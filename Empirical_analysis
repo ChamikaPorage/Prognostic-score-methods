@@ -1,0 +1,1751 @@
+#####R code for the empirical analysis######
+
+set.seed(2025)
+
+#load required packages
+library(devtools)
+library(boot)
+library(MASS) 
+library(tmle)
+library(earth)
+library(ranger)
+library(PSW)
+library(iWeigReg)
+library(cobalt)
+library(WeightIt)
+library(table1)
+library(e1071)
+library(xgboost)
+library(caret)
+
+#read data from dfmale.csv 
+datat <- read.csv("dfmale.csv", header=TRUE) 
+
+#covariates
+X.matrix <- model.matrix(smoking ~ married + birth.country + edu + race + income + income.mis + cage + cage2 + army + cfamily.size, data = datat)
+
+dat.X <- as.data.frame(X.matrix)
+dat.X <- dat.X[,-1]
+names(dat.X) <- c(LETTERS[1:18])
+
+dat <- cbind(datat$smoking, datat$lead, dat.X)
+
+names(dat) <- c("smoking", "lead", LETTERS[1:18])
+
+# Subsetting data
+data0 <- subset(dat, smoking == 0)
+data1 <- subset(dat, smoking == 1)
+
+# Linear model using data1
+pg1 <- lm(data1$lead~ ., data= subset(data1, select = -c(smoking, lead)))
+p1<- predict(pg1,newdata = subset(dat, select = -c(smoking, lead)))           
+
+# Model using data0
+pg0 <- lm(data0$lead~ ., data= subset(data0, select = -c(smoking, lead)))
+p0<- predict(pg0,newdata = subset(dat, select = -c(smoking, lead)))  
+
+###Non-linear models###
+
+folds <- createFolds(dat$lead, k = 5, list = TRUE)
+
+# Initializing prediction vectors
+
+N <- nrow(dat)
+p0ra <- p1ra <- p0gb <- p1gb <- p0svm <- p1svm <- rep(NA, N)
+
+for (k in 1:5) {
+  # Training and validation indices for fold k
+  train_id <- unlist(folds[-k])  # Use all folds except fold k
+  test_id <- folds[[k]]         # Hold out fold k
+  
+  # Separate training and validation data
+  train_data <- dat[train_id, ]
+  test_data <- dat[test_id, ]
+  
+  # Subset training data into treatment groups
+  data0_train <- subset(train_data, smoking == 0)
+  data1_train <- subset(train_data, smoking == 1)
+  
+  ### Random Forest regression(ranger)
+  # Train random forest on untreated group (smoking == 0)
+  model_rf_0 <- ranger(lead ~ ., data = subset(data0_train, select = -c(smoking)), num.trees = 300, mtry = 2)
+  p0ra[test_id] <- predict(model_rf_0, data = subset(test_data, select = -c(smoking)))$predictions
+  
+  # Train random forest on treated group (smoking == 1)
+  model_rf_1 <- ranger(lead ~ ., data = subset(data1_train, select = -c(smoking)), num.trees = 300, mtry = 2)
+  p1ra[test_id] <- predict(model_rf_1, data = subset(test_data, select = -c(smoking)))$predictions
+  
+  ### XGBoost regression
+  # Prepare data matrices for XGBoost
+  train_matrix_0 <- xgb.DMatrix(data = as.matrix(subset(data0_train, select = -c(smoking, lead))), label = data0_train$lead)
+  train_matrix_1 <- xgb.DMatrix(data = as.matrix(subset(data1_train, select = -c(smoking, lead))), label = data1_train$lead)
+  test_matrix <- xgb.DMatrix(data = as.matrix(subset(test_data, select = -c(smoking, lead))))
+  
+  # Train XGBoost on untreated group (smoking == 0)
+  model_xgb_0 <- xgboost(data = train_matrix_0, max_depth = 6, eta = 0.05, nrounds = 50, objective = "reg:squarederror",
+                         min_child_weight = 5, subsample = 0.8, colsample_bytree = 0.8, verbose = 0)
+  p0gb[test_id] <- predict(model_xgb_0, test_matrix)
+  
+  # Train XGBoost on treated group (smoking == 1)
+  model_xgb_1 <- xgboost(data = train_matrix_1, max_depth = 6, eta = 0.05, nrounds = 50, objective = "reg:squarederror",
+                         min_child_weight = 5, subsample = 0.8, colsample_bytree = 0.8, verbose = 0)
+  p1gb[test_id] <- predict(model_xgb_1, test_matrix)
+  
+  ### SVM regression
+  # Train SVM on untreated group (smoking == 0)
+  model_svm_0 <- svm(lead ~ ., data = subset(data0_train, select = -c(smoking)),
+                     type = "eps-regression", kernel = "radial", cost = 1, gamma = 0.1)
+  p0svm[test_id] <- predict(model_svm_0, newdata = subset(test_data, select = -c(smoking)))
+  
+  # Train SVM on treated group (smoking == 1)
+  model_svm_1 <- svm(lead ~ ., data = subset(data1_train, select = -c(smoking)),
+                     type = "eps-regression", kernel = "radial", cost = 1, gamma = 0.1)
+  p1svm[test_id] <- predict(model_svm_1, newdata = subset(test_data, select = -c(smoking)))
+}
+
+# Combine predictions into a final data frame
+data <- cbind.data.frame(dat$lead, dat$smoking, p1, p0, p1ra, p0ra, p1gb, p0gb, p1svm, p0svm)
+colnames(data) <- c('lead', 'smoking', 'p1', 'p0', 'p1ra', 'p0ra', 'p1gb', 'p0gb', 'p1svm', 'p0svm')
+
+####ATE of estimators####
+
+##PGS estimators##
+
+#1. RI_ols 
+
+RI_ols <- mean(data$p1) - mean(data$p0)
+ 
+#2. RI_rf
+    
+RI_ran <- mean(data$p1ra) - mean(data$p0ra)
+
+#3. RI_xgb
+    
+RI_xgb <- mean(data$p1gb) - mean(data$p0gb)
+
+#4. RI_svm
+    
+RI_svm <- mean(data$p1svm) - mean(data$p0svm)
+
+####FPGS estimators####
+
+#### OLS RI estimators ####
+
+#5. RI_ols_ols
+    
+dat0 <- subset(data, datat$smoking == 0)
+dat1 <- subset(data, datat$smoking == 1)
+
+model1 <- lm(lead ~ p1 + p0, data = dat1)
+pred1 <- predict(model1, newdata = data)
+model0 <- lm(lead ~ p1 + p0, data = dat0)
+pred0 <- predict(model0, newdata = data)
+
+RI_ols_ols <- mean(pred1 -pred0)
+
+#6. RI_rf_ols
+
+
+mod1 <- lm(lead ~ p1ra + p0ra, data = dat1)
+pre1 <- predict(mod1, newdata = data)
+mod0 <- lm(lead ~ p1ra + p0ra, data = dat0)
+pre0 <- predict(mod0, newdata = data)
+
+RI_ran_ols <- mean(pre1 -pre0)
+
+#7. RI_xgb_ols
+
+
+md1 <- lm(lead ~ p0gb + p1gb, data = dat1)
+pre1_gb <- predict(md1, newdata = data)
+md0 <- lm(lead ~ p0gb + p1gb, data = dat0)
+pre0_gb <- predict(md0, newdata = data)
+
+RI_xgb_ols <- mean(pre1_gb -pre0_gb)
+
+#8. RI_svm_ols
+
+mvm1 <- lm(lead ~ p0svm + p1svm, data = dat1)
+pre1_vm <- predict(mvm1 , newdata = data)
+mvm0 <- lm(lead ~ p0svm + p1svm, data = dat0)
+pre0_vm <- predict(mvm0, newdata = data)
+
+RI_svm_ols <- mean(pre1_vm - pre0_vm)
+
+###random forest RI estimators###
+
+#9. RI_ols_rf
+
+mu1 <- mu0 <- rep(NA, nrow(data))
+
+for (k in 1:5) {
+  # Training and validation indices
+  train_id <- unlist(folds[-k])  
+  test_id <- folds[[k]]         
+  
+  # Split data 
+  train_data <- data[train_id, ]
+  test_data <- data[test_id, ]
+  
+  # Subset training data by treatment group
+  dat0_train <- subset(train_data, smoking == 0)
+  dat1_train <- subset(train_data, smoking == 1)
+  
+  # Train models for smoking == 1 (treated group)
+  model1 <- ranger(lead ~ p1 + p0, data = dat1_train, num.trees = 300, mtry = 2, min.node.size = 5)
+  mu1[test_id] <- predict(model1, data = test_data)$predictions  
+  
+  # Train models for smoking == 0 (control group)
+  model0 <- ranger(lead ~ p1 + p0, data = dat0_train, num.trees = 300, mtry = 2, min.node.size = 5)
+  mu0[test_id] <- predict(model0, data = test_data)$predictions  
+}
+
+# Calculate mean predictions for treated and control groups
+mu1_hat <- mean(mu1, na.rm = TRUE)
+mu0_hat <- mean(mu0, na.rm = TRUE)
+
+# Estimate treatment effect
+RI_ols_ran <- mu1_hat - mu0_hat
+
+
+#10. RI_rf_rf
+
+mu1 <- mu0 <- rep(NA, nrow(data))
+
+for (k in 1:5) {
+  # Training and validation indices
+  train_id <- unlist(folds[-k])  
+  test_id <- folds[[k]]         
+  
+  # Split data 
+  train_data <- data[train_id, ]
+  test_data <- data[test_id, ]
+  
+  # Subset training data by treatment group
+  dat0_train <- subset(train_data, smoking == 0)
+  dat1_train <- subset(train_data, smoking == 1)
+  
+  # Train models for smoking == 1 (treated group)
+  model1 <- ranger(lead ~ p1ra + p0ra, data = dat1_train, num.trees = 300, mtry = 2, min.node.size = 5)
+  mu1[test_id] <- predict(model1, data = test_data)$predictions  
+  
+  # Train models for smoking == 0 (control group)
+  model0 <- ranger(lead ~ p1ra + p0ra, data = dat0_train, num.trees = 300, mtry = 2, min.node.size = 5)
+  mu0[test_id] <- predict(model0, data = test_data)$predictions  
+}
+
+# Calculate mean predictions for treated and control groups
+mu1_hat <- mean(mu1, na.rm = TRUE)
+mu0_hat <- mean(mu0, na.rm = TRUE)
+
+# Estimate treatment effect
+RI_ran_ran <- mu1_hat - mu0_hat
+
+#11. RI_xgb_rf
+
+for (k in 1:5) {
+  # Training and validation indices
+  train_id <- unlist(folds[-k])  
+  test_id <- folds[[k]]         
+  
+  # Split data 
+  train_data <- data[train_id, ]
+  test_data <- data[test_id, ]
+  
+  # Subset training data by treatment group
+  dat0_train <- subset(train_data, smoking == 0)
+  dat1_train <- subset(train_data, smoking == 1)
+  
+  # Train models for smoking == 1 (treated group)
+  model1 <- ranger(lead ~ p1gb + p0gb, data = dat1_train, num.trees = 300, mtry = 2, min.node.size = 5)
+  mu1[test_id] <- predict(model1, data = test_data)$predictions  
+  
+  # Train models for smoking == 0 (control group)
+  model0 <- ranger(lead ~ p1gb + p0gb, data = dat0_train, num.trees = 300, mtry = 2, min.node.size = 5)
+  mu0[test_id] <- predict(model0, data = test_data)$predictions  
+}
+
+# Calculate mean predictions for treated and control groups
+mu1_hat <- mean(mu1, na.rm = TRUE)
+mu0_hat <- mean(mu0, na.rm = TRUE)
+
+# Estimate treatment effect
+RI_xgb_ran <- mu1_hat - mu0_hat
+
+
+#12. RI_svm_rf
+
+for (k in 1:5) {
+  # Training and validation indices
+  train_id <- unlist(folds[-k])  
+  test_id <- folds[[k]]         
+  
+  # Split data 
+  train_data <- data[train_id, ]
+  test_data <- data[test_id, ]
+  
+  # Subset training data by treatment group
+  dat0_train <- subset(train_data, smoking == 0)
+  dat1_train <- subset(train_data, smoking == 1)
+  
+  # Train models for smoking == 1 (treated group)
+  model1 <- ranger(lead ~ p1svm + p0svm, data = dat1_train, num.trees = 300, mtry = 2, min.node.size = 5)
+  mu1[test_id] <- predict(model1, data = test_data)$predictions  
+  
+  # Train models for smoking == 0 (control group)
+  model0 <- ranger(lead ~ p1svm + p0svm, data = dat0_train, num.trees = 300, mtry = 2, min.node.size = 5)
+  mu0[test_id] <- predict(model0, data = test_data)$predictions  
+}
+
+# Calculate mean predictions for treated and control groups
+mu1_hat <- mean(mu1, na.rm = TRUE)
+mu0_hat <- mean(mu0, na.rm = TRUE)
+
+# Estimate treatment effect
+RI_svm_ran <- mu1_hat - mu0_hat
+
+####XGB RI estimators####
+
+#13. RI_ols_xgb
+
+# set up XGBoost parameters for regression
+params <- list(
+  objective = "reg:squarederror",
+  eta = 0.05,
+  max_depth = 6,
+  min_child_weight = 5,
+  subsample = 0.8,
+  colsample_bytree = 0.8
+  )
+
+for (k in 1:5) {
+  # Training and validation indices
+  train_id <- unlist(folds[-k])  
+  test_id <- folds[[k]]         
+  
+  # Split data into training and validation sets
+  train_data <- data[train_id, ]
+  test_data <- data[test_id, ]
+  
+  # Subset training data by treatment group
+  dat0_train <- subset(train_data, smoking == 0)
+  dat1_train <- subset(train_data, smoking == 1)
+  
+  # Prepare data matrices for XGBoost
+  dtrain1 <- xgb.DMatrix(data = as.matrix(subset(dat1_train, select = c(p1, p0))), label = dat1_train$lead)
+  dtrain0 <- xgb.DMatrix(data = as.matrix(subset(dat0_train, select = c(p1, p0))), label = dat0_train$lead)
+  dtest <- xgb.DMatrix(data = as.matrix(subset(test_data, select = c(p1, p0))))
+  
+  # Train XGBoost model for smoking == 1 (treated group)
+  model1 <- xgboost(params = params, data = dtrain1, nrounds = 50, verbose = 0)
+  mu1[test_id] <- as.vector(predict(model1, newdata = dtest))  
+  
+  # Train XGBoost model for smoking == 0 (control group)
+  model0 <- xgboost(params = params, data = dtrain0, nrounds = 50, verbose = 0)
+  mu0[test_id] <- as.vector(predict(model0, newdata = dtest))  
+}
+
+# Calculate mean predictions for treated and control groups
+mu1_hat <- mean(mu1, na.rm = TRUE)
+mu0_hat <- mean(mu0, na.rm = TRUE)
+
+# Estimate treatment effect
+RI_ols_xgb <- mu1_hat - mu0_hat
+
+#14. RI_rf_xgb
+
+for (k in 1:5) {
+  # Training and validation indices
+  train_id <- unlist(folds[-k])  
+  test_id <- folds[[k]]         
+  
+  # Split data into training and validation sets
+  train_data <- data[train_id, ]
+  test_data <- data[test_id, ]
+  
+  # Subset training data by treatment group
+  dat0_train <- subset(train_data, smoking == 0)
+  dat1_train <- subset(train_data, smoking == 1)
+  
+  # Prepare data matrices for XGBoost
+  dtrain1 <- xgb.DMatrix(data = as.matrix(subset(dat1_train, select = c(p1ra, p0ra))), label = dat1_train$lead)
+  dtrain0 <- xgb.DMatrix(data = as.matrix(subset(dat0_train, select = c(p1ra, p0ra))), label = dat0_train$lead)
+  dtest <- xgb.DMatrix(data = as.matrix(subset(test_data, select = c(p1ra, p0ra))))
+  
+  # Train XGBoost model for smoking == 1 (treated group)
+  model1 <- xgboost(params = params, data = dtrain1, nrounds = 50, verbose = 0)
+  mu1[test_id] <- as.vector(predict(model1, newdata = dtest))  
+  
+  # Train XGBoost model for smoking == 0 (control group)
+  model0 <- xgboost(params = params, data = dtrain0, nrounds = 50, verbose = 0)
+  mu0[test_id] <- as.vector(predict(model0, newdata = dtest))  
+}
+
+# Calculate mean predictions for treated and control groups
+mu1_hat <- mean(mu1, na.rm = TRUE)
+mu0_hat <- mean(mu0, na.rm = TRUE)
+
+# Estimate treatment effect
+RI_ran_xgb <- mu1_hat - mu0_hat
+
+#15. RI_xgb_xgb
+
+for (k in 1:5) {
+  # Training and validation indices
+  train_id <- unlist(folds[-k])  
+  test_id <- folds[[k]]         
+  
+  # Split data into training and validation sets
+  train_data <- data[train_id, ]
+  test_data <- data[test_id, ]
+  
+  # Subset training data by treatment group
+  dat0_train <- subset(train_data, smoking == 0)
+  dat1_train <- subset(train_data, smoking == 1)
+  
+  # Prepare data matrices for XGBoost
+  dtrain1 <- xgb.DMatrix(data = as.matrix(subset(dat1_train, select = c(p1gb, p0gb))), label = dat1_train$lead)
+  dtrain0 <- xgb.DMatrix(data = as.matrix(subset(dat0_train, select = c(p1gb, p0gb))), label = dat0_train$lead)
+  dtest <- xgb.DMatrix(data = as.matrix(subset(test_data, select = c(p1gb, p0gb))))
+  
+  # Train XGBoost model for smoking == 1 (treated group)
+  model1 <- xgboost(params = params, data = dtrain1, nrounds = 50, verbose = 0)
+  mu1[test_id] <- as.vector(predict(model1, newdata = dtest))  
+  
+  # Train XGBoost model for smoking == 0 (control group)
+  model0 <- xgboost(params = params, data = dtrain0, nrounds = 50, verbose = 0)
+  mu0[test_id] <- as.vector(predict(model0, newdata = dtest))  
+}
+
+# Calculate mean predictions for treated and control groups
+mu1_hat <- mean(mu1, na.rm = TRUE)
+mu0_hat <- mean(mu0, na.rm = TRUE)
+
+# Estimate treatment effect
+RI_xgb_xgb <- mu1_hat - mu0_hat
+
+#16. RI_svm_xgb
+
+for (k in 1:5) {
+  # Training and validation indices
+  train_id <- unlist(folds[-k])  
+  test_id <- folds[[k]]         
+  
+  # Split data into training and validation sets
+  train_data <- data[train_id, ]
+  test_data <- data[test_id, ]
+  
+  # Subset training data by treatment group
+  dat0_train <- subset(train_data, smoking == 0)
+  dat1_train <- subset(train_data, smoking == 1)
+  
+  # Prepare data matrices for XGBoost
+  dtrain1 <- xgb.DMatrix(data = as.matrix(subset(dat1_train, select = c(p1svm, p0svm))), label = dat1_train$lead)
+  dtrain0 <- xgb.DMatrix(data = as.matrix(subset(dat0_train, select = c(p1svm, p0svm))), label = dat0_train$lead)
+  dtest <- xgb.DMatrix(data = as.matrix(subset(test_data, select = c(p1svm, p0svm))))
+  
+  # Train XGBoost model for smoking == 1 (treated group)
+  model1 <- xgboost(params = params, data = dtrain1, nrounds = 50, verbose = 0)
+  mu1[test_id] <- as.vector(predict(model1, newdata = dtest))  
+  
+  # Train XGBoost model for smoking == 0 (control group)
+  model0 <- xgboost(params = params, data = dtrain0, nrounds = 50, verbose = 0)
+  mu0[test_id] <- as.vector(predict(model0, newdata = dtest))  
+}
+
+# Calculate mean predictions for treated and control groups
+mu1_hat <- mean(mu1, na.rm = TRUE)
+mu0_hat <- mean(mu0, na.rm = TRUE)
+
+# Estimate treatment effect
+RI_svm_xgb <- mu1_hat - mu0_hat
+
+####SVM RI estimators####
+
+#17. RI_ols_svm
+
+for (k in 1:5) {
+  # Training and validation indices
+  train_id <- unlist(folds[-k])  
+  test_id <- folds[[k]]         
+  
+  # Split data into training and validation sets
+  train_data <- data[train_id, ]
+  test_data <- data[test_id, ]
+  
+  # Subset training data by treatment group
+  dat0_train <- subset(train_data, smoking == 0)
+  dat1_train <- subset(train_data, smoking == 1)
+  
+  ### Train SVM models
+  # SVM for treated group (smoking == 1)
+  model1 <- svm(lead ~ p1 + p0, data = dat1_train,
+                type = "eps-regression",  
+                kernel = "radial",        
+                cost = 1,                 
+                gamma = 0.1)              
+  mu1[test_id] <- predict(model1, newdata = test_data)  
+  
+  # SVM for control group (smoking == 0)
+  model0 <- svm(lead ~ p1 + p0, data = dat0_train,
+                type = "eps-regression",
+                kernel = "radial",
+                cost = 1,
+                gamma = 0.1)
+  mu0[test_id] <- predict(model0, newdata = test_data)  
+}
+
+# Calculate mean predictions for treated and control groups
+mu1_hat <- mean(mu1, na.rm = TRUE)
+mu0_hat <- mean(mu0, na.rm = TRUE)
+
+# Estimate treatment effect
+RI_ols_svm <- mu1_hat - mu0_hat
+
+#18. RI_rf_svm
+
+for (k in 1:5) {
+  # Training and validation indices
+  train_id <- unlist(folds[-k])  
+  test_id <- folds[[k]]         
+  
+  # Split data into training and validation sets
+  train_data <- data[train_id, ]
+  test_data <- data[test_id, ]
+  
+  # Subset training data by treatment group
+  dat0_train <- subset(train_data, smoking == 0)
+  dat1_train <- subset(train_data, smoking == 1)
+  
+  ### Train SVM models
+  
+  # SVM for treated group (smoking == 1)
+  model1 <- svm(lead ~ p1ra + p0ra, data = dat1_train,
+                type = "eps-regression",  
+                kernel = "radial",        
+                cost = 1,                 
+                gamma = 0.1)              
+  mu1[test_id] <- predict(model1, newdata = test_data)  
+  
+  # SVM for control group (smoking == 0)
+  model0 <- svm(lead ~ p1ra + p0ra, data = dat0_train,
+                type = "eps-regression",
+                kernel = "radial",
+                cost = 1,
+                gamma = 0.1)
+  mu0[test_id] <- predict(model0, newdata = test_data)  
+}
+
+# Calculate mean predictions for treated and control groups
+mu1_hat <- mean(mu1, na.rm = TRUE)
+mu0_hat <- mean(mu0, na.rm = TRUE)
+
+# Estimate treatment effect
+RI_ran_svm <- mu1_hat - mu0_hat
+
+#19. RI_xgb_svm
+
+for (k in 1:5) {
+  # Training and validation indices
+  train_id <- unlist(folds[-k])  
+  test_id <- folds[[k]]         
+  
+  # Split data into training and validation sets
+  train_data <- data[train_id, ]
+  test_data <- data[test_id, ]
+  
+  # Subset training data by treatment group
+  dat0_train <- subset(train_data, smoking == 0)
+  dat1_train <- subset(train_data, smoking == 1)
+  
+  ### Train SVM models
+  # SVM for treated group (smoking == 1)
+  model1 <- svm(lead ~ p1gb + p0gb, data = dat1_train,
+                type = "eps-regression",  
+                kernel = "radial",        
+                cost = 1,                 
+                gamma = 0.1)              
+  mu1[test_id] <- predict(model1, newdata = test_data)  
+  
+  # SVM for control group (smoking == 0)
+  model0 <- svm(lead ~ p1gb + p0gb, data = dat0_train,
+                type = "eps-regression",
+                kernel = "radial",
+                cost = 1,
+                gamma = 0.1)
+  mu0[test_id] <- predict(model0, newdata = test_data)  
+}
+
+# Calculate mean predictions for treated and control groups
+mu1_hat <- mean(mu1, na.rm = TRUE)
+mu0_hat <- mean(mu0, na.rm = TRUE)
+
+# Estimate treatment effect
+RI_xgb_svm <- mu1_hat - mu0_hat
+
+#20. RI_svm_svm
+
+for (k in 1:5) {
+  # Training and validation indices
+  train_id <- unlist(folds[-k])  
+  test_id <- folds[[k]]         
+  
+  # Split data into training and validation sets
+  train_data <- data[train_id, ]
+  test_data <- data[test_id, ]
+  
+  # Subset training data by treatment group
+  dat0_train <- subset(train_data, smoking == 0)
+  dat1_train <- subset(train_data, smoking == 1)
+  
+  ### Train SVM models
+  # SVM for treated group (smoking == 1)
+  model1 <- svm(lead ~ p1svm + p0svm, data = dat1_train,
+                type = "eps-regression",  
+                kernel = "radial",        
+                cost = 1,                 
+                gamma = 0.1)              
+  mu1[test_id] <- predict(model1, newdata = test_data)  
+  
+  # SVM for control group (smoking == 0)
+  model0 <- svm(lead ~ p1svm + p0svm, data = dat0_train,
+                type = "eps-regression",
+                kernel = "radial",
+                cost = 1,
+                gamma = 0.1)
+  mu0[test_id] <- predict(model0, newdata = test_data)  
+}
+
+# Calculate mean predictions for treated and control groups
+mu1_hat <- mean(mu1, na.rm = TRUE)
+mu0_hat <- mean(mu0, na.rm = TRUE)
+
+# Estimate treatment effect
+RI_svm_svm <- mu1_hat - mu0_hat
+
+####TMLE estimators####
+
+#21. TMLE_ols
+
+mot_glm <-
+  tmle(
+    Y = data$lead,
+    A = data$ smoking,
+    W = cbind(data$p1, data$p0),
+    Q.SL.library = c("SL.glm"),
+    g.SL.library = c("SL.glm")
+  )
+# Estimate treatment effect
+tmle_ols <- mot_glm$estimates$ATE$psi
+
+
+#22. TMLE_rf
+
+mot_ran <-
+  tmle(
+    Y = data$lead,
+    A = data$ smoking,
+    W = cbind(data$p1ra, data$p0ra),
+    Q.SL.library = c("SL.glm"),
+    g.SL.library = c("SL.glm")
+  )
+# Estimate treatment effect
+tmle_ran <- mot_ran$estimates$ATE$psi
+
+#23. TMLE_xgb
+
+mot_xgb <-
+  tmle(
+    Y = data$lead,
+    A = data$ smoking,
+    W = cbind(data$p1gb, data$p0gb),
+    Q.SL.library = c("SL.glm"),
+    g.SL.library = c("SL.glm")
+  )
+# Estimate treatment effect
+tmle_xgb <- mot_xgb$estimates$ATE$psi
+
+#24. TMLE_svm
+
+mot_svm <-
+  tmle(
+    Y = data$lead,
+    A = data$ smoking,
+    W = cbind(data$p1svm, data$p0svm),
+    Q.SL.library = c("SL.glm"),
+    g.SL.library = c("SL.glm")
+  )
+# Estimate treatment effect
+tmle_svm <- mot_svm$estimates$ATE$psi
+
+###############################################################################
+
+####Bootstrap CI and standard deviation####
+
+library(boot)
+library(tmle)
+
+set.seed(2025)
+
+#-----------------------PGS Estimators-----------------------------
+
+#1. RI_ols
+
+# Define the statistic function for bootstrapping
+boot_ri_ols <- function(data, indices) {
+  data_s <- data[indices, ]
+  p1_s <- data_s$p1
+  p0_s <- data_s$p0
+  ri_ols <- p1_s - p0_s
+  mean(ri_ols, na.rm = TRUE)
+}
+
+# bootstrap resampling
+  
+res_ri_ols <- boot(data = data, statistic = boot_ri_ols , R = 1000)
+
+# Calculate confidence intervals 
+CI_ri_ols <- boot.ci(res_ri_ols, type = "basic")
+
+# Print results
+print(CI_ri_ols)
+
+# Calculate the bootstrap standard error
+ri_ols_se <- sd(res_ri_ols$t)
+
+#Print the bootstrap standard error
+print(ri_ols_se)
+
+#####################################################################################
+
+#2. RI_ran
+
+# Define the statistic function for bootstrapping
+boot_ri_ran <- function(data, indices) {
+  data_s <- data[indices, ]
+  p1_s <- data_s$p1ra
+  p0_s <- data_s$p0ra
+  ri_ran <- p1_s - p0_s
+  mean(ri_ran, na.rm = TRUE)
+}
+
+# bootstrap resampling
+  
+res_ri_ran <- boot(data = data, statistic = boot_ri_ran , R = 1000)
+
+# Calculate CI 
+CI_ri_ran <- boot.ci(res_ri_ran, type = "basic")
+
+# Print CI
+print(CI_ri_ran)
+
+# Calculate the bootstrap standard error
+ri_ran_se <- sd(res_ri_ran$t)
+
+# Print the bootstrap standard error
+print(ri_ran_se)
+
+#####################################################################################
+
+#3. RI_xgb
+
+# Define the statistic function for bootstrapping
+boot_ri_xgb <- function(data, indices) {
+  data_s <- data[indices, ]
+  p1_s <- data_s$p1gb
+  p0_s <- data_s$p0gb
+  ri_xgb <- p1_s - p0_s
+  mean(ri_xgb, na.rm = TRUE)
+}
+
+# bootstrap resampling
+
+res_ri_xgb <- boot(data = data, statistic = boot_ri_xgb , R = 1000)
+
+# Calculate confidence intervals 
+CI_ri_xgb <- boot.ci(res_ri_xgb, type = "basic")
+
+# Print results
+print(CI_ri_xgb)
+
+# Calculate the bootstrap standard error
+ri_xgb_se <- sd(res_ri_xgb$t)
+
+# Print the bootstrap standard error
+print(ri_xgb_se)
+
+#####################################################################################
+
+#4. RI_svm
+
+# Define the statistic function for bootstrapping
+boot_ri_svm <- function(data, indices) {
+  data_s <- data[indices, ]
+  p1_s <- data_s$p1svm
+  p0_s <- data_s$p0svm
+  ri_svm <- p1_s - p0_s
+  mean(ri_svm, na.rm = TRUE)
+}
+
+# bootstrap resampling
+res_ri_svm <- boot(data = data, statistic = boot_ri_svm , R = 1000)
+
+# Calculate confidence intervals 
+CI_ri_svm <- boot.ci(res_ri_svm, type = "basic")
+
+# Print CI
+print(CI_ri_svm)
+
+# Calculate the bootstrap standard error
+ri_svm_se <- sd(res_ri_svm$t)
+
+# Print the bootstrap standard error
+print(ri_svm_se)
+
+#---------------------------The Full prognostic score estimators-------------------------
+
+
+#5.RI_ols_ols
+
+boot_ri_ols_ols <- function(data, indices) {
+  data_s <- data[indices, ]
+  dat0_s <- subset(data_s, smoking == 0)
+  dat1_s <- subset(data_s, smoking == 1)
+  
+  # Model for outcome under treatment
+  model1_s <- lm(lead ~ p1 + p0, data = dat1_s)
+  pred1_s <- predict(model1_s, newdata = data_s)
+  
+  # Model for outcome under control
+  model0_s <- lm(lead ~ p1 + p0, data = dat0_s)
+  pred0_s <- predict(model0_s, newdata = data_s)
+  
+  ols_ols <- pred1_s - pred0_s
+  mean(ols_ols)
+}
+
+# bootstrap resampling
+res_ri_ols_ols <- boot(data = data, statistic = boot_ri_ols_ols, R = 1000)
+# construct CI
+CI_ri_ols_ols <- boot.ci(res_ri_ols_ols, type = "basic", conf = 0.95)
+#print CI
+print(CI_ri_ols_ols)
+# Calculate the bootstrap standard error
+ri_ols_ols_se <- sd(res_ri_ols_ols$t)
+# Print the SE 
+print(paste("Bootstrap se:", ri_ols_ols_se))
+
+#################################################################################
+
+#6.RI_ran_ols
+
+boot_ri_ran_ols <- function(data, indices) {
+  data_s <- data[indices, ]
+  dat0_s <- subset(data_s, smoking == 0)
+  dat1_s <- subset(data_s, smoking == 1)
+  
+  # Model for outcome under treatment
+  model1_s <- lm(lead ~ p1ra + p0ra, data = dat1_s)
+  pred1_s <- predict(model1_s, newdata = data_s)
+  
+  # Model for outcome under control
+  model0_s <- lm(lead ~ p1ra + p0ra, data = dat0_s)
+  pred0_s <- predict(model0_s, newdata = data_s)
+  
+  ran_ols <- pred1_s - pred0_s
+  mean(ran_ols)
+}
+
+# bootstrap resampling
+res_ri_ran_ols <- boot(data = data, statistic = boot_ri_ran_ols, R = 1000)
+# Calculate confidence intervals 
+CI_ri_ran_ols <- boot.ci(res_ri_ran_ols, type = "basic", conf = 0.95)
+# Calculate the bootstrap standard error
+ri_ran_ols_se <- sd(res_ri_ran_ols$t)
+# Print CI
+print(CI_ri_ran_ols)
+# Print bootstrap SE 
+print(paste("Bootstrap se:", ri_ran_ols_se))
+
+#################################################################################
+
+#7. RI_xgb_ols
+
+boot_ri_xgb_ols <- function(data, indices) {
+  data_s <- data[indices, ]
+  dat0_s <- subset(data_s, smoking == 0)
+  dat1_s <- subset(data_s, smoking == 1)
+  
+  # Model for outcome under treatment
+  model1_s <- lm(lead ~ p1gb + p0gb, data = dat1_s)
+  pred1_s <- predict(model1_s, newdata = data_s)
+  
+  # Model for outcome under control
+  model0_s <- lm(lead ~ p1gb + p0gb, data = dat0_s)
+  pred0_s <- predict(model0_s, newdata = data_s)
+  
+  xgb_ols <- pred1_s - pred0_s
+  mean(xgb_ols)
+}
+# bootstrap resampling
+res_ri_xgb_ols <- boot(data = data, statistic = boot_ri_xgb_ols, R = 1000)
+# Calculate confidence intervals 
+CI_ri_xgb_ols<- boot.ci(res_ri_xgb_ols, type = "basic", conf = 0.95)
+# Calculate bootstrap SE
+ri_xgb_ols_se <- sd(res_ri_xgb_ols$t)
+# print bootstrap CI
+print(CI_ri_xgb_ols)
+#print bootstrap SE
+print(paste("Bootstrap se:", ri_xgb_ols_se))
+
+#################################################################################
+
+#8.RI_svm_ols
+
+boot_ri_svm_ols <- function(data, indices) {
+  data_s <- data[indices, ]
+  dat0_s <- subset(data_s, smoking == 0)
+  dat1_s <- subset(data_s, smoking == 1)
+  
+  # Model for outcome under treatment
+  model1_s <- lm(lead ~ p1svm + p0svm, data = dat1_s)
+  pred1_s <- predict(model1_s, newdata = data_s)
+  
+  # Model for outcome under control
+  model0_s <- lm(lead ~ p1svm + p0svm, data = dat0_s)
+  pred0_s <- predict(model0_s, newdata = data_s)
+  
+  svm_ols <- pred1_s - pred0_s
+  mean(svm_ols)
+}
+
+# bootstrap resampling
+res_ri_svm_ols <- boot(data = data, statistic = boot_ri_svm_ols, R = 1000)
+# Calculate confidence intervals 
+CI_ri_svm_ols<- boot.ci(res_ri_svm_ols, type = "basic", conf = 0.95)
+# Calculate bootstrap SE
+ri_svm_ols_se <- sd(res_ri_svm_ols$t)
+# print bootstrap CI
+print(CI_ri_svm_ols)
+#print bootstrap SE
+print(paste("Bootstrap se:", ri_svm_ols_se))
+
+#################################################################################
+
+#9. RI_ols_rf
+
+boot_ri_ols_ran <- function(data, indices) {
+  data_s <- data[indices, ]  
+  mu1 <- mu0 <- rep(NA, nrow(data_s))  
+  
+  # Create 5-fold cross-validation splits
+  folds <- createFolds(data_s$lead, k = 5, list = TRUE)
+  
+  for (k in 1:5) {
+    # Training and validation indices
+    train_id <- unlist(folds[-k])  
+    test_id <- folds[[k]]         
+    
+    # Split data into training and validation sets
+    train_data <- data_s[train_id, ]
+    test_data <- data_s[test_id, ]
+    
+    # Subset training data by treatment group
+    dat0_train <- subset(train_data, smoking == 0)
+    dat1_train <- subset(train_data, smoking == 1)
+    
+    # Train random forest models for both groups
+    model1 <- ranger(lead ~ p1 + p0, data = dat1_train, num.trees = 300, mtry = 2, min.node.size = 5)
+    mu1[test_id] <- predict(model1, data = test_data)$predictions
+    
+    model0 <- ranger(lead ~ p1 + p0, data = dat0_train, num.trees = 300, mtry = 2, min.node.size = 5)
+    mu0[test_id] <- predict(model0, data = test_data)$predictions
+  }
+  
+  # Calculate mean predictions for treated and control groups
+  mu1_hat <- mean(mu1, na.rm = TRUE)
+  mu0_hat <- mean(mu0, na.rm = TRUE)
+  
+  # Estimate treatment effect
+  RI_ols_ran <- mu1_hat - mu0_hat
+  
+  return(RI_ols_ran)
+}
+# bootstrap resampling
+res_ri_ols_ran <- boot(data = data, statistic = boot_ri_ols_ran, R = 1000)  
+# Calculate 95% CI
+CI_ri_ols_ran <- boot.ci(res_ols_ran, type = "basic", conf = 0.95)
+# Calculate bootstrap SE
+ri_ols_ran_se <- sd(res_ri_ols_ran$t)
+# print bootstrap CI
+print(CI_ri_ols_ran)
+#print bootstrap SE
+print(paste("Bootstrap se:", ri_ols_ran_se))
+
+#################################################################################
+
+#10. RI_rf_rf
+
+boot_ri_ran_ran <- function(data, indices) {
+  data_s <- data[indices, ]  
+  mu1 <- mu0 <- rep(NA, nrow(data_s))  
+  
+  # Create 5-fold cross-validation splits
+  folds <- createFolds(data_s$lead, k = 5, list = TRUE)
+  
+  for (k in 1:5) {
+    # Training and validation indices
+    train_id <- unlist(folds[-k])  
+    test_id <- folds[[k]]         
+    
+    # Split data into training and validation sets
+    train_data <- data_s[train_id, ]
+    test_data <- data_s[test_id, ]
+    
+    # Subset training data by treatment group
+    dat0_train <- subset(train_data, smoking == 0)
+    dat1_train <- subset(train_data, smoking == 1)
+    
+    # Train random forest models for both groups
+    model1 <- ranger(lead ~ p1ra + p0ra, data = dat1_train, num.trees = 300, mtry = 2, min.node.size = 5)
+    mu1[test_id] <- predict(model1, data = test_data)$predictions
+    
+    model0 <- ranger(lead ~ p1ra + p0ra, data = dat0_train, num.trees = 300, mtry = 2, min.node.size = 5)
+    mu0[test_id] <- predict(model0, data = test_data)$predictions
+  }
+  
+  # Calculate mean predictions for treated and control groups
+  mu1_hat <- mean(mu1, na.rm = TRUE)
+  mu0_hat <- mean(mu0, na.rm = TRUE)
+  
+  # Estimate treatment effect
+  RI_ran_ran <- mu1_hat - mu0_hat
+  
+  return(RI_ran_ran)
+}
+
+# bootstrap resampling
+res_ri_ran_ran <- boot(data = data, statistic = boot_ri_ran_ran, R = 1000)  
+# Calculate 95% confidence interval 
+CI_ri_ran_ran <- boot.ci(res_ri_ran_ran, type = "basic", conf = 0.95)
+# Calculate bootstrap SE
+ri_ran_ran_se <- sd(res_ri_ran_ran$t)
+# print bootstrap CI
+print(CI_ri_ran_ran)
+#print bootstrap SE
+print(paste("Bootstrap se:", ri_ran_ran_se))
+
+#################################################################################
+
+#11. RI_xgb_ran
+
+boot_ri_xgb_ran <- function(data, indices) {
+  data_s <- data[indices, ]  
+  mu1 <- mu0 <- rep(NA, nrow(data_s))  
+  
+  # Create 5-fold cross-validation splits
+  folds <- createFolds(data_s$lead, k = 5, list = TRUE)
+  
+  for (k in 1:5) {
+    # Training and validation indices
+    train_id <- unlist(folds[-k])  
+    test_id <- folds[[k]]         
+    
+    # Split data into training and validation sets
+    train_data <- data_s[train_id, ]
+    test_data <- data_s[test_id, ]
+    
+    # Subset training data by treatment group
+    dat0_train <- subset(train_data, smoking == 0)
+    dat1_train <- subset(train_data, smoking == 1)
+    
+    # Train random forest models for both groups
+    model1 <- ranger(lead ~ p1gb + p0gb, data = dat1_train, num.trees = 300, mtry = 2, min.node.size = 5)
+    mu1[test_id] <- predict(model1, data = test_data)$predictions
+    
+    model0 <- ranger(lead ~ p1gb + p0gb, data = dat0_train, num.trees = 300, mtry = 2, min.node.size = 5)
+    mu0[test_id] <- predict(model0, data = test_data)$predictions
+  }
+  
+  # Calculate mean predictions for treated and control groups
+  mu1_hat <- mean(mu1, na.rm = TRUE)
+  mu0_hat <- mean(mu0, na.rm = TRUE)
+  
+  # Estimate treatment effect
+  RI_xgb_ran <- mu1_hat - mu0_hat
+  
+  return(RI_xgb_ran)
+}
+# bootstrap resampling
+res_ri_xgb_ran <- boot(data = data, statistic = boot_ri_xgb_ran, R = 1000)  # 1000 bootstrap replicates
+# Calculate 95% confidence interval 
+CI_ri_xgb_ran <- boot.ci(res_ri_xgb_ran, type = "basic", conf = 0.95)
+# Calculate bootstrap SE
+ri_xgb_ran_se <- sd(res_ri_xgb_ran$t)
+# print bootstrap CI
+print(CI_ri_xgb_ran)
+#print bootstrap SE
+print(paste("Bootstrap se:", ri_xgb_ran_se))
+
+#################################################################################
+
+#12. RI_svm_rf
+
+boot_ri_svm_ran <- function(data, indices) {
+  data_s <- data[indices, ]  # Resample the data
+  mu1 <- mu0 <- rep(NA, nrow(data_s))  # Initialize predictions
+  
+  # Create 5-fold cross-validation splits
+  folds <- createFolds(data_s$lead, k = 5, list = TRUE)
+  
+  for (k in 1:5) {
+    # Training and validation indices
+    train_id <- unlist(folds[-k])  
+    test_id <- folds[[k]]         
+    
+    # Split data into training and validation sets
+    train_data <- data_s[train_id, ]
+    test_data <- data_s[test_id, ]
+    
+    # Subset training data by treatment group
+    dat0_train <- subset(train_data, smoking == 0)
+    dat1_train <- subset(train_data, smoking == 1)
+    
+    # Train random forest models for both groups
+    model1 <- ranger(lead ~ p1svm + p0svm, data = dat1_train, num.trees = 300, mtry = 2, min.node.size = 5)
+    mu1[test_id] <- predict(model1, data = test_data)$predictions
+    
+    model0 <- ranger(lead ~ p1svm + p0svm, data = dat0_train, num.trees = 300, mtry = 2, min.node.size = 5)
+    mu0[test_id] <- predict(model0, data = test_data)$predictions
+  }
+  
+  # Calculate mean predictions for treated and control groups
+  mu1_hat <- mean(mu1, na.rm = TRUE)
+  mu0_hat <- mean(mu0, na.rm = TRUE)
+  
+  # Estimate treatment effect
+  RI_svm_ran <- mu1_hat - mu0_hat
+  
+  return(RI_svm_ran)
+}
+# bootstrap resampling
+res_ri_svm_ran <- boot(data = data, statistic = boot_ri_svm_ran, R = 1000)  
+# Calculate 95% confidence interval 
+CI_ri_svm_ran <- boot.ci(res_ri_svm_ran, type = "basic", conf = 0.95)
+# Calculate bootstrap SE
+ri_svm_ran_se <- sd(res_ri_svm_ran$t)
+# print bootstrap CI
+print(CI_ri_svm_ran)
+#print bootstrap SE
+print(paste("Bootstrap se:", ri_svm_ran_se))
+
+#################################################################################
+
+#13. RI_ols_xgb
+
+boot_ri_ols_xgb <- function(data, indices) {
+  # Subset the data using bootstrap indices
+  data_s <- data[indices, ]
+  
+  # Initialize vectors to store predictions
+  mu1 <- mu0 <- rep(NA, nrow(data_s))
+  
+  # Create 5-fold cross-validation splits
+  folds <- createFolds(data_s$lead, k = 5, list = TRUE)
+  
+  for (k in 1:5) {
+    # Training and validation indices
+    train_id <- unlist(folds[-k])
+    test_id <- folds[[k]]
+    
+    # Split data into training and validation sets
+    train_data <- data_s[train_id, ]
+    test_data <- data_s[test_id, ]
+    
+    # Subset training data by treatment group
+    dat0_train <- subset(train_data, smoking == 0)
+    dat1_train <- subset(train_data, smoking == 1)
+    
+    # Prepare data matrices for XGBoost
+    dtrain1 <- xgb.DMatrix(data = as.matrix(subset(dat1_train, select = c(p1, p0))), label = dat1_train$lead)
+    dtrain0 <- xgb.DMatrix(data = as.matrix(subset(dat0_train, select = c(p1, p0))), label = dat0_train$lead)
+    dtest <- xgb.DMatrix(data = as.matrix(subset(test_data, select = c(p1, p0))))
+    
+    # Train XGBoost model for smoking == 1 (treated group)
+    model1 <- xgboost(params = params, data = dtrain1, nrounds = 50, verbose = 0)
+    mu1[test_id] <- as.vector(predict(model1, newdata = dtest))
+    
+    # Train XGBoost model for smoking == 0 (control group)
+    model0 <- xgboost(params = params, data = dtrain0, nrounds = 50, verbose = 0)
+    mu0[test_id] <- as.vector(predict(model0, newdata = dtest))
+  }
+  
+  # Calculate mean predictions for treated and control groups
+  mu1_hat <- mean(mu1, na.rm = TRUE)
+  mu0_hat <- mean(mu0, na.rm = TRUE)
+  
+  # Estimate treatment effect
+  RI_ols_xgb <- mu1_hat - mu0_hat
+  
+  return(RI_ols_xgb)
+}
+
+# Perform the bootstrap
+res_ri_ols_xgb <- boot(data = data, statistic = boot_ri_ols_xgb, R = 1000)
+# Calculate confidence intervals
+CI_ri_ols_xgb <- boot.ci(res_ri_ols_xgb, type = "basic", conf = 0.95)
+# Calculate bootstrap standard error
+ri_ols_xgb_se <- sd(res_ri_ols_xgb$t)
+# print bootstrap CI
+print(CI_ri_ols_xgb)
+#print bootstrap SE
+print(paste("Bootstrap se:", ri_ols_xgb_se))
+
+#################################################################################
+
+#14. RI_rf_xgb
+
+boot_ri_ran_xgb <- function(data, indices) {
+  # Subset the data using bootstrap indices
+  data_s <- data[indices, ]
+  
+  # Initialize vectors to store predictions
+  mu1 <- mu0 <- rep(NA, nrow(data_s))
+  
+  # Create 5-fold cross-validation splits
+  folds <- createFolds(data_s$lead, k = 5, list = TRUE)
+  
+  for (k in 1:5) {
+    # Training and validation indices
+    train_id <- unlist(folds[-k])
+    test_id <- folds[[k]]
+    
+    # Split data into training and validation sets
+    train_data <- data_s[train_id, ]
+    test_data <- data_s[test_id, ]
+    
+    # Subset training data by treatment group
+    dat0_train <- subset(train_data, smoking == 0)
+    dat1_train <- subset(train_data, smoking == 1)
+    
+    # Prepare data matrices for XGBoost
+    dtrain1 <- xgb.DMatrix(data = as.matrix(subset(dat1_train, select = c(p1ra, p0ra))), label = dat1_train$lead)
+    dtrain0 <- xgb.DMatrix(data = as.matrix(subset(dat0_train, select = c(p1ra, p0ra))), label = dat0_train$lead)
+    dtest <- xgb.DMatrix(data = as.matrix(subset(test_data, select = c(p1ra, p0ra))))
+    
+    # Train XGBoost model for smoking == 1 (treated group)
+    model1 <- xgboost(params = params, data = dtrain1, nrounds = 50, verbose = 0)
+    mu1[test_id] <- as.vector(predict(model1, newdata = dtest))
+    
+    # Train XGBoost model for smoking == 0 (control group)
+    model0 <- xgboost(params = params, data = dtrain0, nrounds = 50, verbose = 0)
+    mu0[test_id] <- as.vector(predict(model0, newdata = dtest))
+  }
+  
+  # Calculate mean predictions for treated and control groups
+  mu1_hat <- mean(mu1, na.rm = TRUE)
+  mu0_hat <- mean(mu0, na.rm = TRUE)
+  
+  # Estimate treatment effect
+  RI_ran_xgb <- mu1_hat - mu0_hat
+  
+  return(RI_ran_xgb)
+}
+
+# Perform the bootstrap
+res_ri_ran_xgb <- boot(data = data, statistic = boot_ri_ran_xgb, R = 1000)
+# Calculate confidence intervals
+CI_ri_ran_xgb <- boot.ci(res_ri_ran_xgb, type = "basic", conf = 0.95)
+# Calculate bootstrap standard error
+ri_ran_xgb_se <- sd(res_ri_ran_xgb$t)
+# print bootstrap CI
+print(CI_ri_ran_xgb)
+#print bootstrap SE
+print(paste("Bootstrap se:", ri_ran_xgb_se))
+
+#################################################################################
+
+#15. RI_xgb_xgb
+
+boot_ri_xgb_xgb <- function(data, indices) {
+  # Subset the data using bootstrap indices
+  data_s <- data[indices, ]
+  
+  # Initialize vectors to store predictions
+  mu1 <- mu0 <- rep(NA, nrow(data_s))
+  
+  # Create 5-fold cross-validation splits
+  folds <- createFolds(data_s$lead, k = 5, list = TRUE)
+  
+  for (k in 1:5) {
+    # Training and validation indices
+    train_id <- unlist(folds[-k])
+    test_id <- folds[[k]]
+    
+    # Split data into training and validation sets
+    train_data <- data_s[train_id, ]
+    test_data <- data_s[test_id, ]
+    
+    # Subset training data by treatment group
+    dat0_train <- subset(train_data, smoking == 0)
+    dat1_train <- subset(train_data, smoking == 1)
+    
+    # Prepare data matrices for XGBoost
+    dtrain1 <- xgb.DMatrix(data = as.matrix(subset(dat1_train, select = c(p1gb, p0gb))), label = dat1_train$lead)
+    dtrain0 <- xgb.DMatrix(data = as.matrix(subset(dat0_train, select = c(p1gb, p0gb))), label = dat0_train$lead)
+    dtest <- xgb.DMatrix(data = as.matrix(subset(test_data, select = c(p1gb, p0gb))))
+    
+    # Train XGBoost model for smoking == 1 (treated group)
+    model1 <- xgboost(params = params, data = dtrain1, nrounds = 50, verbose = 0)
+    mu1[test_id] <- as.vector(predict(model1, newdata = dtest))
+    
+    # Train XGBoost model for smoking == 0 (control group)
+    model0 <- xgboost(params = params, data = dtrain0, nrounds = 50, verbose = 0)
+    mu0[test_id] <- as.vector(predict(model0, newdata = dtest))
+  }
+  
+  # Calculate mean predictions for treated and control groups
+  mu1_hat <- mean(mu1, na.rm = TRUE)
+  mu0_hat <- mean(mu0, na.rm = TRUE)
+  
+  # Estimate treatment effect
+  RI_xgb_xgb <- mu1_hat - mu0_hat
+  
+  return(RI_xgb_xgb)
+}
+
+# Perform the bootstrap
+res_ri_xgb_xgb <- boot(data = data, statistic = boot_ri_xgb_xgb, R = 1000)
+# Calculate bootstrap standard error
+ri_xgb_xgb_se <- sd(res_ri_xgb_xgb$t)
+# Calculate confidence intervals
+CI_ri_xgb_xgb <- boot.ci(res_ri_xgb_xgb, type = "basic", conf = 0.95)
+# print bootstrap CI
+print(CI_ri_xgb_xgb)
+#print bootstrap SE
+print(paste("Bootstrap se:", ri_xgb_xgb_se))
+
+
+#################################################################################
+
+#16. RI_svm_xgb
+
+boot_ri_svm_xgb <- function(data, indices) {
+  # Subset the data using bootstrap indices
+  data_s <- data[indices, ]
+  
+  # Initialize vectors to store predictions
+  mu1 <- mu0 <- rep(NA, nrow(data_s))
+  
+  # Create 5-fold cross-validation splits
+  folds <- createFolds(data_s$lead, k = 5, list = TRUE)
+  
+  for (k in 1:5) {
+    # Training and validation indices
+    train_id <- unlist(folds[-k])
+    test_id <- folds[[k]]
+    
+    # Split data into training and validation sets
+    train_data <- data_s[train_id, ]
+    test_data <- data_s[test_id, ]
+    
+    # Subset training data by treatment group
+    dat0_train <- subset(train_data, smoking == 0)
+    dat1_train <- subset(train_data, smoking == 1)
+    
+    # Prepare data matrices for XGBoost
+    dtrain1 <- xgb.DMatrix(data = as.matrix(subset(dat1_train, select = c(p1svm, p0svm))), label = dat1_train$lead)
+    dtrain0 <- xgb.DMatrix(data = as.matrix(subset(dat0_train, select = c(p1svm, p0svm))), label = dat0_train$lead)
+    dtest <- xgb.DMatrix(data = as.matrix(subset(test_data, select = c(p1svm, p0svm))))
+    
+    # Train XGBoost model for smoking == 1 (treated group)
+    model1 <- xgboost(params = params, data = dtrain1, nrounds = 50, verbose = 0)
+    mu1[test_id] <- as.vector(predict(model1, newdata = dtest))
+    
+    # Train XGBoost model for smoking == 0 (control group)
+    model0 <- xgboost(params = params, data = dtrain0, nrounds = 50, verbose = 0)
+    mu0[test_id] <- as.vector(predict(model0, newdata = dtest))
+  }
+  
+  # Calculate mean predictions for treated and control groups
+  mu1_hat <- mean(mu1, na.rm = TRUE)
+  mu0_hat <- mean(mu0, na.rm = TRUE)
+  
+  # Estimate treatment effect
+  RI_svm_xgb <- mu1_hat - mu0_hat
+  
+  return(RI_svm_xgb)
+}
+
+# Perform the bootstrap
+res_ri_svm_xgb <- boot(data = data, statistic = boot_ri_svm_xgb, R = 1000)
+# Calculate bootstrap standard error
+ri_svm_xgb_se <- sd(res_ri_svm_xgb$t)
+# Calculate confidence intervals
+CI_ri_svm_xgb <- boot.ci(res_ri_svm_xgb, type = "basic", conf = 0.95)
+# print bootstrap CI
+print(CI_ri_svm_xgb)
+#print bootstrap SE
+print(paste("Bootstrap se:", ri_svm_xgb_se))
+
+#################################################################################
+
+#17. RI_ols_svm
+
+boot_ri_ols_svm <- function(data, indices) {
+  data_s <- data[indices, ]  
+  mu1 <- mu0 <- rep(NA, nrow(data_s))  
+  
+  # Create 5-fold cross-validation splits
+  folds <- createFolds(data_s$lead, k = 5, list = TRUE)
+  
+  for (k in 1:5) {
+    # Training and validation indices
+    train_id <- unlist(folds[-k])  
+    test_id <- folds[[k]]         
+    
+    # Split data into training and validation sets
+    train_data <- data_s[train_id, ]
+    test_data <- data_s[test_id, ]
+    
+    # Subset training data by treatment group
+    dat0_train <- subset(train_data, smoking == 0)
+    dat1_train <- subset(train_data, smoking == 1)
+    
+    ### Train SVM models
+    # SVM for treated group (smoking == 1)
+    model1 <- svm(lead ~ p1 + p0, data = dat1_train,
+                  type = "eps-regression",  
+                  kernel = "radial",        
+                  cost = 1,                 
+                  gamma = 0.1)              
+    mu1[test_id] <- predict(model1, newdata = test_data)  
+    
+    # SVM for control group (smoking == 0)
+    model0 <- svm(lead ~ p1 + p0, data = dat0_train,
+                  type = "eps-regression",
+                  kernel = "radial",
+                  cost = 1,
+                  gamma = 0.1)
+    mu0[test_id] <- predict(model0, newdata = test_data)  
+  }
+  
+  # Calculate mean predictions for treated and control groups
+  mu1_hat <- mean(mu1, na.rm = TRUE)
+  mu0_hat <- mean(mu0, na.rm = TRUE)
+  
+  # Estimate treatment effect
+  RI_ols_svm <- mu1_hat - mu0_hat
+  
+  return(RI_ols_svm)
+}
+# Perform the bootstrap
+res_ri_ols_svm <- boot(data = data, statistic = boot_ri_ols_svm, R = 1000)
+# Calculate 95% confidence interval 
+CI_ri_ols_svm <- boot.ci(res_ri_ols_svm, type = "basic", conf = 0.95)
+# Calculate bootstrap SE
+ri_ols_svm_se <- sd(res_ri_ols_svm$t)
+# print bootstrap CI
+print(CI_ri_ols_svm)
+#print bootstrap SE
+print(paste("Bootstrap se:", ri_ols_svm_se))
+
+#################################################################################
+
+#18. RI_rf_svm
+
+boot_ri_ran_svm <- function(data, indices) {
+  data_s <- data[indices, ]  
+  mu1 <- mu0 <- rep(NA, nrow(data_s))  
+  
+  # Create 5-fold cross-validation splits
+  folds <- createFolds(data_s$lead, k = 5, list = TRUE)
+  
+  for (k in 1:5) {
+    # Training and validation indices
+    train_id <- unlist(folds[-k])  
+    test_id <- folds[[k]]         
+    
+    # Split data into training and validation sets
+    train_data <- data_s[train_id, ]
+    test_data <- data_s[test_id, ]
+    
+    # Subset training data by treatment group
+    dat0_train <- subset(train_data, smoking == 0)
+    dat1_train <- subset(train_data, smoking == 1)
+    
+    ### Train SVM models
+    # SVM for treated group (smoking == 1)
+    model1 <- svm(lead ~ p1ra + p0ra, data = dat1_train,
+                  type = "eps-regression",  
+                  kernel = "radial",        
+                  cost = 1,                 
+                  gamma = 0.1)              
+    mu1[test_id] <- predict(model1, newdata = test_data)  
+    
+    # SVM for control group (smoking == 0)
+    model0 <- svm(lead ~ p1ra + p0ra, data = dat0_train,
+                  type = "eps-regression",
+                  kernel = "radial",
+                  cost = 1,
+                  gamma = 0.1)
+    mu0[test_id] <- predict(model0, newdata = test_data)  
+  }
+  
+  # Calculate mean predictions for treated and control groups
+  mu1_hat <- mean(mu1, na.rm = TRUE)
+  mu0_hat <- mean(mu0, na.rm = TRUE)
+  
+  # Estimate treatment effect
+  RI_ran_svm <- mu1_hat - mu0_hat
+  
+  return(RI_ran_svm)
+}
+# Perform the bootstrap
+res_ri_ran_svm <- boot(data = data, statistic = boot_ri_ran_svm, R = 1000)  
+# Calculate 95% confidence interval 
+CI_ri_ran_svm <- boot.ci(res_ri_ran_svm, type = "basic", conf = 0.95)
+# Calculate bootstrap SE
+ri_ran_svm_se <- sd(res_ri_ran_svm$t)
+# print bootstrap CI
+print(CI_ri_ran_svm)
+#print bootstrap SE
+print(paste("Bootstrap se:", ri_ran_svm_se))
+
+
+#################################################################################
+
+#19. RI_xgb_svm
+
+boot_ri_xgb_svm <- function(data, indices) {
+  data_s <- data[indices, ]  
+  mu1 <- mu0 <- rep(NA, nrow(data_s))  
+  
+  # Create 5-fold cross-validation splits
+  folds <- createFolds(data_s$lead, k = 5, list = TRUE)
+  
+  for (k in 1:5) {
+    # Training and validation indices
+    train_id <- unlist(folds[-k])  
+    test_id <- folds[[k]]         
+    
+    # Split data into training and validation sets
+    train_data <- data_s[train_id, ]
+    test_data <- data_s[test_id, ]
+    
+    # Subset training data by treatment group
+    dat0_train <- subset(train_data, smoking == 0)
+    dat1_train <- subset(train_data, smoking == 1)
+    
+    ### Train SVM models
+    # SVM for treated group (smoking == 1)
+    model1 <- svm(lead ~ p1gb + p0gb, data = dat1_train,
+                  type = "eps-regression",  
+                  kernel = "radial",        
+                  cost = 1,                 
+                  gamma = 0.1)              
+    mu1[test_id] <- predict(model1, newdata = test_data)  
+    
+    # SVM for control group (smoking == 0)
+    model0 <- svm(lead ~ p1gb + p0gb, data = dat0_train,
+                  type = "eps-regression",
+                  kernel = "radial",
+                  cost = 1,
+                  gamma = 0.1)
+    mu0[test_id] <- predict(model0, newdata = test_data)  
+  }
+  
+  # Calculate mean predictions for treated and control groups
+  mu1_hat <- mean(mu1, na.rm = TRUE)
+  mu0_hat <- mean(mu0, na.rm = TRUE)
+  
+  # Estimate treatment effect
+  RI_xgb_svm <- mu1_hat - mu0_hat
+  
+  return(RI_xgb_svm)
+}
+
+# Perform the bootstrap
+res_ri_xgb_svm <- boot(data = data, statistic = boot_ri_xgb_svm, R = 1000)
+# Calculate confidence intervals
+CI_ri_xgb_svm <- boot.ci(res_ri_xgb_svm, type = "basic", conf = 0.95)
+# Calculate bootstrap standard error
+ri_xgb_svm_se <- sd(res_ri_xgb_svm$t)
+# print bootstrap CI
+print(CI_ri_xgb_svm)
+#print bootstrap SE
+print(paste("Bootstrap se:", ri_xgb_svm_se))
+
+#################################################################################
+
+#20. RI_svm_svm
+
+boot_ri_svm_svm <- function(data, indices) {
+  data_s <- data[indices, ] 
+  mu1 <- mu0 <- rep(NA, nrow(data_s))  
+  
+  # Create 5-fold cross-validation splits
+  folds <- createFolds(data_s$lead, k = 5, list = TRUE)
+  
+  for (k in 1:5) {
+    # Training and validation indices
+    train_id <- unlist(folds[-k])  
+    test_id <- folds[[k]]         
+    
+    # Split data into training and validation sets
+    train_data <- data_s[train_id, ]
+    test_data <- data_s[test_id, ]
+    
+    # Subset training data by treatment group
+    dat0_train <- subset(train_data, smoking == 0)
+    dat1_train <- subset(train_data, smoking == 1)
+    
+    ### Train SVM models
+    # SVM for treated group (smoking == 1)
+    model1 <- svm(lead ~ p1svm + p0svm, data = dat1_train,
+                  type = "eps-regression",  
+                  kernel = "radial",        
+                  cost = 1,                 
+                  gamma = 0.1)              
+    mu1[test_id] <- predict(model1, newdata = test_data)  
+    
+    # SVM for control group (smoking == 0)
+    model0 <- svm(lead ~ p1svm + p0svm, data = dat0_train,
+                  type = "eps-regression",
+                  kernel = "radial",
+                  cost = 1,
+                  gamma = 0.1)
+    mu0[test_id] <- predict(model0, newdata = test_data)  
+  }
+  
+  # Calculate mean predictions for treated and control groups
+  mu1_hat <- mean(mu1, na.rm = TRUE)
+  mu0_hat <- mean(mu0, na.rm = TRUE)
+  
+  # Estimate treatment effect
+  RI_svm_svm <- mu1_hat - mu0_hat
+  
+  return(RI_svm_svm)
+}
+
+# Perform the bootstrap
+res_ri_svm_svm <- boot(data = data, statistic = boot_ri_svm_svm, R = 1000)
+# Calculate bootstrap standard error
+ri_svm_svm_se <- sd(res_ri_svm_svm$t)
+# Calculate confidence intervals
+CI_ri_svm_svm <- boot.ci(res_ri_svm_svm, type = "basic", conf = 0.95)
+# print bootstrap CI
+print(CI_ri_svm_svm)
+#print bootstrap SE
+print(paste("Bootstrap se:", ri_svm_svm_se))
+
+
+####### TMLE estimators########
+
+#21. TMLE_ols
+
+tmle_ols <- function(data, indices) {
+  boot_data <- data[indices, ]
+  
+  TMLE_mod_ols <- tmle(
+    Y = boot_data$lead,  
+    A = boot_data$smoking, 
+    W = cbind(boot_data$p1, boot_data$p0),  
+    Q.SL.library = c("SL.glm"),
+    g.SL.library = c("SL.glm")
+  )
+  
+  # Extract ATE estimate
+  return(TMLE_mod_ols$estimates$ATE$psi)
+}
+
+
+res_tmle_ols <- boot(data = data, statistic = tmle_ols, R = 1000)
+#bootstrap standard deviation
+tmle_ols_se <- sd(res_tmle_ols$t, na.rm = TRUE)
+#the 95% confidence interval
+CI_tmle_ols <- boot.ci(res_tmle_ols, type = "basic", conf = 0.95)
+# bootstrap results
+list(Standard_Error = tmle_ols_se, Confidence_Interval = CI_tmle_ols)
+
+################################################################################
+#22. TMLE_rf
+
+tmle_ran <- function(data, indices) {
+  boot_data <- data[indices, ]
+  
+  TMLE_mod_ran <- tmle(
+    Y = boot_data$lead,  
+    A = boot_data$smoking, 
+    W = cbind(boot_data$p1ra, boot_data$p0ra),  
+    Q.SL.library = c("SL.glm"),
+    g.SL.library = c("SL.glm")
+  )
+  
+  # Extract ATE estimate
+  return(TMLE_mod_ran$estimates$ATE$psi)
+}
+
+
+res_tmle_ran <- boot(data = data, statistic = tmle_ran, R = 1000)
+#bootstrap standard deviation
+tmle_ran_se <- sd(res_tmle_ran$t, na.rm = TRUE)
+#95% CI
+CI_tmle_ran <- boot.ci(res_tmle_ran, type = "basic", conf = 0.95)
+#results
+list(Standard_Error = tmle_ran_se, Confidence_Interval = CI_tmle_ran)
+
+################################################################################
+#23. TMLE_xgb
+
+tmle_xgb <- function(data, indices) {
+  boot_data <- data[indices, ]
+  
+  TMLE_mod_xgb <- tmle(
+    Y = boot_data$lead,  
+    A = boot_data$smoking, 
+    W = cbind(boot_data$p1gb, boot_data$p0gb),  
+    Q.SL.library = c("SL.glm"),
+    g.SL.library = c("SL.glm")
+  )
+  
+  # Extract ATE estimate
+  return(TMLE_mod_xgb$estimates$ATE$psi)
+}
+
+res_tmle_xgb <- boot(data = data, statistic = tmle_xgb, R = 1000)
+#bootstrap standard deviation
+tmle_xgb_se <- sd(res_tmle_xgb$t, na.rm = TRUE)
+#the 95% confidence interval
+CI_tmle_xgb <- boot.ci(res_tmle_xgb, type = "basic", conf = 0.95)
+#results
+list(Standard_Error = tmle_xgb_se, Confidence_Interval = CI_tmle_xgb)
+
+################################################################################
+#24. TMLE_svm
+
+tmle_svm <- function(data, indices) {
+  boot_data <- data[indices, ]
+  
+  TMLE_mod_svm <- tmle(
+    Y = boot_data$lead,  
+    A = boot_data$smoking, 
+    W = cbind(boot_data$p1svm, boot_data$p0svm),  
+    Q.SL.library = c("SL.glm"),
+    g.SL.library = c("SL.glm")
+  )
+  
+  # Extract ATE estimate
+  return(TMLE_mod_svm$estimates$ATE$psi)
+}
+
+
+res_tmle_svm <- boot(data = data, statistic = tmle_svm, R = 1000)
+#bootstrap standard deviation
+tmle_svm_se <- sd(res_tmle_svm$t, na.rm = TRUE)
+#the 95% confidence interval
+CI_tmle_svm <- boot.ci(res_tmle_svm, type = "basic", conf = 0.95)
+#results
+list(Standard_Error = tmle_svm_se, Confidence_Interval = CI_tmle_svm)
+
+
