@@ -1,0 +1,212 @@
+############################
+# Run file for Simulation  #
+############################
+
+##############
+#Simulation 1#
+##############
+
+source("Simulation_1.R")
+source("Estimators_for_sim1_sim2.R")
+
+N <- 500
+seed <- 121
+datat <- gen.data.1(N,  seed)
+
+ri.A_ols <- est_ri_ols (datat,seed)
+ri.A_ran<- est_ri_ran(datat, seed)
+ri.A_xgb <- est_ri_xgb(datat,seed)
+ri.A_svm<- est_ri_svm(datat,seed)
+
+ri.A_ols_ols <- est_ols_ols(datat,seed)
+ri.A_ran_ols<- est_ran_ols(datat, seed)
+ri.A_xgb_ols <- est_xgb_ols(datat,seed)
+ri.A_svm_ols<- est_svm_ols(datat,seed)
+
+ri.A_ols_ran <- est_ols_ran(datat,seed)
+ri.A_ran_ran<- est_ran_ran(datat, seed)
+ri.A_xgb_ran <- est_xgb_ran(datat,seed)
+ri.A_svm_ran<- est_svm_ran(datat,seed)
+
+ri.A_ols_xgb <- est_ols_xgb (datat,seed)
+ri.A_ran_xgb<- est_ran_xgb(datat, seed)
+ri.A_xgb_xgb <- est_xgb_xgb(datat,seed)
+ri.A_svm_xgb<- est_svm_xgb(datat,seed)
+
+ri.A_ols_svm <- est_ols_svm(datat,seed)
+ri.A_ran_svm<- est_ran_svm(datat, seed)
+ri.A_xgb_svm <- est_xgb_svm(datat,seed)
+ri.A_svm_svm<- est_svm_svm(datat,seed)
+
+tmle.A_ols <- est_ols_tmle (datat,seed)
+tmle.A_ran<- est_ran_tmle(datat, seed)
+tmle.A_xgb <- est_xgb_tmle(datat,seed)
+tmle.A_svm<- est_svm_tmle(datat,seed)
+
+##############
+#Simulation 2#
+##############
+
+source("Simulation_2.R")
+source("Estimators_for_sim1_sim2.R")
+
+N <- 500
+seed <- 221
+datat <- gen.data.2(N,  seed)
+
+ri.B_ols <- est_ri_ols (datat,seed)
+ri.B_ran<- est_ri_ran(datat, seed)
+ri.B_xgb <- est_ri_xgb(datat,seed)
+ri.B_svm<- est_ri_svm(datat,seed)
+
+ri.B_ols_ols <- est_ols_ols(datat,seed)
+ri.B_ran_ols<- est_ran_ols(datat, seed)
+ri.B_xgb_ols <- est_xgb_ols(datat,seed)
+ri.B_svm_ols<- est_svm_ols(datat,seed)
+
+ri.B_ols_ran <- est_ols_ran(datat,seed)
+ri.B_ran_ran<- est_ran_ran(datat, seed)
+ri.B_xgb_ran <- est_xgb_ran(datat,seed)
+ri.B_svm_ran<- est_svm_ran(datat,seed)
+
+ri.B_ols_xgb <- est_ols_xgb (datat,seed)
+ri.B_ran_xgb<- est_ran_xgb(datat, seed)
+ri.B_xgb_xgb <- est_xgb_xgb(datat,seed)
+ri.B_svm_xgb<- est_svm_xgb(datat,seed)
+
+ri.B_ols_svm <- est_ols_svm(datat,seed)
+ri.B_ran_svm<- est_ran_svm(datat, seed)
+ri.B_xgb_svm <- est_xgb_svm(datat,seed)
+ri.B_svm_svm<- est_svm_svm(datat,seed)
+
+tmle.B_ols <- est_ols_tmle (datat,seed)
+tmle.B_ran<- est_ran_tmle(datat, seed)
+tmle.B_xgb <- est_xgb_tmle(datat,seed)
+tmle.B_svm<- est_svm_tmle(datat,seed)
+
+
+##############
+#Simulation 3#
+##############
+
+source("Simulation_3.R")
+source("Estimators_for_sim3.R")
+
+N <- 500
+seed <- 321
+datat <- gen.data.3(N,  seed)
+
+ri.C_ols <- est_ri_ols (datat,seed)
+ri.C_ran<- est_ri_ran(datat, seed)
+ri.C_xgb <- est_ri_xgb(datat,seed)
+ri.C_svm<- est_ri_svm(datat,seed)
+
+ri.C_ols_ols <- est_ols_ols(datat,seed)
+ri.C_ran_ols<- est_ran_ols(datat, seed)
+ri.C_xgb_ols <- est_xgb_ols(datat,seed)
+ri.C_svm_ols<- est_svm_ols(datat,seed)
+
+ri.C_ols_ran <- est_ols_ran(datat,seed)
+ri.C_ran_ran<- est_ran_ran(datat, seed)
+ri.C_xgb_ran <- est_xgb_ran(datat,seed)
+ri.C_svm_ran<- est_svm_ran(datat,seed)
+
+ri.C_ols_xgb <- est_ols_xgb (datat,seed)
+ri.C_ran_xgb<- est_ran_xgb(datat, seed)
+ri.C_xgb_xgb <- est_xgb_xgb(datat,seed)
+ri.C_svm_xgb<- est_svm_xgb(datat,seed)
+
+ri.C_ols_svm <- est_ols_svm(datat,seed)
+ri.C_ran_svm<- est_ran_svm(datat, seed)
+ri.C_xgb_svm <- est_xgb_svm(datat,seed)
+ri.C_svm_svm<- est_svm_svm(datat,seed)
+
+tmle.C_ols <- est_ols_tmle (datat,seed)
+tmle.C_ran<- est_ran_tmle(datat, seed)
+tmle.C_xgb <- est_xgb_tmle(datat,seed)
+tmle.C_svm<- est_svm_tmle(datat,seed)
+
+# Prepare the results for latex table
+
+# Simulation 1
+
+D_ri.A_ols <- round(cbind(mean(ri.A_ols) - 5.5, sd(ri.A_ols), mean((ri.A_ols- 5.5)^2)), digit = 3)
+D_ri.A_ran <- round(cbind(mean(ri.A_ran) - 5.5, sd(ri.A_ran), mean((ri.A_ran - 5.5)^2)), digit = 3)
+D_ri.A_xgb <- round(cbind(mean(ri.A_xgb) - 5.5, sd(ri.A_xgb), mean((ri.A_xgb - 5.5)^2)), digit = 3)
+D_ri.A_svm <- round(cbind(mean(ri.A_svm) - 5.5, sd(ri.A_svm), mean((ri.A_svm - 5.5)^2)), digit = 3)
+D_ri.A_ols_ols <- round(cbind(mean(ri.A_ols_ols) - 5.5, sd(ri.A_ols_ols), mean((ri.A_ols_ols - 5.5)^2)), digit = 3)
+D_ri.A_ran_ols <- round(cbind(mean(ri.A_ran_ols) - 5.5, sd(ri.A_ran_ols), mean((ri.A_ran_ols - 5.5)^2)), digit = 3)
+D_ri.A_xgb_ols <- round(cbind(mean(ri.A_xgb_ols) - 5.5, sd(ri.A_xgb_ols), mean((ri.A_xgb_ols - 5.5)^2)), digit = 3)
+D_ri.A_svm_ols <- round(cbind(mean(ri.A_svm_ols) - 5.5, sd(ri.A_svm_ols), mean((ri.A_svm_ols - 5.5)^2)), digit = 3)
+D_ri.A_ols_ran = round(cbind(mean(ri.A_ols_ran) - 5.5, sd(ri.A_ols_ran), mean((ri.A_ols_ran - 5.5)^2)), digit = 3)
+D_ri.A_ran_ran = round(cbind(mean(ri.A_ran_ran) - 5.5, sd(ri.A_ran_ran), mean((ri.A_ran_ran - 5.5)^2)), digit = 3)
+D_ri.A_xgb_ran = round(cbind(mean(ri.A_xgb_ran) - 5.5, sd(ri.A_xgb_ran), mean((ri.A_xgb_ran - 5.5)^2)), digit = 3)
+D_ri.A_svm_ran = round(cbind(mean(ri.A_svm_ran) - 5.5, sd(ri.A_svm_ran), mean((ri.A_svm_ran - 5.5)^2)), digit = 3)
+D_ri.A_ols_xgb = round(cbind(mean(ri.A_ols_xgb) - 5.5, sd(ri.A_ols_xgb), mean((ri.A_ols_xgb - 5.5)^2)), digit = 3)
+D_ri.A_ran_xgb = round(cbind(mean(ri.A_ran_xgb) - 5.5, sd(ri.A_ran_xgb), mean((ri.A_ran_xgb - 5.5)^2)), digit = 3)
+D_ri.A_xgb_xgb = round(cbind(mean(ri.A_xgb_xgb) - 5.5, sd(ri.A_xgb_xgb), mean((ri.A_xgb_xgb - 5.5)^2)), digit = 3)
+D_ri.A_svm_xgb = round(cbind(mean(ri.A_svm_xgb) - 5.5, sd(ri.A_svm_xgb), mean((ri.A_svm_xgb - 5.5)^2)), digit = 3)
+D_ri.A_ols_svm = round(cbind(mean(ri.A_ols_svm) - 5.5, sd(ri.A_ols_svm), mean((ri.A_ols_svm - 5.5)^2)), digit = 3)
+D_ri.A_ran_svm = round(cbind(mean(ri.A_ran_svm) - 5.5, sd(ri.A_ran_svm), mean((ri.A_ran_svm - 5.5)^2)), digit = 3)
+D_ri.A_xgb_svm = round(cbind(mean(ri.A_xgb_svm) - 5.5, sd(ri.A_xgb_svm), mean((ri.A_xgb_svm - 5.5)^2)), digit = 3)
+D_ri.A_svm_svm = round(cbind(mean(ri.A_svm_svm) - 5.5, sd(ri.A_svm_svm), mean((ri.A_svm_svm - 5.5)^2)), digit = 3)
+D_tmle.A_ols = round(cbind(mean(tmle.A_ols) - 5.5, sd(tmle.A_ols), mean((tmle.A_ols - 5.5)^2)), digit = 3)
+D_tmle.A_ran = round(cbind(mean(tmle.A_ran) - 5.5, sd(tmle.A_ran), mean((tmle.A_ran - 5.5)^2)), digit = 3)
+D_tmle.A_xgb = round(cbind(mean(tmle.A_xgb) - 5.5, sd(tmle.A_xgb), mean((tmle.A_xgb - 5.5)^2)), digit = 3)
+D_tmle.A_svm = round(cbind(mean(tmle.A_svm) - 5.5, sd(tmle.A_svm), mean((tmle.A_svm - 5.5)^2)), digit = 3)
+
+# Simulation 2
+
+D_ri.B_ols <- round(cbind(mean(ri.B_ols) - 1.75, sd(ri.B_ols), mean((ri.B_ols- 1.75)^2)), digit = 3)
+D_ri.B_ran <- round(cbind(mean(ri.B_ran) - 1.75, sd(ri.B_ran), mean((ri.B_ran - 1.75)^2)), digit = 3)
+D_ri.B_xgb <- round(cbind(mean(ri.B_xgb) - 1.75, sd(ri.B_xgb), mean((ri.B_xgb - 1.75)^2)), digit = 3)
+D_ri.B_svm <- round(cbind(mean(ri.B_svm) - 1.75, sd(ri.B_svm), mean((ri.B_svm - 1.75)^2)), digit = 3)
+D_ri.B_ols_ols <- round(cbind(mean(ri.B_ols_ols) - 1.75, sd(ri.B_ols_ols), mean((ri.B_ols_ols - 1.75)^2)), digit = 3)
+D_ri.B_ran_ols <- round(cbind(mean(ri.B_ran_ols) - 1.75, sd(ri.B_ran_ols), mean((ri.B_ran_ols - 1.75)^2)), digit = 3)
+D_ri.B_xgb_ols <- round(cbind(mean(ri.B_xgb_ols) - 1.75, sd(ri.B_xgb_ols), mean((ri.B_xgb_ols - 1.75)^2)), digit = 3)
+D_ri.B_svm_ols <- round(cbind(mean(ri.B_svm_ols) - 1.75, sd(ri.B_svm_ols), mean((ri.B_svm_ols - 1.75)^2)), digit = 3)
+D_ri.B_ols_ran = round(cbind(mean(ri.B_ols_ran) - 1.75, sd(ri.B_ols_ran), mean((ri.B_ols_ran - 1.75)^2)), digit = 3)
+D_ri.B_ran_ran = round(cbind(mean(ri.B_ran_ran) - 1.75, sd(ri.B_ran_ran), mean((ri.B_ran_ran - 1.75)^2)), digit = 3)
+D_ri.B_xgb_ran = round(cbind(mean(ri.B_xgb_ran) - 1.75, sd(ri.B_xgb_ran), mean((ri.B_xgb_ran - 1.75)^2)), digit = 3)
+D_ri.B_svm_ran = round(cbind(mean(ri.B_svm_ran) - 1.75, sd(ri.B_svm_ran), mean((ri.B_svm_ran - 1.75)^2)), digit = 3)
+D_ri.B_ols_xgb = round(cbind(mean(ri.B_ols_xgb) - 1.75, sd(ri.B_ols_xgb), mean((ri.B_ols_xgb - 1.75)^2)), digit = 3)
+D_ri.B_ran_xgb = round(cbind(mean(ri.B_ran_xgb) - 1.75, sd(ri.B_ran_xgb), mean((ri.B_ran_xgb - 1.75)^2)), digit = 3)
+D_ri.B_xgb_xgb = round(cbind(mean(ri.B_xgb_xgb) - 1.75, sd(ri.B_xgb_xgb), mean((ri.B_xgb_xgb - 1.75)^2)), digit = 3)
+D_ri.B_svm_xgb = round(cbind(mean(ri.B_svm_xgb) - 1.75, sd(ri.B_svm_xgb), mean((ri.B_svm_xgb - 1.75)^2)), digit = 3)
+D_ri.B_ols_svm = round(cbind(mean(ri.B_ols_svm) - 1.75, sd(ri.B_ols_svm), mean((ri.B_ols_svm - 1.75)^2)), digit = 3)
+D_ri.B_ran_svm = round(cbind(mean(ri.B_ran_svm) - 1.75, sd(ri.B_ran_svm), mean((ri.B_ran_svm - 1.75)^2)), digit = 3)
+D_ri.B_xgb_svm = round(cbind(mean(ri.B_xgb_svm) - 1.75, sd(ri.B_xgb_svm), mean((ri.B_xgb_svm - 1.75)^2)), digit = 3)
+D_ri.B_svm_svm = round(cbind(mean(ri.B_svm_svm) - 1.75, sd(ri.B_svm_svm), mean((ri.B_svm_svm - 1.75)^2)), digit = 3)
+D_tmle.B_ols = round(cbind(mean(tmle.B_ols) - 1.75, sd(tmle.B_ols), mean((tmle.B_ols - 1.75)^2)), digit = 3)
+D_tmle.B_ran = round(cbind(mean(tmle.B_ran) - 1.75, sd(tmle.B_ran), mean((tmle.B_ran - 1.75)^2)), digit = 3)
+D_tmle.B_xgb = round(cbind(mean(tmle.B_xgb) - 1.75, sd(tmle.B_xgb), mean((tmle.B_xgb - 1.75)^2)), digit = 3)
+D_tmle.B_svm = round(cbind(mean(tmle.B_svm) - 1.75, sd(tmle.B_svm), mean((tmle.B_svm - 1.75)^2)), digit = 3)
+
+# Simulation 3
+
+D_ri.C_ols <- round(cbind(mean(ri.C_ols) - 5.5, sd(ri.C_ols), mean((ri.C_ols- 5.5)^2)), digit = 3)
+D_ri.C_ran <- round(cbind(mean(ri.C_ran) - 5.5, sd(ri.C_ran), mean((ri.C_ran - 5.5)^2)), digit = 3)
+D_ri.C_xgb <- round(cbind(mean(ri.C_xgb) - 5.5, sd(ri.C_xgb), mean((ri.C_xgb - 5.5)^2)), digit = 3)
+D_ri.C_svm <- round(cbind(mean(ri.C_svm) - 5.5, sd(ri.C_svm), mean((ri.C_svm - 5.5)^2)), digit = 3)
+D_ri.C_ols_ols <- round(cbind(mean(ri.C_ols_ols) - 5.5, sd(ri.C_ols_ols), mean((ri.C_ols_ols - 5.5)^2)), digit = 3)
+D_ri.C_ran_ols <- round(cbind(mean(ri.C_ran_ols) - 5.5, sd(ri.C_ran_ols), mean((ri.C_ran_ols - 5.5)^2)), digit = 3)
+D_ri.C_xgb_ols <- round(cbind(mean(ri.C_xgb_ols) - 5.5, sd(ri.C_xgb_ols), mean((ri.C_xgb_ols - 5.5)^2)), digit = 3)
+D_ri.C_svm_ols <- round(cbind(mean(ri.C_svm_ols) - 5.5, sd(ri.C_svm_ols), mean((ri.C_svm_ols - 5.5)^2)), digit = 3)
+D_ri.C_ols_ran = round(cbind(mean(ri.C_ols_ran) - 5.5, sd(ri.C_ols_ran), mean((ri.C_ols_ran - 5.5)^2)), digit = 3)
+D_ri.C_ran_ran = round(cbind(mean(ri.C_ran_ran) - 5.5, sd(ri.C_ran_ran), mean((ri.C_ran_ran - 5.5)^2)), digit = 3)
+D_ri.C_xgb_ran = round(cbind(mean(ri.C_xgb_ran) - 5.5, sd(ri.C_xgb_ran), mean((ri.C_xgb_ran - 5.5)^2)), digit = 3)
+D_ri.C_svm_ran = round(cbind(mean(ri.C_svm_ran) - 5.5, sd(ri.C_svm_ran), mean((ri.C_svm_ran - 5.5)^2)), digit = 3)
+D_ri.C_ols_xgb = round(cbind(mean(ri.C_ols_xgb) - 5.5, sd(ri.C_ols_xgb), mean((ri.C_ols_xgb - 5.5)^2)), digit = 3)
+D_ri.C_ran_xgb = round(cbind(mean(ri.C_ran_xgb) - 5.5, sd(ri.C_ran_xgb), mean((ri.C_ran_xgb - 5.5)^2)), digit = 3)
+D_ri.C_xgb_xgb = round(cbind(mean(ri.C_xgb_xgb) - 5.5, sd(ri.C_xgb_xgb), mean((ri.C_xgb_xgb - 5.5)^2)), digit = 3)
+D_ri.C_svm_xgb = round(cbind(mean(ri.C_svm_xgb) - 5.5, sd(ri.C_svm_xgb), mean((ri.C_svm_xgb - 5.5)^2)), digit = 3)
+D_ri.C_ols_svm = round(cbind(mean(ri.C_ols_svm) - 5.5, sd(ri.C_ols_svm), mean((ri.C_ols_svm - 5.5)^2)), digit = 3)
+D_ri.C_ran_svm = round(cbind(mean(ri.C_ran_svm) - 5.5, sd(ri.C_ran_svm), mean((ri.C_ran_svm - 5.5)^2)), digit = 3)
+D_ri.C_xgb_svm = round(cbind(mean(ri.C_xgb_svm) - 5.5, sd(ri.C_xgb_svm), mean((ri.C_xgb_svm - 5.5)^2)), digit = 3)
+D_ri.C_svm_svm = round(cbind(mean(ri.C_svm_svm) - 5.5, sd(ri.C_svm_svm), mean((ri.C_svm_svm - 5.5)^2)), digit = 3)
+D_tmle.C_ols = round(cbind(mean(tmle.C_ols) - 5.5, sd(tmle.C_ols), mean((tmle.C_ols - 5.5)^2)), digit = 3)
+D_tmle.C_ran = round(cbind(mean(tmle.C_ran) - 5.5, sd(tmle.C_ran), mean((tmle.C_ran - 5.5)^2)), digit = 3)
+D_tmle.C_xgb = round(cbind(mean(tmle.C_xgb) - 5.5, sd(tmle.C_xgb), mean((tmle.C_xgb - 5.5)^2)), digit = 3)
+D_tmle.C_svm = round(cbind(mean(tmle.C_svm) - 5.5, sd(tmle.C_svm), mean((tmle.C_svm - 5.5)^2)), digit = 3)
+
+
