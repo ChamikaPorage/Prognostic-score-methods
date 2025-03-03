@@ -41,13 +41,13 @@ gen.data.2 <- function(N, seed) {
     data0 <- subset(dat, Tr == 0)
     data1 <- subset(dat, Tr == 1)
     
-    ###linear model
+    ###Linear model
     
     # Linear model using data1
     pg1 <- lm(Y~ ., data= subset(data1, select = - Tr))
     p1<- predict(pg1,newdata = subset(dat, select = -c(Y, Tr)))           
     
-    # Model using data0
+    # Linear model using data0
     pg0 <- lm(Y~ ., data= subset(data0, select = - Tr))
     p0 <- predict(pg0, newdata = subset(dat, select = -c(Y, Tr)))
     
@@ -64,13 +64,10 @@ gen.data.2 <- function(N, seed) {
       train_idx <- unlist(folds[-k])  # Use all folds except k
       test_idx <- folds[[k]]         # Hold out fold k
       
-      # Separate treatment groups in training data
       train_data <- dat[train_idx, ]
       test_data <- dat[test_idx, ]
       data0_train <- subset(train_data, Tr == 0)
       data1_train <- subset(train_data, Tr == 1)
-      
-      # Predict on the validation fold for causal effect estimation
       
       ### Random Forest (ranger)
       
