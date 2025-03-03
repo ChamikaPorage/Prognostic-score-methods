@@ -1,0 +1,917 @@
+##############################
+# ESTIMATORS		             #
+##############################
+# Load necessary libraries
+library(boot)
+library(doParallel)
+library(foreach)
+library(tmle)
+
+# Setup parallel backend
+cl <- makePSOCKcluster(2)  
+registerDoParallel(cl)
+
+###### Regression Imputation prognostic score estimators (RI) ######
+
+#1. ols regression imputation 
+est_ri_ols <- function(data, seed) {
+  set.seed(seed)
+  ri_ols <- numeric(length(data))
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    ri_ols[i] <- mean(datat$p1) - mean(datat$p0)
+  }
+  return(ri_ols)
+}
+
+#2.  random forest regression imputation
+est_ri_ran <- function(data, seed) {
+  set.seed(seed)
+  ri_ran <- numeric(length(data))
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    ri_ran[i] <- mean(datat$p1ra) - mean(datat$p0ra)
+  }
+  return(ri_ran)
+}
+
+#3. xgboost regression imputation
+est_ri_xgb <- function(data, seed) {
+  set.seed(seed)
+  ri_xgb <- numeric(length(data))
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    ri_xgb[i] <- mean(datat$p1gb) - mean(datat$p0gb)
+  }
+  return(ri_xgb)
+}
+
+#4. svm regression imputation
+est_ri_svm <- function(data, seed) {
+  set.seed(seed)
+  ri_svm <- numeric(length(data))
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    ri_svm[i] <- mean(datat$p1svm) - mean(datat$p0svm)
+  }
+  return(ri_svm)
+}
+
+###### The Full Prognostic Score Estimator ######
+
+###ols regression imputation
+
+#5. step 1: ols and step 2: ols
+
+est_ols_ols <- function(data, seed) {
+  set.seed(seed)
+  l_ols <- numeric(length(data))
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    dat0 <- subset(datat, Tr == 0)
+    dat1 <- subset(datat, Tr == 1)
+    
+    # Model for dat1
+    model1 <- lm(Y ~ p1 + p0, data = dat1)
+    
+    # Predict on datat
+    pred1 <- predict(model1, newdata = datat)
+    
+    # mean of the predictions for model1
+    mu1 <- mean(pred1)
+    
+    # Model for dat0
+    model0 <- lm(Y ~ p1 + p0, data = dat0)
+    
+    # Predict on datat
+    pred0 <- predict(model0, newdata = datat)
+    
+    # the mean of the predictions for model0
+    mu0 <- mean(pred0)
+    
+    l_ols[i] <- mu1 - mu0
+  }
+  return(l_ols)
+}
+
+#6. step 1: RF from ranger and step 2: ols
+est_ran_ols <- function(data, seed) {
+  set.seed(seed)
+  l_ran <- numeric(length(data))
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    dat0 <- subset(datat, Tr == 0)
+    dat1 <- subset(datat, Tr == 1)
+    
+    # Model for dat1
+    model1 <- lm(Y ~ p1ra + p0ra, data = dat1)
+    
+    # Predict on datat
+    pred1 <- predict(model1, newdata = datat)
+    
+    # mean of the predictions for model1
+    mu1 <- mean(pred1)
+    
+    # Model for dat0
+    model0 <- lm(Y ~ p1ra + p0ra, data = dat0)
+    
+    # Predict on datat
+    pred0 <- predict(model0, newdata = datat)
+    
+    # mean of the predictions for model0
+    mu0 <- mean(pred0)
+    
+    l_ran[i] <- mu1 - mu0
+  }
+  return(l_ran)
+}
+
+#7. step 1: xgboost  and step 2: ols
+est_xgb_ols <- function(data, seed) {
+  set.seed(seed)
+  l_xgb <- numeric(length(data))
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    dat0 <- subset(datat, Tr == 0)
+    dat1 <- subset(datat, Tr == 1)
+    
+    # Model for dat1
+    model1 <- lm(Y ~ p1gb + p0gb, data = dat1)
+    
+    # Predict on datat
+    pred1 <- predict(model1, newdata = datat)
+    
+    # mean of the predictions for model1
+    mu1 <- mean(pred1)
+    
+    # Model for dat0
+    model0 <- lm(Y ~ p1gb + p0gb, data = dat0)
+    
+    # Predict on datat
+    pred0 <- predict(model0, newdata = datat)
+    
+    # mean of the predictions for model0
+    mu0 <- mean(pred0)
+    
+    l_xgb[i] <- mu1 - mu0
+  }
+  return(l_xgb)
+}
+
+#8. step 1: svm  and step 2: ols
+
+est_svm_ols <- function(data, seed) {
+  set.seed(seed)
+  l_svm <- numeric(length(data))
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    dat0 <- subset(datat, Tr == 0)
+    dat1 <- subset(datat, Tr == 1)
+    
+    # Model for dat1
+    model1 <- lm(Y ~ p1svm + p0svm, data = dat1)
+    
+    # Predict on datat
+    pred1 <- predict(model1, newdata = datat)
+    
+    # mean of the predictions for model1
+    mu1 <- mean(pred1)
+    
+    # Model for dat0
+    model0 <- lm(Y ~ p1svm + p0svm, data = dat0)
+    
+    # Predict on datat
+    pred0 <- predict(model0, newdata = datat)
+    
+    # mean of the predictions for model0
+    mu0 <- mean(pred0)
+    
+    l_svm[i] <- mu1 - mu0
+  }
+  return(l_svm)
+}
+
+###random forest regression imputation
+
+#9. step 1: ols  and step 2: ranger
+est_ols_ran <- function(data, seed) {
+  set.seed(seed)
+  ols_ran <- numeric(length(data))
+  
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Initialize predictions
+    mu1 <- mu0 <- rep(NA, nrow(datat))
+    
+    # Create 5-fold cross-validation splits
+    folds <- createFolds(datat$Y, k = 5, list = TRUE)
+    
+    for (k in 1:5) {
+      # Training and validation indices
+      train_idx <- unlist(folds[-k]) 
+      test_idx <- folds[[k]]         
+      
+      # Split data into training and validation sets
+      train_data <- datat[train_idx, ]
+      test_data <- datat[test_idx, ]
+      
+      # Split training data by treatment group
+      dat0_train <- subset(train_data, Tr == 0)
+      dat1_train <- subset(train_data, Tr == 1)
+      
+      # Train models for Tr == 1 (treated group)
+      model1 <- ranger(Y ~ p1 + p0, data = dat1_train, num.trees = 300, mtry = 2, min.node.size = 5)
+      mu1[test_idx] <- predict(model1, data = test_data)$predictions
+      
+      # Train models for Tr == 0 (control group)
+      model0 <- ranger(Y ~ p1 + p0, data = dat0_train, num.trees = 300, mtry = 2, min.node.size = 5)
+      mu0[test_idx] <- predict(model0, data = test_data)$predictions
+    }
+    
+    # Estimate treatment effects using mean of predictions
+    
+    ols_ran[i] <- mean(mu1) - mean(mu0)
+  }
+  return(ols_ran)
+}
+
+#10. step 1: ran  and step 2: ran
+
+est_ran_ran <- function(data, seed) {
+  set.seed(seed)
+  ran_ran <- numeric(length(data))
+  
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Initialize predictions
+    mu1 <- mu0 <- rep(NA, nrow(datat))
+    
+    # Create 5-fold cross-validation splits
+    folds <- createFolds(datat$Y, k = 5, list = TRUE)
+    
+    for (k in 1:5) {
+      # Training and validation indices
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
+      
+      # Split data into training and validation sets
+      train_data <- datat[train_idx, ]
+      test_data <- datat[test_idx, ]
+      
+      # Split training data by treatment group
+      dat0_train <- subset(train_data, Tr == 0)
+      dat1_train <- subset(train_data, Tr == 1)
+      
+      # Train models for Tr == 1 (treated group)
+      model1 <- ranger(Y ~ p1ra + p0ra, data = dat1_train, num.trees = 300, mtry = 2, min.node.size = 5)
+      mu1[test_idx] <- predict(model1, data = test_data)$predictions
+      
+      # Train models for Tr == 0 (control group)
+      model0 <- ranger(Y ~ p1ra + p0ra, data = dat0_train, num.trees = 300, mtry = 2, min.node.size = 5)
+      mu0[test_idx] <- predict(model0, data = test_data)$predictions
+    }
+    
+    # Estimate treatment effect for the dataset
+    ran_ran[i] <- mean(mu1) - mean(mu0)
+  }
+  
+  return(ran_ran)
+}
+
+#11. step 1: xgboost  and step 2: ran
+est_xgb_ran <- function(data, seed) {
+  set.seed(seed)
+  xgb_ran <- numeric(length(data))
+  
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Initialize predictions
+    mu1 <- mu0 <- rep(NA, nrow(datat))
+    
+    # Create 5-fold cross-validation splits
+    folds <- createFolds(datat$Y, k = 5, list = TRUE)
+    
+    for (k in 1:5) {
+      # Training and validation indices
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
+      
+      # Split data into training and validation sets
+      train_data <- datat[train_idx, ]
+      test_data <- datat[test_idx, ]
+      
+      # Split training data by treatment group
+      dat0_train <- subset(train_data, Tr == 0)
+      dat1_train <- subset(train_data, Tr == 1)
+      
+      # Train models for Tr == 1 (treated group)
+      model1 <- ranger(Y ~ p1gb + p0gb, data = dat1_train, num.trees = 300, mtry = 2, min.node.size = 5)
+      mu1[test_idx] <- predict(model1, data = test_data)$predictions
+      
+      # Train models for Tr == 0 (control group)
+      model0 <- ranger(Y ~ p1gb + p0gb, data = dat0_train, num.trees = 300, mtry = 2, min.node.size = 5)
+      mu0[test_idx] <- predict(model0, data = test_data)$predictions
+    }
+    # Estimate treatment effects using mean of predictions
+    
+    xgb_ran[i] <- mean(mu1) - mean(mu0)
+  }
+  return(xgb_ran)
+}
+
+#12. step 1: svm  and step 2: ranger
+est_svm_ran <- function(data, seed) {
+  set.seed(seed)
+  svm_ran <- numeric(length(data))
+  
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Initialize predictions
+    mu1 <- mu0 <- rep(NA, nrow(datat))
+    
+    # Create 5-fold cross-validation splits
+    folds <- createFolds(datat$Y, k = 5, list = TRUE)
+    
+    for (k in 1:5) {
+      # Training and validation indices
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
+      
+      # Split data into training and validation sets
+      train_data <- datat[train_idx, ]
+      test_data <- datat[test_idx, ]
+      
+      # Split training data by treatment group
+      dat0_train <- subset(train_data, Tr == 0)
+      dat1_train <- subset(train_data, Tr == 1)
+      
+      # Train models for Tr == 1 (treated group)
+      model1 <- ranger(Y ~ p1svm + p0svm, data = dat1_train, num.trees = 300, mtry = 2, min.node.size = 5)
+      mu1[test_idx] <- predict(model1, data = test_data)$predictions
+      
+      # Train models for Tr == 0 (control group)
+      model0 <- ranger(Y ~ p1svm + p0svm, data = dat0_train, num.trees = 300, mtry = 2, min.node.size = 5)
+      mu0[test_idx] <- predict(model0, data = test_data)$predictions
+    }
+    # Estimate treatment effects using mean of predictions
+    
+    svm_ran[i] <- mean(mu1) - mean(mu0)
+  }
+  return(svm_ran)
+}
+
+#13. step 1: ols  and step 2: xgboost
+
+est_ols_xgb <- function(data, seed) {
+  set.seed(seed)
+  ols_xgb <- numeric(length(data))
+  
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Initialize cross-fitted predictions
+    mu1 <- mu0 <- numeric(nrow(datat))
+    
+    # 5-fold cross-splitting
+    folds <- createFolds(datat$Y, k = 5, list = TRUE)
+    
+    for (k in 1:5) {
+      # Training and validation indices
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
+      
+      # Subset training and test data
+      train_data <- datat[train_idx, ]
+      test_data <- datat[test_idx, ]
+      
+      # Split training data into treatment groups
+      data0_train <- subset(train_data, Tr == 0)
+      data1_train <- subset(train_data, Tr == 1)
+      
+      # Prepare XGBoost data
+      dtrain1 <- xgb.DMatrix(data = as.matrix(data1_train[, c("p1", "p0")]), label = data1_train$Y)
+      dtrain0 <- xgb.DMatrix(data = as.matrix(data0_train[, c("p1", "p0")]), label = data0_train$Y)
+      dtest <- xgb.DMatrix(data = as.matrix(test_data[, c("p1", "p0")]))
+      
+      # XGBoost Parameters
+      params <- list(
+        booster = "gbtree",
+        objective = "reg:squarederror",
+        eta = 0.05,
+        max_depth = 6,
+        min_child_weight = 5,
+        subsample = 0.8,
+        colsample_bytree = 0.8
+      )
+      
+      # Train and predict for Tr == 1 (treated group)
+      model_xgb1 <- xgboost(params = params, data = dtrain1, nrounds = 50, verbose = 0)
+      mu1[test_idx] <- predict(model_xgb1, dtest)
+      
+      # Train and predict for Tr == 0 (control group)
+      model_xgb0 <- xgboost(params = params, data = dtrain0, nrounds = 50, verbose = 0)
+      mu0[test_idx] <- predict(model_xgb0, dtest)
+    }
+    
+    # Estimate treatment effect for dataset i
+    ols_xgb[i] <- mean(mu1) - mean(mu0)
+  }
+  
+  return(ols_xgb)
+}
+
+#14. step 1: ranger  and step 2: xgboost
+est_ran_xgb <- function(data, seed) {
+  set.seed(seed)
+  ran_xgb <- numeric(length(data))
+  
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Initialize cross-fitted predictions
+    mu1 <- mu0 <- numeric(nrow(datat))
+    
+    # 5-fold cross-splitting
+    folds <- createFolds(datat$Y, k = 5, list = TRUE)
+    
+    for (k in 1:5) {
+      # Training and validation indices
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
+      
+      # Subset training and test data
+      train_data <- datat[train_idx, ]
+      test_data <- datat[test_idx, ]
+      
+      # Split training data into treatment groups
+      data0_train <- subset(train_data, Tr == 0)
+      data1_train <- subset(train_data, Tr == 1)
+      
+      # Prepare XGBoost data
+      dtrain1 <- xgb.DMatrix(data = as.matrix(data1_train[, c("p1ra", "p0ra")]), label = data1_train$Y)
+      dtrain0 <- xgb.DMatrix(data = as.matrix(data0_train[, c("p1ra", "p0ra")]), label = data0_train$Y)
+      dtest <- xgb.DMatrix(data = as.matrix(test_data[, c("p1ra", "p0ra")]))
+      
+      # XGBoost Parameters
+      params <- list(
+        booster = "gbtree",
+        objective = "reg:squarederror",
+        eta = 0.05,
+        max_depth = 6,
+        min_child_weight = 5,
+        subsample = 0.8,
+        colsample_bytree = 0.8
+      )
+      
+      # Train and predict for Tr == 1 (treated group)
+      model_xgb1 <- xgboost(params = params, data = dtrain1, nrounds = 50, verbose = 0)
+      mu1[test_idx] <- predict(model_xgb1, dtest)
+      
+      # Train and predict for Tr == 0 (control group)
+      model_xgb0 <- xgboost(params = params, data = dtrain0, nrounds = 50, verbose = 0)
+      mu0[test_idx] <- predict(model_xgb0, dtest)
+    }
+    
+    # Estimate treatment effects using mean of predictions
+    ran_xgb[i] <- mean(mu1) - mean(mu0)
+  }
+  return(ran_xgb)
+}
+
+#15. step 1: xgboost  and step 2: xgboost
+est_xgb_xgb <- function(data, seed) {
+  set.seed(seed)
+  xgb_xgb <- numeric(length(data))
+  
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Initialize cross-fitted predictions
+    mu1 <- mu0 <- numeric(nrow(datat))
+    
+    # 5-fold cross-splitting
+    folds <- createFolds(datat$Y, k = 5, list = TRUE)
+    
+    for (k in 1:5) {
+      # Training and validation indices
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
+      
+      # Subset training and test data
+      train_data <- datat[train_idx, ]
+      test_data <- datat[test_idx, ]
+      
+      # Split training data into treatment groups
+      data0_train <- subset(train_data, Tr == 0)
+      data1_train <- subset(train_data, Tr == 1)
+      
+      # Prepare XGBoost data
+      dtrain1 <- xgb.DMatrix(data = as.matrix(data1_train[, c("p1gb", "p0gb")]), label = data1_train$Y)
+      dtrain0 <- xgb.DMatrix(data = as.matrix(data0_train[, c("p1gb", "p0gb")]), label = data0_train$Y)
+      dtest <- xgb.DMatrix(data = as.matrix(test_data[, c("p1gb", "p0gb")]))
+      
+      # XGBoost Parameters
+      params <- list(
+        booster = "gbtree",
+        objective = "reg:squarederror",
+        eta = 0.05,
+        max_depth = 6,
+        min_child_weight = 5,
+        subsample = 0.8,
+        colsample_bytree = 0.8
+      )
+      
+      # Train and predict for Tr == 1 (treated group)
+      model_xgb1 <- xgboost(params = params, data = dtrain1, nrounds = 50, verbose = 0)
+      mu1[test_idx] <- predict(model_xgb1, dtest)
+      
+      # Train and predict for Tr == 0 (control group)
+      model_xgb0 <- xgboost(params = params, data = dtrain0, nrounds = 50, verbose = 0)
+      mu0[test_idx] <- predict(model_xgb0, dtest)
+    }
+    # Estimate treatment effects using mean of predictions
+    xgb_xgb[i] <- mean(mu1) - mean(mu0)
+  }
+  return(xgb_xgb)
+}
+
+#16. step 1: svm  and step 2: xgboost
+est_svm_xgb <- function(data, seed) {
+  set.seed(seed)
+  svm_xgb <- numeric(length(data))
+  
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Initialize cross-fitted predictions
+    mu1 <- mu0 <- numeric(nrow(datat))
+    
+    # 5-fold cross-splitting
+    folds <- createFolds(datat$Y, k = 5, list = TRUE)
+    
+    for (k in 1:5) {
+      # Training and validation indices
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
+      
+      # Subset training and test data
+      train_data <- datat[train_idx, ]
+      test_data <- datat[test_idx, ]
+      
+      # Split training data into treatment groups
+      data0_train <- subset(train_data, Tr == 0)
+      data1_train <- subset(train_data, Tr == 1)
+      
+      # Prepare XGBoost data
+      dtrain1 <- xgb.DMatrix(data = as.matrix(data1_train[, c("p1svm", "p0svm")]), label = data1_train$Y)
+      dtrain0 <- xgb.DMatrix(data = as.matrix(data0_train[, c("p1svm", "p0svm")]), label = data0_train$Y)
+      dtest <- xgb.DMatrix(data = as.matrix(test_data[, c("p1svm", "p0svm")]))
+      
+      # XGBoost Parameters
+      params <- list(
+        booster = "gbtree",
+        objective = "reg:squarederror",
+        eta = 0.05,
+        max_depth = 6,
+        min_child_weight = 5,
+        subsample = 0.8,
+        colsample_bytree = 0.8
+      )
+      
+      # Train and predict for Tr == 1 (treated group)
+      model_xgb1 <- xgboost(params = params, data = dtrain1, nrounds = 50, verbose = 0)
+      mu1[test_idx] <- predict(model_xgb1, dtest)
+      
+      # Train and predict for Tr == 0 (control group)
+      model_xgb0 <- xgboost(params = params, data = dtrain0, nrounds = 50, verbose = 0)
+      mu0[test_idx] <- predict(model_xgb0, dtest)
+    }
+    
+    # Estimate treatment effects using mean of predictions
+    svm_xgb[i] <- mean(mu1) - mean(mu0)
+  }
+  return(svm_xgb)
+}
+
+#17. step 1: ols  and step 2: svm
+
+est_ols_svm <- function(data, seed) {
+  set.seed(seed)
+  ols_svm <- numeric(length(data))
+  
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Initialize cross-fitted predictions
+    mu1 <- mu0 <- numeric(nrow(datat))
+    
+    # 5-fold cross-splitting
+    folds <- createFolds(datat$Y, k = 5, list = TRUE)
+    
+    for (k in 1:5) {
+      # Training and validation indices
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
+      
+      # Subset training and test data
+      train_data <- datat[train_idx, ]
+      test_data <- datat[test_idx, ]
+      
+      # Split training data into treatment groups
+      data0_train <- subset(train_data, Tr == 0)
+      data1_train <- subset(train_data, Tr == 1)
+      
+      ### SVM for Treated Group (Tr == 1)
+      # Train SVM on treated group
+      model_svm_1 <- svm(Y ~ p1 + p0, data = data1_train,
+                         type = "eps-regression",
+                         kernel = "radial",
+                         cost = 1,
+                         gamma = 0.1)
+      # Predict on validation set
+      mu1[test_idx] <- predict(model_svm_1, newdata = test_data)
+      
+      ### SVM for Control Group (Tr == 0)
+      # Train SVM on control group
+      model_svm_0 <- svm(Y ~ p1 + p0, data = data0_train,
+                         type = "eps-regression",
+                         kernel = "radial",
+                         cost = 1,
+                         gamma = 0.1)
+      # Predict on validation set
+      mu0[test_idx] <- predict(model_svm_0, newdata = test_data)
+    }
+    
+    # Estimate treatment effects using mean of predictions
+    ols_svm[i] <- mean(mu1) - mean(mu0)
+  }
+  return(ols_svm)
+}
+
+#18. step 1: ranger  and step 2: svm
+
+est_ran_svm <- function(data, seed) {
+  set.seed(seed)
+  ran_svm <- numeric(length(data))
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Initialize cross-fitted predictions
+    mu1 <- mu0 <- numeric(nrow(datat))
+    
+    # 5-fold cross-splitting
+    folds <- createFolds(datat$Y, k = 5, list = TRUE)
+    
+    for (k in 1:5) {
+      # Training and validation indices
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
+      
+      # Subset training and test data
+      train_data <- datat[train_idx, ]
+      test_data <- datat[test_idx, ]
+      
+      # Split training data into treatment groups
+      data0_train <- subset(train_data, Tr == 0)
+      data1_train <- subset(train_data, Tr == 1)
+      
+      ### SVM for Treated Group (Tr == 1)
+      # Train SVM on treated group
+      model_svm_1 <- svm(Y ~ p1ra + p0ra, data = data1_train,
+                         type = "eps-regression",
+                         kernel = "radial",
+                         cost = 1,
+                         gamma = 0.1)
+      # Predict on validation set
+      mu1[test_idx] <- predict(model_svm_1, newdata = test_data)
+      
+      ### SVM for Control Group (Tr == 0)
+      # Train SVM on control group
+      model_svm_0 <- svm(Y ~ p1ra + p0ra, data = data0_train,
+                         type = "eps-regression",
+                         kernel = "radial",
+                         cost = 1,
+                         gamma = 0.1)
+      # Predict on validation set
+      mu0[test_idx] <- predict(model_svm_0, newdata = test_data)
+    }
+    # Estimate treatment effects using mean of predictions
+    ran_svm[i] <- mean(mu1) - mean(mu0)
+  }
+  return(ran_svm)
+}
+
+#19. step 1: xgboost  and step 2: svm
+
+est_xgb_svm <- function(data, seed) {
+  set.seed(seed)
+  xgb_svm <- numeric(length(data))
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Initialize cross-fitted predictions
+    mu1 <- mu0 <- numeric(nrow(datat))
+    
+    # 5-fold cross-splitting
+    folds <- createFolds(datat$Y, k = 5, list = TRUE)
+    
+    for (k in 1:5) {
+      # Training and validation indices
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
+      
+      # Subset training and test data
+      train_data <- datat[train_idx, ]
+      test_data <- datat[test_idx, ]
+      
+      # Split training data into treatment groups
+      data0_train <- subset(train_data, Tr == 0)
+      data1_train <- subset(train_data, Tr == 1)
+      
+      ### SVM for Treated Group (Tr == 1)
+      # Train SVM on treated group
+      model_svm_1 <- svm(Y ~ p1gb + p0gb, data = data1_train,
+                         type = "eps-regression",
+                         kernel = "radial",
+                         cost = 1,
+                         gamma = 0.1)
+      # Predict on validation set
+      mu1[test_idx] <- predict(model_svm_1, newdata = test_data)
+      
+      ### SVM for Control Group (Tr == 0)
+      # Train SVM on control group
+      model_svm_0 <- svm(Y ~ p1gb + p0gb, data = data0_train,
+                         type = "eps-regression",
+                         kernel = "radial",
+                         cost = 1,
+                         gamma = 0.1)
+      # Predict on validation set
+      mu0[test_idx] <- predict(model_svm_0, newdata = test_data)
+    }
+    xgb_svm[i] <- mean(mu1) - mean(mu0)
+  }
+  return(xgb_svm)
+}
+
+#20. step 1: svm  and step 2: svm
+
+est_svm_svm <- function(data, seed) {
+  set.seed(seed)
+  svm_svm <- numeric(length(data))
+  
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Initialize cross-fitted predictions
+    mu1 <- mu0 <- numeric(nrow(datat))
+    
+    # 5-fold cross-splitting
+    folds <- createFolds(datat$Y, k = 5, list = TRUE)
+    
+    for (k in 1:5) {
+      # Training and validation indices
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
+      
+      # Subset training and test data
+      train_data <- datat[train_idx, ]
+      test_data <- datat[test_idx, ]
+      
+      # Split training data into treatment groups
+      data0_train <- subset(train_data, Tr == 0)
+      data1_train <- subset(train_data, Tr == 1)
+      
+      ### SVM for Treated Group (Tr == 1)
+      # Train SVM on treated group
+      model_svm_1 <- svm(Y ~ p1svm + p0svm, data = data1_train,
+                         type = "eps-regression",
+                         kernel = "radial",
+                         cost = 1,
+                         gamma = 0.1)
+      # Predict on validation set
+      mu1[test_idx] <- predict(model_svm_1, newdata = test_data)
+      
+      ### SVM for Control Group (Tr == 0)
+      # Train SVM on control group
+      model_svm_0 <- svm(Y ~ p1svm + p0svm, data = data0_train,
+                         type = "eps-regression",
+                         kernel = "radial",
+                         cost = 1,
+                         gamma = 0.1)
+      # Predict on validation set
+      mu0[test_idx] <- predict(model_svm_0, newdata = test_data)
+    }
+    svm_svm[i] <- mean(mu1) - mean(mu0)
+  }
+  return(svm_svm)
+}
+
+#####TMLE estimators#####
+
+#21. step 1: ols  and step 2:tmle
+
+est_ols_tmle <- function(data, seed) {
+  set.seed(seed)
+  ols_tmle <- numeric(length(data))  
+  
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Implement TMLE
+    mot_glm <- tmle(
+      Y = datat$Y,
+      A = datat$Tr,
+      W = cbind(datat$p1, datat$p0),
+      Q.SL.library = "SL.glm",  
+      g.SL.library = "SL.glm"  
+    )
+    
+    # extract the ATE estimate 
+    ols_tmle[i] <- mot_glm$estimates$ATE$psi
+  }
+  
+  return(ols_tmle)
+}
+
+#22. step 1: ranger  and step 2:tmle
+
+est_ran_tmle <- function(data, seed) {
+  set.seed(seed)
+  ran_tmle <- numeric(length(data))  
+  
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Implement TMLE
+    mot_ran <- tmle(
+      Y = datat$Y,
+      A = datat$Tr,
+      W = cbind(datat$p1ra, datat$p0ra),
+      Q.SL.library = "SL.glm",  
+      g.SL.library = "SL.glm"  
+    )
+    
+    # extract the ATE estimate 
+    ran_tmle[i] <- mot_ran$estimates$ATE$psi
+  }
+  
+  return(ran_tmle)
+}
+
+#23. step 1: xgboost  and step 2:tmle
+
+est_xgb_tmle <- function(data, seed) {
+  set.seed(seed)
+  xgb_tmle <- numeric(length(data))  
+  
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Implement TMLE
+    mot_gb <- tmle(
+      Y = datat$Y,
+      A = datat$Tr,
+      W = cbind(datat$p1gb, datat$p0gb),
+      Q.SL.library = "SL.glm",  
+      g.SL.library = "SL.glm"  
+    )
+    
+    # extract the ATE estimate 
+    xgb_tmle[i] <- mot_gb$estimates$ATE$psi
+  }
+  
+  return(xgb_tmle)
+}
+
+#24. step 1: svm  and step 2:tmle
+
+est_svm_tmle <- function(data, seed) {
+  set.seed(seed)
+  svm_tmle <- numeric(length(data))  
+  
+  for (i in 1:length(data)) {
+    datat <- data[[i]]
+    
+    # Implement TMLE
+    mot_svm <- tmle(
+      Y = datat$Y,
+      A = datat$Tr,
+      W = cbind(datat$p1svm, datat$p0svm),
+      Q.SL.library = "SL.glm",  
+      g.SL.library = "SL.glm"  
+    )
+    
+    # extract the ATE estimate 
+    svm_tmle[i] <- mot_svm$estimates$ATE$psi
+  }
+  
+  return(svm_tmle)
+}
