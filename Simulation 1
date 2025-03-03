@@ -12,7 +12,6 @@ library(e1071)
 library(data.table)
 library(caret)
 
-# Function with Cross-Fitting
 gen.data.1 <- function(N, seed) {
   set.seed(seed)
   datat1 <- list()
@@ -46,7 +45,7 @@ gen.data.1 <- function(N, seed) {
     data0 <- subset(dat, Tr == 0)
     data1 <- subset(dat, Tr == 1)
     
-    ###linear model
+    ###Linear model
     
     # Linear model using data1
     pg1 <- lm(Y~ ., data= subset(data1, select = - Tr))
@@ -66,16 +65,15 @@ gen.data.1 <- function(N, seed) {
     
     for (k in 1:5) {
       # Training indices for nuisance parameter estimation
-      train_idx <- unlist(folds[-k])  # Use all folds except k
-      valid_idx <- folds[[k]]         # Hold out fold k
+      train_idx <- unlist(folds[-k])  
+      valid_idx <- folds[[k]]         
       
-      # Separate treatment groups in training data
       train_data <- dat[train_idx, ]
       valid_data <- dat[valid_idx, ]
       data0_train <- subset(train_data, Tr == 0)
       data1_train <- subset(train_data, Tr == 1)
       
-      # Predict on the validation fold for causal effect estimation
+      # Predict on the validation fold 
       
       ### Random Forest (ranger)
       
