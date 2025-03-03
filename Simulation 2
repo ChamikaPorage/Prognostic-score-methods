@@ -1,0 +1,117 @@
+###############
+# Simulation 2#
+###############
+# proposed by Bahamyirou et al
+# contains function with argument N  =  sample size and seed
+# that generates 1000 datasets of Design B,  Simulation 2.
+
+# Load required libraries
+
+library(xgboost)
+library(ranger)
+library(e1071)
+library(caret)
+
+gen.data.2 <- function(N, seed) {
+  set.seed(seed)
+  datat1 <- list(0) 
+  for (i in 1:1000) {
+    # Generate baseline covariates
+    X1 <- rbinom(N, 1, 0.4)
+    X2 <- rbinom(N, 1, 0.5)
+    X3 <- rbinom(N, 1, 0.6)
+    X4 <- rbinom(N, 1, 0.5)
+    X5 <- rbinom(N, 1, 0.7)
+    X6 <- rbinom(N, 1, 0.45)
+    
+    # Define the treatment mechanism and treatment variable
+    expit <- function(x) 1 / (1 + exp(-x))
+    g <- function(X1, X6, X2, X3) expit(0.5*X6 - 0.2*X1 + 0.3*X2 + 0.4*X3)
+    
+    # Generate treatment variable
+    Tr <- rbinom(N, 1, g(X1, X6, X2, X3))
+    
+    # Generate the outcome variable
+    Y <- 1 + Tr - 0.5*X1 + 2*X2 + X3 + X4 - 0.2*X5 + 4*X2*X3*X4 + Tr*(0.5*X2 +X4) + rnorm(N)
+    
+    # Creating data frame
+    dat <- data.frame(Y = Y, Tr, X1, X2, X3, X4, X5, X6)
+    
+    # Subsetting data
+    data0 <- subset(dat, Tr == 0)
+    data1 <- subset(dat, Tr == 1)
+    
+    ###linear model
+    
+    # Linear model using data1
+    pg1 <- lm(Y~ ., data= subset(data1, select = - Tr))
+    p1<- predict(pg1,newdata = subset(dat, select = -c(Y, Tr)))           
+    
+    # Model using data0
+    pg0 <- lm(Y~ ., data= subset(data0, select = - Tr))
+    p0 <- predict(pg0, newdata = subset(dat, select = -c(Y, Tr)))
+    
+    ###Non-linear model
+    
+    # Create 5-fold cross-validation folds
+    folds <- createFolds(dat$Y, k = 5, list = TRUE)
+    
+    # Initialize predictions
+    p0ra <- p1ra <- p0gb <- p1gb <- p0svm <- p1svm <- rep(NA, N)
+    
+    for (k in 1:5) {
+      # Training indices for nuisance parameter estimation
+      train_idx <- unlist(folds[-k])  # Use all folds except k
+      test_idx <- folds[[k]]         # Hold out fold k
+      
+      # Separate treatment groups in training data
+      train_data <- dat[train_idx, ]
+      test_data <- dat[test_idx, ]
+      data0_train <- subset(train_data, Tr == 0)
+      data1_train <- subset(train_data, Tr == 1)
+      
+      # Predict on the validation fold for causal effect estimation
+      
+      ### Random Forest (ranger)
+      
+      # Train random forest on untreated (Tr == 0)
+      model_rf_0 <- ranger(Y ~ ., data = data0_train, num.trees = 300, mtry = 2, min.node.size = 5)
+      p0ra[test_idx] <- predict(model_rf_0, data = test_data)$predictions
+      
+      # Train random forest on treated (Tr == 1)
+      model_rf_1 <- ranger(Y ~ ., data = data1_train, num.trees = 300, mtry = 2, min.node.size = 5)
+      p1ra[test_idx] <- predict(model_rf_1, data = test_data)$predictions
+      
+      ###XGBoost regression
+      
+      # Train XGBoost on untreated (Tr == 0)
+      train_matrix_0 <- xgb.DMatrix(data = as.matrix(data0_train[, -c(1, 2)]), label = data0_train$Y)
+      test_matrix <- xgb.DMatrix(data = as.matrix(test_data[, -c(1, 2)]))
+      model_xgb_0 <- xgboost(data = train_matrix_0, max_depth = 6, eta = 0.05, nrounds = 50, objective = "reg:squarederror", min_child_weight = 5,
+                             subsample = 0.8, colsample_bytree = 0.8, verbose = 0)
+      p0gb[test_idx] <- predict(model_xgb_0, test_matrix)
+      
+      # Train XGBoost on treated (Tr == 1)
+      train_matrix_1 <- xgb.DMatrix(data = as.matrix(data1_train[, -c(1, 2)]), label = data1_train$Y)
+      test_matrix <- xgb.DMatrix(data = as.matrix(test_data[, -c(1, 2)]))
+      model_xgb_1 <- xgboost(data = train_matrix_1, max_depth = 6, eta = 0.05, nrounds = 50, objective = "reg:squarederror", min_child_weight = 5,
+                             subsample = 0.8, colsample_bytree = 0.8, verbose = 0)
+      p1gb[test_idx] <- predict(model_xgb_1, test_matrix)
+      
+      ## SVM regression 
+      # Train SVM on untreated (Tr == 0)
+      model_svm_0 <- svm(Y ~ ., data = data0_train, type = "eps-regression", kernel = "radial", cost = 1, gamma = 0.1)
+      p0svm[test_idx] <- predict(model_svm_0, newdata = test_data)
+      
+      # Train SVM on treated (Tr == 1)
+      model_svm_1 <- svm(Y ~ ., data = data1_train, type = "eps-regression", kernel = "radial", cost = 1, gamma = 0.1)
+      p1svm[test_idx] <- predict(model_svm_1, newdata = test_data)
+      
+    }
+    
+    # Store predictions and observed outcomes
+    datat1[[i]] <- data.frame(Y = dat$Y, Tr = dat$Tr, p1, p0, p0ra, p1ra, p0gb, p1gb, p0svm, p1svm)
+  }
+  return(datat1)
+}
+
