@@ -215,8 +215,8 @@ est_ols_ran <- function(data, seed) {
     
     for (k in 1:5) {
       # Training and validation indices
-      train_idx <- unlist(folds[-k])  # Use all but the kth fold for training
-      test_idx <- folds[[k]]         # Use the kth fold for validation
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
       
       # Split data into training and validation sets
       train_data <- datat[train_idx, ]
@@ -256,8 +256,8 @@ est_ran_ran <- function(data, seed) {
     
     for (k in 1:5) {
       # Training and validation indices
-      train_idx <- unlist(folds[-k])  # Use all but the kth fold for training
-      test_idx <- folds[[k]]         # Use the kth fold for validation
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
       
       # Split data into training and validation sets
       train_data <- datat[train_idx, ]
@@ -298,8 +298,8 @@ est_xgb_ran <- function(data, seed) {
     
     for (k in 1:5) {
       # Training and validation indices
-      train_idx <- unlist(folds[-k])  # Use all but the kth fold for training
-      test_idx <- folds[[k]]         # Use the kth fold for validation
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
       
       # Split data into training and validation sets
       train_data <- datat[train_idx, ]
@@ -340,8 +340,8 @@ est_svm_ran <- function(data, seed) {
     
     for (k in 1:5) {
       # Training and validation indices
-      train_idx <- unlist(folds[-k])  # Use all but the kth fold for training
-      test_idx <- folds[[k]]         # Use the kth fold for validation
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
       
       # Split data into training and validation sets
       train_data <- datat[train_idx, ]
@@ -382,8 +382,8 @@ est_ols_xgb <- function(data, seed) {
     
     for (k in 1:5) {
       # Training and validation indices
-      train_idx <- unlist(folds[-k])  # Use all but the kth fold for training
-      test_idx <- folds[[k]]         # Hold out the kth fold for validation
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
       
       # Subset training and test data
       train_data <- datat[train_idx, ]
@@ -439,8 +439,8 @@ est_ran_xgb <- function(data, seed) {
     
     for (k in 1:5) {
       # Training and validation indices
-      train_idx <- unlist(folds[-k])  # Use all but the kth fold for training
-      test_idx <- folds[[k]]         # Hold out the kth fold for validation
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
       
       # Subset training and test data
       train_data <- datat[train_idx, ]
@@ -496,8 +496,8 @@ est_xgb_xgb <- function(data, seed) {
     
     for (k in 1:5) {
       # Training and validation indices
-      train_idx <- unlist(folds[-k])  # Use all but the kth fold for training
-      test_idx <- folds[[k]]         # Hold out the kth fold for validation
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
       
       # Subset training and test data
       train_data <- datat[train_idx, ]
@@ -552,8 +552,8 @@ est_svm_xgb <- function(data, seed) {
     
     for (k in 1:5) {
       # Training and validation indices
-      train_idx <- unlist(folds[-k])  # Use all but the kth fold for training
-      test_idx <- folds[[k]]         # Hold out the kth fold for validation
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
       
       # Subset training and test data
       train_data <- datat[train_idx, ]
@@ -610,8 +610,8 @@ est_ols_svm <- function(data, seed) {
     
     for (k in 1:5) {
       # Training and validation indices
-      train_idx <- unlist(folds[-k])  # Use all but the kth fold for training
-      test_idx <- folds[[k]]         # Use the kth fold for validation
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
       
       # Subset training and test data
       train_data <- datat[train_idx, ]
@@ -663,8 +663,8 @@ est_ran_svm <- function(data, seed) {
     
     for (k in 1:5) {
       # Training and validation indices
-      train_idx <- unlist(folds[-k])  # Use all but the kth fold for training
-      test_idx <- folds[[k]]         # Use the kth fold for validation
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
       
       # Subset training and test data
       train_data <- datat[train_idx, ]
@@ -717,8 +717,8 @@ est_xgb_svm <- function(data, seed) {
     
     for (k in 1:5) {
       # Training and validation indices
-      train_idx <- unlist(folds[-k])  # Use all but the kth fold for training
-      test_idx <- folds[[k]]         # Use the kth fold for validation
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
       
       # Subset training and test data
       train_data <- datat[train_idx, ]
@@ -769,8 +769,8 @@ est_svm_svm <- function(data, seed) {
     
     for (k in 1:5) {
       # Training and validation indices
-      train_idx <- unlist(folds[-k])  # Use all but the kth fold for training
-      test_idx <- folds[[k]]         # Use the kth fold for validation
+      train_idx <- unlist(folds[-k])  
+      test_idx <- folds[[k]]         
       
       # Subset training and test data
       train_data <- datat[train_idx, ]
