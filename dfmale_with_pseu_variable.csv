@@ -1,0 +1,1393 @@
+"water.treat.devices","smoking","lead","income","income.mis","cage","cage2","race","edu","army","married","birth.country","cfamily.size"
+"No",0,1.7,2.2,"No",2.84221556886227,8.07818933988309,"mexicanam","edu.lt9","No","Yes","Born in Mexico",1.39353630899596
+"No",0,2.17,1.14,"No",16.8422155688623,283.660225268027,"black","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,3.6,5,"No",-22.1577844311377,490.967410896769,"otherrace","edu.college","No","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"Yes",0,1.1,1.02,"No",22.8422155688623,521.766812094374,"white","edu.lt9","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"Yes",0,3.2,1.63,"No",18.8422155688623,355.029087543476,"black","edu.lt9","No","No","Born in other Non-Spanish-speaking country",-0.60646369100404
+"No",1,1.05,3.41,"No",-20.1577844311377,406.336273172219,"mexicanam","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.4,4.38,"No",27.8422155688623,775.188967782997,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.35,5,"No",0.842215568862272,0.709327064434001,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.03,1.21,"No",22.8422155688623,521.766812094374,"white","edu.somecol","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"Yes",0,1.62,1.81,"No",-6.15778443113773,37.9183091003622,"otherhispan","edu.9to11","No","Yes","Born in other Spanish-speaking country",1.39353630899596
+"No",0,0.89,3.85,"No",-12.1577844311377,147.811722274015,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.5,1.24,"No",-11.1577844311377,124.496153411739,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,0.72,5,"No",0.842215568862272,0.709327064434001,"white","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,3.8,1.46,"No",22.8422155688623,521.766812094374,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2.14,0.76,"No",5.84221556886227,34.1314827530567,"white","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.85,2.33,"No",-24.1577844311377,583.59854862132,"mexicanam","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.9,0.62,"No",-29.1577844311377,850.176392932698,"mexicanam","edu.9to11","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"Other",0,3.7,2.49236006546645,"Yes",-22.1577844311377,490.967410896769,"mexicanam","edu.hischl","No","No","Born in Mexico",-2.60646369100404
+"Yes",0,0.81,2.21,"No",-12.1577844311377,147.811722274015,"mexicanam","edu.college","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.5,5,"No",8.84221556886227,78.1847761662304,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,2.14,5,"No",16.8422155688623,283.660225268027,"black","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.7,1.37,"No",-22.1577844311377,490.967410896769,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,1.52,1.92,"No",30.8422155688623,951.24226119617,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.62,2.69,"No",-24.1577844311377,583.59854862132,"black","edu.somecol","No","Yes","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",0,1.97,3.02,"No",21.8422155688623,477.082380956649,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.8,1.24,"No",13.8422155688623,191.606931854853,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,3.67,5,"No",22.8422155688623,521.766812094374,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,2.2,1.81,"No",-18.1577844311377,329.705135447668,"mexicanam","edu.9to11","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",1,3,1.9,"No",-0.157784431137728,0.0248959267094563,"white","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.7,5,"No",10.8422155688623,117.553638441679,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,7.75,5,"No",0.842215568862272,0.709327064434001,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.9,1.28,"No",5.84221556886227,34.1314827530567,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,2.14,1.28,"No",-7.15778443113773,51.2338779626376,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.92,0.84,"No",-12.1577844311377,147.811722274015,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.12,1.63,"No",-22.1577844311377,490.967410896769,"black","edu.college","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.2,5,"No",-11.1577844311377,124.496153411739,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,4,0.99,"No",19.8422155688623,393.7135186812,"black","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,4.38,2.88,"No",29.8422155688623,890.557830058446,"black","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,6.5,2.52,"No",-21.1577844311377,447.651842034494,"mexicanam","edu.hischl","No","No","Born in Mexico",0.39353630899596
+"No",1,2.28,1.01,"No",-8.15778443113773,66.5494468249131,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,1.65,5,"No",-17.1577844311377,294.389566585392,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,0.57,0.48,"No",-28.1577844311377,792.860824070422,"mexicanam","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",1,1.6,4.38,"No",16.8422155688623,283.660225268027,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.1,1.18,"No",-6.15778443113773,37.9183091003622,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,2.3,1.61,"No",-5.15778443113773,26.6027402380867,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.24,1.09,"No",-14.1577844311377,200.442859998566,"mexicanam","edu.hischl","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,1.99,0.47,"No",-21.1577844311377,447.651842034494,"mexicanam","edu.lt9","No","No","Born in Mexico",0.39353630899596
+"Yes",0,0.39,2.82,"No",-28.1577844311377,792.860824070422,"otherhispan","edu.somecol","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,5.7,4.38,"No",28.8422155688623,831.873398920721,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.34,4.24,"No",-28.1577844311377,792.860824070422,"mexicanam","edu.somecol","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,6.1,2.49236006546645,"Yes",2.84221556886227,8.07818933988309,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,2.96,0.19,"No",10.8422155688623,117.553638441679,"white","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.46,2.95,"No",-5.15778443113773,26.6027402380867,"mexicanam","edu.somecol","No","No","Born in Mexico",-0.60646369100404
+"No",0,0.45,1.94,"No",-14.1577844311377,200.442859998566,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,0.99,5,"No",-21.1577844311377,447.651842034494,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.79,1.56,"No",-17.1577844311377,294.389566585392,"mexicanam","edu.hischl","No","No","Born in Mexico",3.39353630899596
+"No",1,2.93,0.48,"No",3.84221556886227,14.7626204776076,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,0.86,0.71,"No",-14.1577844311377,200.442859998566,"mexicanam","edu.lt9","No","Yes","Born in Mexico",2.39353630899596
+"No",0,0.69,1.14,"No",-13.1577844311377,173.12729113629,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.31,0,"No",10.8422155688623,117.553638441679,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",-2.60646369100404
+"No",1,1.63,5,"No",-0.157784431137728,0.0248959267094563,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.72,3.57,"No",-11.1577844311377,124.496153411739,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2.1,0.88,"No",-8.15778443113773,66.5494468249131,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.8,0.73,"No",-18.1577844311377,329.705135447668,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.99,0.62,"No",-22.1577844311377,490.967410896769,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",2.39353630899596
+"Other",0,2.6,2.49236006546645,"Yes",-23.1577844311377,536.282979759045,"mexicanam","edu.hischl","No","No","Born in Mexico",-2.60646369100404
+"No",0,0.69,4.72,"No",-3.15778443113773,9.97160251353582,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,1.6,5,"No",-1.15778443113773,1.34046478898491,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.9,2.35,"No",21.8422155688623,477.082380956649,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.68,3.69,"No",-27.1577844311377,737.545255208147,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,2.4,5,"No",2.84221556886227,8.07818933988309,"black","edu.college","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.15,5,"No",2.84221556886227,8.07818933988309,"mexicanam","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,6.2,4.9,"No",30.8422155688623,951.24226119617,"white","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.36,1.43,"No",-25.1577844311377,632.914117483596,"mexicanam","edu.9to11","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.98,2.64,"No",-25.1577844311377,632.914117483596,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.5,4.37,"No",21.8422155688623,477.082380956649,"white","edu.lt9","No","Yes","Born in other Non-Spanish-speaking country",-0.60646369100404
+"Yes",0,2.5,2.49236006546645,"Yes",-20.1577844311377,406.336273172219,"otherrace","edu.9to11","No","Yes","Born in other Non-Spanish-speaking country",3.39353630899596
+"Yes",0,0.97,1.13,"No",1.84221556886227,3.39375820215855,"otherhispan","edu.college","No","Yes","Born in other Spanish-speaking country",0.39353630899596
+"Yes",0,1.6,2.49236006546645,"Yes",25.8422155688623,667.820105507548,"white","edu.college","Yes","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,3.4,1.31,"No",30.8422155688623,951.24226119617,"white","edu.lt9","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,3.1,0.98,"No",0.842215568862272,0.709327064434001,"otherrace","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",0,1.02,5,"No",-5.15778443113773,26.6027402380867,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,2.6,5,"No",2.84221556886227,8.07818933988309,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.5,0.58,"No",-12.1577844311377,147.811722274015,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,0.99,5,"No",-3.15778443113773,9.97160251353582,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",1,1.9,5,"No",-19.1577844311377,367.020704309943,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,2.18,1.93,"No",-7.15778443113773,51.2338779626376,"mexicanam","edu.9to11","No","No","Born in Mexico",0.39353630899596
+"No",1,0.89,3.77,"No",-3.15778443113773,9.97160251353582,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,2,5,"No",-0.157784431137728,0.0248959267094563,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.77,3.18,"No",-27.1577844311377,737.545255208147,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.75,3.3,"No",-14.1577844311377,200.442859998566,"otherrace","edu.college","Yes","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",0,0.91,1.93,"No",-17.1577844311377,294.389566585392,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",-1.60646369100404
+"No",0,0.98,5,"No",-3.15778443113773,9.97160251353582,"black","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.8,5,"No",22.8422155688623,521.766812094374,"otherrace","edu.college","No","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",0,2.14,1.25,"No",11.8422155688623,140.238069579404,"otherhispan","edu.somecol","Yes","Yes","Born in other Spanish-speaking country",-0.60646369100404
+"No",0,6.5,2.36,"No",30.8422155688623,951.24226119617,"black","edu.lt9","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",1,1.4,5,"No",0.842215568862272,0.709327064434001,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,1.77,1.06,"No",-21.1577844311377,447.651842034494,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2,5,"No",-10.1577844311377,103.180584549464,"white","edu.somecol","No","Yes","Born in other Non-Spanish-speaking country",1.39353630899596
+"No",0,2.13,2.49236006546645,"Yes",25.8422155688623,667.820105507548,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.57,0.81,"No",22.8422155688623,521.766812094374,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.75,1.34,"No",-25.1577844311377,632.914117483596,"otherhispan","edu.hischl","No","No","Born in other Spanish-speaking country",2.39353630899596
+"No",1,7.02,0.71,"No",17.8422155688623,318.344656405751,"black","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.1,3.32,"No",-27.1577844311377,737.545255208147,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,2.7,1.2,"No",29.8422155688623,890.557830058446,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.23,2.36,"No",-8.15778443113773,66.5494468249131,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",0.39353630899596
+"Yes",0,1.61,5,"No",0.842215568862272,0.709327064434001,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-0.60646369100404
+"Yes",1,1.4,1.26,"No",-19.1577844311377,367.020704309943,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,2.53,3.57,"No",24.8422155688623,617.135674369823,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.59,2.49236006546645,"Yes",30.8422155688623,951.24226119617,"white","edu.lt9","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.27,1.41,"No",0.842215568862272,0.709327064434001,"mexicanam","edu.lt9","No","Yes","Born in Mexico",1.39353630899596
+"No",0,2.2,1.31,"No",30.8422155688623,951.24226119617,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.91,2.19,"No",15.8422155688623,250.975794130302,"mexicanam","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.35,1.71,"No",15.8422155688623,250.975794130302,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,2.03,2.49236006546645,"Yes",-15.1577844311377,229.758428860841,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"Yes",0,1.48,5,"No",0.842215568862272,0.709327064434001,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.7,0.58,"No",-26.1577844311377,684.229686345871,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.85,5,"No",6.84221556886227,46.8159138907813,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.6,2.92,"No",13.8422155688623,191.606931854853,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",0,0.59,3.52,"No",-19.1577844311377,367.020704309943,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.47,5,"No",8.84221556886227,78.1847761662304,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.6,2.04,"No",-9.15778443113773,83.8650156871886,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",-2.60646369100404
+"No",0,0.9,2.04,"No",-14.1577844311377,200.442859998566,"black","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",3.39353630899596
+"No",0,2.29,2.49236006546645,"Yes",-6.15778443113773,37.9183091003622,"mexicanam","edu.lt9","No","Yes","Born in Mexico",1.39353630899596
+"Yes",0,1.54,5,"No",0.842215568862272,0.709327064434001,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,3.11,2.19,"No",-9.15778443113773,83.8650156871886,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",3.39353630899596
+"No",1,2.38,0.93,"No",-11.1577844311377,124.496153411739,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",2.39353630899596
+"Yes",0,0.52,4.01,"No",-14.1577844311377,200.442859998566,"white","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.71,0.96,"No",30.8422155688623,951.24226119617,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.23,5,"No",4.84221556886227,23.4470516153322,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,3.54,1.81,"No",27.8422155688623,775.188967782997,"mexicanam","edu.lt9","No","Yes","Born in Mexico",1.39353630899596
+"Yes",1,2.5,0.46,"No",-25.1577844311377,632.914117483596,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.4,0.48,"No",-26.1577844311377,684.229686345871,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,3.96,2.92,"No",-16.1577844311377,261.073997723117,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,1.53,0.85,"No",-24.1577844311377,583.59854862132,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.07,2.14,"No",6.84221556886227,46.8159138907813,"otherhispan","edu.hischl","No","No","Born in other Spanish-speaking country",-1.60646369100404
+"Yes",1,5.6,2.49236006546645,"Yes",4.84221556886227,23.4470516153322,"otherrace","edu.lt9","No","Yes","Born in other Non-Spanish-speaking country",3.39353630899596
+"No",1,1.61,4.84,"No",-12.1577844311377,147.811722274015,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",1,3.4,5,"No",7.84221556886227,61.5003450285058,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.3,1.83,"No",5.84221556886227,34.1314827530567,"mexicanam","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,8.32,2.49236006546645,"Yes",3.84221556886227,14.7626204776076,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.2,3.29,"No",-20.1577844311377,406.336273172219,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"No",0,1.31,0.96,"No",-7.15778443113773,51.2338779626376,"white","edu.lt9","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.8,0.73,"No",3.84221556886227,14.7626204776076,"mexicanam","edu.lt9","No","Yes","Born in Mexico",0.39353630899596
+"No",0,1.2,0.55,"No",2.84221556886227,8.07818933988309,"white","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",3.39353630899596
+"No",0,3.7,0.39,"No",-21.1577844311377,447.651842034494,"mexicanam","edu.somecol","No","No","Born in Mexico",3.39353630899596
+"No",1,1.8,2.9,"No",14.8422155688623,220.291362992578,"otherrace","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.7,0.31,"No",-28.1577844311377,792.860824070422,"mexicanam","edu.9to11","No","No","Born in 50 U.S. states or DC",2.39353630899596
+"Yes",0,3.8,1.76,"No",-22.1577844311377,490.967410896769,"mexicanam","edu.hischl","No","No","Born in Mexico",-2.60646369100404
+"No",0,0.98,5,"No",9.84221556886227,96.8692073039549,"black","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,0.88,5,"No",0.842215568862272,0.709327064434001,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,1.47,5,"No",3.84221556886227,14.7626204776076,"white","edu.college","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.83,0.69,"No",-22.1577844311377,490.967410896769,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.3,1.25,"No",-3.15778443113773,9.97160251353582,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",3.39353630899596
+"No",0,3.9,1.51,"No",21.8422155688623,477.082380956649,"black","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.4,5,"No",7.84221556886227,61.5003450285058,"white","edu.college","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.59,4.29,"No",-1.15778443113773,1.34046478898491,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,1.61,2.5,"No",-6.15778443113773,37.9183091003622,"mexicanam","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,3.8,1.08,"No",-8.15778443113773,66.5494468249131,"otherrace","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,2.17,5,"No",14.8422155688623,220.291362992578,"otherhispan","edu.somecol","No","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"No",0,1.3,5,"No",-10.1577844311377,103.180584549464,"mexicanam","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,3.14,2.5,"No",13.8422155688623,191.606931854853,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.5,4.41,"No",-24.1577844311377,583.59854862132,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,3.05,3.41,"No",15.8422155688623,250.975794130302,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,3.67,2.5,"No",21.8422155688623,477.082380956649,"white","edu.9to11","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.25,5,"No",0.842215568862272,0.709327064434001,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",1,7.4,1.76,"No",9.84221556886227,96.8692073039549,"white","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.76,4.55,"No",12.8422155688623,164.922500717129,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.78,2.12,"No",-7.15778443113773,51.2338779626376,"otherhispan","edu.somecol","No","No","Born in other Spanish-speaking country",0.39353630899596
+"Yes",1,2.11,1.46,"No",9.84221556886227,96.8692073039549,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,4.4,5,"No",3.84221556886227,14.7626204776076,"mexicanam","edu.college","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,0.97,4.1,"No",-16.1577844311377,261.073997723117,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.73,1.25,"No",-13.1577844311377,173.12729113629,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",-0.60646369100404
+"No",1,3,5,"No",2.84221556886227,8.07818933988309,"mexicanam","edu.lt9","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,4.32,3.21,"No",21.8422155688623,477.082380956649,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",0,0.92,5,"No",-8.15778443113773,66.5494468249131,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.15,5,"No",5.84221556886227,34.1314827530567,"otherhispan","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,2.6,5,"No",14.8422155688623,220.291362992578,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.33,5,"No",-1.15778443113773,1.34046478898491,"mexicanam","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,2.3,0.58,"No",-5.15778443113773,26.6027402380867,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.51,1.94,"No",-9.15778443113773,83.8650156871886,"mexicanam","edu.lt9","No","No","Born in Mexico",0.39353630899596
+"No",0,8.59,0,"No",9.84221556886227,96.8692073039549,"black","edu.hischl","No","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",0,1.62,2.06,"No",30.8422155688623,951.24226119617,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,3.14,1.54,"No",-26.1577844311377,684.229686345871,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.8,5,"No",-0.157784431137728,0.0248959267094563,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,2.24,5,"No",0.842215568862272,0.709327064434001,"otherrace","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",2.39353630899596
+"No",0,1.68,0.96,"No",12.8422155688623,164.922500717129,"white","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.74,1.44,"No",14.8422155688623,220.291362992578,"otherrace","edu.college","No","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",0,2.2,2.18,"No",-4.15778443113773,17.2871713758113,"mexicanam","edu.9to11","No","Yes","Born in Mexico",0.39353630899596
+"No",0,0.82,4.33,"No",-20.1577844311377,406.336273172219,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,5.6,1.36,"No",-25.1577844311377,632.914117483596,"mexicanam","edu.lt9","No","Yes","Born in Mexico",0.39353630899596
+"No",0,2.16,2.83,"No",18.8422155688623,355.029087543476,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.1,1.02,"No",11.8422155688623,140.238069579404,"mexicanam","edu.lt9","No","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"No",0,2.2,0.73,"No",25.8422155688623,667.820105507548,"mexicanam","edu.hischl","Yes","No","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,1.76,2.14,"No",23.8422155688623,568.451243232098,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.42,5,"No",8.84221556886227,78.1847761662304,"mexicanam","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.8,0.58,"No",-15.1577844311377,229.758428860841,"otherhispan","edu.9to11","No","Yes","Born in other Spanish-speaking country",0.39353630899596
+"No",1,2.81,1.5,"No",-26.1577844311377,684.229686345871,"mexicanam","edu.9to11","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.49,5,"No",30.8422155688623,951.24226119617,"white","edu.college","Yes","No","Born in 50 U.S. states or DC",3.39353630899596
+"No",1,1.38,2.14,"No",-6.15778443113773,37.9183091003622,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",1,3.6,3.49,"No",-3.15778443113773,9.97160251353582,"black","edu.9to11","Yes","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,2.9,1.5,"No",1.84221556886227,3.39375820215855,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.84,1.92,"No",30.8422155688623,951.24226119617,"white","edu.9to11","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,2.8,0.65,"No",-25.1577844311377,632.914117483596,"otherhispan","edu.hischl","No","No","Born in other Spanish-speaking country",2.39353630899596
+"No",1,1.7,4.46,"No",-10.1577844311377,103.180584549464,"white","edu.somecol","Yes","No","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,1.95,5,"No",-13.1577844311377,173.12729113629,"white","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"Yes",1,12.2,1.44,"No",-17.1577844311377,294.389566585392,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,4.59,5,"No",-23.1577844311377,536.282979759045,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.15,4.55,"No",12.8422155688623,164.922500717129,"mexicanam","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.95,1.73,"No",-22.1577844311377,490.967410896769,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-2.60646369100404
+"No",0,1.1,3.92,"No",-22.1577844311377,490.967410896769,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.14,1.79,"No",30.8422155688623,951.24226119617,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,5.8,1.41,"No",6.84221556886227,46.8159138907813,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.5,0.71,"No",-27.1577844311377,737.545255208147,"otherhispan","edu.9to11","No","Yes","Born in other Spanish-speaking country",3.39353630899596
+"No",1,1.84,4.5,"No",3.84221556886227,14.7626204776076,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.82,3.78,"No",-6.15778443113773,37.9183091003622,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.21,2.59,"No",-27.1577844311377,737.545255208147,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.63,0.68,"No",-4.15778443113773,17.2871713758113,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.66,2.33,"No",-14.1577844311377,200.442859998566,"mexicanam","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.6,5,"No",13.8422155688623,191.606931854853,"black","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.87,3.92,"No",-16.1577844311377,261.073997723117,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",1,1.85,1.45,"No",-11.1577844311377,124.496153411739,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,2.6,1.69,"No",-3.15778443113773,9.97160251353582,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",0.39353630899596
+"Yes",0,1.08,2.14,"No",30.8422155688623,951.24226119617,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,4.8,1.66,"No",-23.1577844311377,536.282979759045,"black","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",1.39353630899596
+"Yes",0,0.59,4.75,"No",-8.15778443113773,66.5494468249131,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.35,1.85,"No",-12.1577844311377,147.811722274015,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,0.63,0.5,"No",-15.1577844311377,229.758428860841,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,2.2,1.1,"No",29.8422155688623,890.557830058446,"white","edu.lt9","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.88,0,"No",-5.15778443113773,26.6027402380867,"mexicanam","edu.9to11","No","Yes","Born in Mexico",-2.60646369100404
+"No",0,1.66,5,"No",8.84221556886227,78.1847761662304,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,3.8,0.59,"No",-17.1577844311377,294.389566585392,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.09,5,"No",-2.15778443113773,4.65603365126037,"otherrace","edu.college","No","Yes","Born in other Spanish-speaking country",1.39353630899596
+"Yes",0,1.92,1.46,"No",10.8422155688623,117.553638441679,"white","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.9,0.87,"No",-23.1577844311377,536.282979759045,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.63,5,"No",-10.1577844311377,103.180584549464,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,2.06,5,"No",-5.15778443113773,26.6027402380867,"white","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",1,3.4,0.59,"No",16.8422155688623,283.660225268027,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",-2.60646369100404
+"No",0,1.61,2.29,"No",-9.15778443113773,83.8650156871886,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",2.39353630899596
+"No",1,3.4,1.99,"No",-6.15778443113773,37.9183091003622,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.3,4.9,"No",18.8422155688623,355.029087543476,"white","edu.college","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.79,1.43,"No",-11.1577844311377,124.496153411739,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.9,1.57,"No",-26.1577844311377,684.229686345871,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",1,2.59,0.7,"No",-25.1577844311377,632.914117483596,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",3.39353630899596
+"No",0,2.2,5,"No",-10.1577844311377,103.180584549464,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,3.1,2.19,"No",-3.15778443113773,9.97160251353582,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,3.3,0.23,"No",-3.15778443113773,9.97160251353582,"black","edu.college","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.65,3.57,"No",-8.15778443113773,66.5494468249131,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2.18,1.57,"No",14.8422155688623,220.291362992578,"black","edu.lt9","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,5.93,5,"No",4.84221556886227,23.4470516153322,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.17,5,"No",-1.15778443113773,1.34046478898491,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",1,2.35,5,"No",-0.157784431137728,0.0248959267094563,"otherrace","edu.somecol","Yes","Yes","Born in other Non-Spanish-speaking country",1.39353630899596
+"No",0,0.67,1.73,"No",-25.1577844311377,632.914117483596,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.96,0.51,"No",-15.1577844311377,229.758428860841,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.2,5,"No",-10.1577844311377,103.180584549464,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",1,2.7,1.45,"No",3.84221556886227,14.7626204776076,"otherrace","edu.college","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.11,5,"No",-3.15778443113773,9.97160251353582,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.01,3.57,"No",16.8422155688623,283.660225268027,"mexicanam","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,5.4,0.99,"No",-1.15778443113773,1.34046478898491,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.91,4.75,"No",7.84221556886227,61.5003450285058,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.18,1.07,"No",12.8422155688623,164.922500717129,"white","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.06,0.98,"No",2.84221556886227,8.07818933988309,"mexicanam","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.77,1.65,"No",-3.15778443113773,9.97160251353582,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.39,1.75,"No",17.8422155688623,318.344656405751,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-0.60646369100404
+"No",0,1.76,1.07,"No",-2.15778443113773,4.65603365126037,"mexicanam","edu.somecol","No","Yes","Born in Mexico",0.39353630899596
+"No",0,0.79,1.21,"No",-29.1577844311377,850.176392932698,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1,5,"No",-12.1577844311377,147.811722274015,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.41,0.81,"No",-7.15778443113773,51.2338779626376,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,2.43,1.81,"No",13.8422155688623,191.606931854853,"mexicanam","edu.lt9","No","Yes","Born in Mexico",1.39353630899596
+"No",0,0.56,0.19,"No",-24.1577844311377,583.59854862132,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,8.9,1.45,"No",-16.1577844311377,261.073997723117,"mexicanam","edu.hischl","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"Yes",0,0.96,5,"No",2.84221556886227,8.07818933988309,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.35,4.72,"No",-28.1577844311377,792.860824070422,"otherrace","edu.9to11","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.02,5,"No",2.84221556886227,8.07818933988309,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.6,1.45,"No",-7.15778443113773,51.2338779626376,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",2.39353630899596
+"No",1,1.22,1.13,"No",0.842215568862272,0.709327064434001,"mexicanam","edu.lt9","No","No","Born in Mexico",3.39353630899596
+"No",1,2.38,5,"No",-13.1577844311377,173.12729113629,"white","edu.college","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.38,0.5,"No",-9.15778443113773,83.8650156871886,"mexicanam","edu.9to11","No","Yes","Born in Mexico",-0.60646369100404
+"No",0,1.7,5,"No",-24.1577844311377,583.59854862132,"otherrace","edu.somecol","No","Yes","Born in other Non-Spanish-speaking country",2.39353630899596
+"No",1,1.57,2.12,"No",-6.15778443113773,37.9183091003622,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.75,3.43,"No",-29.1577844311377,850.176392932698,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,2.18,5,"No",26.8422155688623,720.504536645272,"white","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.5,1.46,"No",28.8422155688623,831.873398920721,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,3.8,1.16,"No",-18.1577844311377,329.705135447668,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,2.04,0.71,"No",-12.1577844311377,147.811722274015,"mexicanam","edu.lt9","No","No","Born in Mexico",3.39353630899596
+"No",0,1.4,4.25,"No",13.8422155688623,191.606931854853,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",1.39353630899596
+"No",1,1.6,1.71,"No",-10.1577844311377,103.180584549464,"otherrace","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,3.25,3.3,"No",-6.15778443113773,37.9183091003622,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2,2.49236006546645,"Yes",22.8422155688623,521.766812094374,"otherhispan","edu.9to11","No","Yes","Born in other Spanish-speaking country",0.39353630899596
+"Yes",0,0.63,1.47,"No",-26.1577844311377,684.229686345871,"otherrace","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,2.7,0.87,"No",24.8422155688623,617.135674369823,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.2,5,"No",17.8422155688623,318.344656405751,"mexicanam","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,3.21,0.05,"No",-22.1577844311377,490.967410896769,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.9,0.46,"No",-18.1577844311377,329.705135447668,"mexicanam","edu.9to11","No","No","Born in Mexico",3.39353630899596
+"No",1,2.5,3.23,"No",0.842215568862272,0.709327064434001,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,0.86,2.49236006546645,"Yes",-21.1577844311377,447.651842034494,"otherhispan","edu.somecol","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,3.1,2.66,"No",-3.15778443113773,9.97160251353582,"otherhispan","edu.somecol","No","No","Born in other Spanish-speaking country",0.39353630899596
+"No",1,2.88,0.77,"No",28.8422155688623,831.873398920721,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.14,2.49236006546645,"Yes",8.84221556886227,78.1847761662304,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",3.39353630899596
+"No",0,5.27,1.69,"No",5.84221556886227,34.1314827530567,"mexicanam","edu.hischl","No","Yes","Born in Mexico",2.39353630899596
+"Yes",1,1.26,3.75,"No",-1.15778443113773,1.34046478898491,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,2.43,5,"No",11.8422155688623,140.238069579404,"mexicanam","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.92,4.29,"No",3.84221556886227,14.7626204776076,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,4.3,1.16,"No",-8.15778443113773,66.5494468249131,"mexicanam","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,1.24,3.87,"No",-11.1577844311377,124.496153411739,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.3,0.44,"No",0.842215568862272,0.709327064434001,"mexicanam","edu.lt9","No","No","Born in Mexico",-2.60646369100404
+"No",1,1.8,0.73,"No",-13.1577844311377,173.12729113629,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2,3.49,"No",30.8422155688623,951.24226119617,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.73,1.21,"No",25.8422155688623,667.820105507548,"white","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,3.1,5,"No",4.84221556886227,23.4470516153322,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.67,1.71,"No",17.8422155688623,318.344656405751,"mexicanam","edu.lt9","No","No","Born in Mexico",-1.60646369100404
+"No",0,1.38,3.37,"No",11.8422155688623,140.238069579404,"black","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.75,3.57,"No",-13.1577844311377,173.12729113629,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.93,4.72,"No",0.842215568862272,0.709327064434001,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,6.56,4.01,"No",-18.1577844311377,329.705135447668,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.61,3.69,"No",-15.1577844311377,229.758428860841,"mexicanam","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.25,5,"No",14.8422155688623,220.291362992578,"black","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,6.25,1.09,"No",30.8422155688623,951.24226119617,"white","edu.lt9","Yes","Yes","Born in other Non-Spanish-speaking country",3.39353630899596
+"No",0,2.8,3.92,"No",30.8422155688623,951.24226119617,"white","edu.college","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.83,2.28,"No",-20.1577844311377,406.336273172219,"mexicanam","edu.9to11","No","Yes","Born in Mexico",0.39353630899596
+"No",1,3.6,1.97,"No",13.8422155688623,191.606931854853,"otherhispan","edu.hischl","Yes","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"No",0,1.7,1.21,"No",10.8422155688623,117.553638441679,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,1.81,5,"No",-1.15778443113773,1.34046478898491,"mexicanam","edu.somecol","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.33,2.49236006546645,"Yes",3.84221556886227,14.7626204776076,"white","edu.somecol","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",1,1.86,2.46,"No",-1.15778443113773,1.34046478898491,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"Yes",0,4.7,1.71,"No",30.8422155688623,951.24226119617,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.6,4.29,"No",-27.1577844311377,737.545255208147,"white","edu.college","No","No","Born in other Non-Spanish-speaking country",-1.60646369100404
+"Yes",1,1.91,5,"No",-28.1577844311377,792.860824070422,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,2.37,4.64,"No",23.8422155688623,568.451243232098,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,1.15,0.25,"No",-18.1577844311377,329.705135447668,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",3.39353630899596
+"Yes",0,2.02,3.86,"No",10.8422155688623,117.553638441679,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.3,4.75,"No",27.8422155688623,775.188967782997,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.46,3.57,"No",-18.1577844311377,329.705135447668,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.62,5,"No",2.84221556886227,8.07818933988309,"black","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,4.55,2.14,"No",12.8422155688623,164.922500717129,"otherhispan","edu.college","No","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"No",0,2.5,1.4,"No",-5.15778443113773,26.6027402380867,"mexicanam","edu.hischl","No","Yes","Born in Mexico",0.39353630899596
+"Yes",0,1.17,1.22,"No",-24.1577844311377,583.59854862132,"mexicanam","edu.9to11","No","No","Born in Mexico",-0.60646369100404
+"No",0,0.76,1.95,"No",-23.1577844311377,536.282979759045,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",3.39353630899596
+"No",0,1.45,5,"No",14.8422155688623,220.291362992578,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,0.53,1.96,"No",-22.1577844311377,490.967410896769,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,2.19,3.49,"No",-14.1577844311377,200.442859998566,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.3,0.97,"No",20.8422155688623,434.397949818925,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,2.34,0.29,"No",10.8422155688623,117.553638441679,"white","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.2,0.91,"No",17.8422155688623,318.344656405751,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-1.60646369100404
+"Yes",0,2.1,1.42,"No",21.8422155688623,477.082380956649,"white","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.85,5,"No",30.8422155688623,951.24226119617,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.82,1.69,"No",-14.1577844311377,200.442859998566,"otherhispan","edu.9to11","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.52,2.49236006546645,"Yes",-5.15778443113773,26.6027402380867,"otherhispan","edu.college","No","No","Born in other Spanish-speaking country",-1.60646369100404
+"No",0,2.6,1.68,"No",-6.15778443113773,37.9183091003622,"mexicanam","edu.hischl","No","Yes","Born in Mexico",-1.60646369100404
+"No",0,0.91,5,"No",-18.1577844311377,329.705135447668,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",3.39353630899596
+"No",0,2.55,2.34,"No",-5.15778443113773,26.6027402380867,"mexicanam","edu.9to11","No","No","Born in Mexico",-1.60646369100404
+"No",1,1.36,4.62,"No",-3.15778443113773,9.97160251353582,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.53,2.14,"No",10.8422155688623,117.553638441679,"otherhispan","edu.college","No","No","Born in other Spanish-speaking country",-1.60646369100404
+"No",0,0.66,2.12,"No",-10.1577844311377,103.180584549464,"otherhispan","edu.somecol","No","Yes","Born in other Spanish-speaking country",0.39353630899596
+"No",1,4.2,0.52,"No",-5.15778443113773,26.6027402380867,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.09,2.91,"No",-7.15778443113773,51.2338779626376,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.87,2.9,"No",-26.1577844311377,684.229686345871,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.77,1.63,"No",-21.1577844311377,447.651842034494,"black","edu.somecol","No","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",0,2.6,0.98,"No",-7.15778443113773,51.2338779626376,"otherrace","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",0,1.8,5,"No",10.8422155688623,117.553638441679,"black","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.97,2.54,"No",2.84221556886227,8.07818933988309,"mexicanam","edu.lt9","No","Yes","Born in Mexico",2.39353630899596
+"No",1,3.2,5,"No",15.8422155688623,250.975794130302,"white","edu.9to11","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.83,4.14,"No",-17.1577844311377,294.389566585392,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",1,1.88,4.33,"No",-15.1577844311377,229.758428860841,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.18,0.71,"No",-27.1577844311377,737.545255208147,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.2,1.17,"No",30.8422155688623,951.24226119617,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,2.3,2.49236006546645,"Yes",-27.1577844311377,737.545255208147,"mexicanam","edu.hischl","No","No","Born in Mexico",3.39353630899596
+"No",0,5.41,2.49236006546645,"Yes",0.842215568862272,0.709327064434001,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,2.4,1.09,"No",-15.1577844311377,229.758428860841,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"No",1,2.9,0.35,"No",-7.15778443113773,51.2338779626376,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",1,1.8,0.7,"No",-16.1577844311377,261.073997723117,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",3.39353630899596
+"Yes",1,3.08,0.72,"No",4.84221556886227,23.4470516153322,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,2.5,5,"No",10.8422155688623,117.553638441679,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.49,2.49236006546645,"Yes",3.84221556886227,14.7626204776076,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"Yes",0,0.81,5,"No",-16.1577844311377,261.073997723117,"white","edu.college","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,4.7,2.35,"No",-4.15778443113773,17.2871713758113,"otherhispan","edu.somecol","No","Yes","Born in other Spanish-speaking country",-2.60646369100404
+"Yes",0,1.54,4.5,"No",9.84221556886227,96.8692073039549,"otherhispan","edu.9to11","Yes","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"Other",0,5.46,2.49236006546645,"Yes",8.84221556886227,78.1847761662304,"mexicanam","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2.55,1.41,"No",-3.15778443113773,9.97160251353582,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,5.02,1.36,"No",30.8422155688623,951.24226119617,"black","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.42,0.47,"No",19.8422155688623,393.7135186812,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",3.39353630899596
+"Yes",0,1.31,5,"No",30.8422155688623,951.24226119617,"white","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",1,2.6,1.16,"No",9.84221556886227,96.8692073039549,"otherrace","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,0.6,0.24,"No",-24.1577844311377,583.59854862132,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.31,2.56,"No",14.8422155688623,220.291362992578,"otherhispan","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.46,1.81,"No",-22.1577844311377,490.967410896769,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",1,2.5,2.49236006546645,"Yes",4.84221556886227,23.4470516153322,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.33,2.49236006546645,"Yes",-11.1577844311377,124.496153411739,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,2.9,5,"No",-3.15778443113773,9.97160251353582,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.43,2.49236006546645,"Yes",12.8422155688623,164.922500717129,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,2,1.45,"No",-4.15778443113773,17.2871713758113,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,1.47,4.72,"No",-11.1577844311377,124.496153411739,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,10.9,1.09,"No",-12.1577844311377,147.811722274015,"mexicanam","edu.lt9","No","Yes","Born in Mexico",2.39353630899596
+"No",0,2,1.16,"No",29.8422155688623,890.557830058446,"mexicanam","edu.lt9","No","No","Born in Mexico",3.39353630899596
+"No",1,4.1,1.86,"No",-11.1577844311377,124.496153411739,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",1,3.4,0.77,"No",12.8422155688623,164.922500717129,"black","edu.somecol","Yes","No","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,1.02,1.44,"No",5.84221556886227,34.1314827530567,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,4.01,0.84,"No",1.84221556886227,3.39375820215855,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,2.16,5,"No",17.8422155688623,318.344656405751,"mexicanam","edu.hischl","No","No","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,1.4,2.07,"No",-17.1577844311377,294.389566585392,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",1.39353630899596
+"No",1,1.3,4.75,"No",3.84221556886227,14.7626204776076,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.81,1.47,"No",-29.1577844311377,850.176392932698,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.93,5,"No",12.8422155688623,164.922500717129,"otherrace","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",0,0.99,4.96,"No",-4.15778443113773,17.2871713758113,"black","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,1.5,1.62,"No",-1.15778443113773,1.34046478898491,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",3.39353630899596
+"No",0,1.12,2.69,"No",-8.15778443113773,66.5494468249131,"otherrace","edu.somecol","No","Yes","Born in other Non-Spanish-speaking country",1.39353630899596
+"No",1,2.5,1.18,"No",18.8422155688623,355.029087543476,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.13,2.49236006546645,"Yes",-28.1577844311377,792.860824070422,"mexicanam","edu.hischl","No","No","Born in 50 U.S. states or DC",3.39353630899596
+"Yes",0,1.8,5,"No",7.84221556886227,61.5003450285058,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1,1.45,"No",-3.15778443113773,9.97160251353582,"mexicanam","edu.9to11","No","No","Born in Mexico",3.39353630899596
+"No",0,0.84,0.91,"No",-13.1577844311377,173.12729113629,"mexicanam","edu.9to11","No","Yes","Born in Mexico",1.39353630899596
+"No",0,1.89,2.49236006546645,"Yes",-19.1577844311377,367.020704309943,"mexicanam","edu.lt9","No","No","Born in Mexico",0.39353630899596
+"No",0,1.51,0.62,"No",-20.1577844311377,406.336273172219,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",2.39353630899596
+"No",1,5.98,4.64,"No",3.84221556886227,14.7626204776076,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.7,1.43,"No",25.8422155688623,667.820105507548,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.05,3.18,"No",-17.1577844311377,294.389566585392,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.74,5,"No",-25.1577844311377,632.914117483596,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.67,1.45,"No",-10.1577844311377,103.180584549464,"mexicanam","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,1.49,2.88,"No",0.842215568862272,0.709327064434001,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.47,1.99,"No",-22.1577844311377,490.967410896769,"mexicanam","edu.hischl","No","Yes","Born in Mexico",-0.60646369100404
+"No",0,6.8,0.1,"No",3.84221556886227,14.7626204776076,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-2.60646369100404
+"No",0,0.91,4.72,"No",-16.1577844311377,261.073997723117,"black","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,0.83,5,"No",-6.15778443113773,37.9183091003622,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,4.1,1.44,"No",30.8422155688623,951.24226119617,"white","edu.lt9","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,3.77,0.67,"No",8.84221556886227,78.1847761662304,"otherrace","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.5,0.73,"No",-22.1577844311377,490.967410896769,"mexicanam","edu.hischl","No","Yes","Born in Mexico",-1.60646369100404
+"Yes",1,0.82,2.42,"No",-20.1577844311377,406.336273172219,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,1.42,4.83,"No",-6.15778443113773,37.9183091003622,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,2.15,4.64,"No",25.8422155688623,667.820105507548,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.4,1.13,"No",0.842215568862272,0.709327064434001,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,5.8,0.29,"No",-22.1577844311377,490.967410896769,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,2.2,3.65,"No",30.8422155688623,951.24226119617,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.72,5,"No",-16.1577844311377,261.073997723117,"mexicanam","edu.college","No","No","Born in Mexico",-2.60646369100404
+"No",0,1.69,4.84,"No",11.8422155688623,140.238069579404,"white","edu.college","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,2.39,0.88,"No",11.8422155688623,140.238069579404,"mexicanam","edu.lt9","No","Yes","Born in Mexico",2.39353630899596
+"No",0,1.28,5,"No",13.8422155688623,191.606931854853,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.87,1.44,"No",-23.1577844311377,536.282979759045,"otherrace","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,0.69,3.32,"No",-28.1577844311377,792.860824070422,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,5.2,1.49,"No",16.8422155688623,283.660225268027,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,1.91,3.39,"No",3.84221556886227,14.7626204776076,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,5.68,0.57,"No",9.84221556886227,96.8692073039549,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.75,2.74,"No",-19.1577844311377,367.020704309943,"black","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,0.77,5,"No",10.8422155688623,117.553638441679,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.83,3.11,"No",-1.15778443113773,1.34046478898491,"black","edu.college","No","Yes","Born in other Non-Spanish-speaking country",1.39353630899596
+"No",0,1.2,1.16,"No",13.8422155688623,191.606931854853,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.79,2.63,"No",30.8422155688623,951.24226119617,"mexicanam","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.2,2.55,"No",-7.15778443113773,51.2338779626376,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.92,4.66,"No",-3.15778443113773,9.97160251353582,"white","edu.college","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,2.8,1.57,"No",11.8422155688623,140.238069579404,"black","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,2.89,5,"No",7.84221556886227,61.5003450285058,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.8,0.59,"No",30.8422155688623,951.24226119617,"otherhispan","edu.hischl","No","No","Born in other Spanish-speaking country",-2.60646369100404
+"No",1,2.9,2.17,"No",10.8422155688623,117.553638441679,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,0.62,2.49236006546645,"Yes",-18.1577844311377,329.705135447668,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.9,1.51,"No",24.8422155688623,617.135674369823,"white","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.99,2.49236006546645,"Yes",0.842215568862272,0.709327064434001,"mexicanam","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,0.99,1.79,"No",-15.1577844311377,229.758428860841,"mexicanam","edu.hischl","No","Yes","Born in Mexico",0.39353630899596
+"Yes",0,0.45,1.43,"No",-16.1577844311377,261.073997723117,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,2.7,5,"No",-1.15778443113773,1.34046478898491,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,0.85,1.71,"No",2.84221556886227,8.07818933988309,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"Yes",0,1.48,2.18,"No",-3.15778443113773,9.97160251353582,"otherhispan","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,0.59,0.77,"No",-22.1577844311377,490.967410896769,"mexicanam","edu.9to11","No","No","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,1.5,1.94,"No",-15.1577844311377,229.758428860841,"black","edu.college","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"Yes",0,1.2,5,"No",-3.15778443113773,9.97160251353582,"black","edu.college","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.2,2.1,"No",-21.1577844311377,447.651842034494,"otherhispan","edu.somecol","No","No","Born in other Spanish-speaking country",2.39353630899596
+"No",0,3.75,2.5,"No",30.8422155688623,951.24226119617,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.37,2.49236006546645,"Yes",14.8422155688623,220.291362992578,"otherhispan","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.73,1.7,"No",11.8422155688623,140.238069579404,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,0.63,2.18,"No",30.8422155688623,951.24226119617,"otherhispan","edu.hischl","Yes","Yes","Born in other Spanish-speaking country",0.39353630899596
+"No",1,2.8,1.46,"No",17.8422155688623,318.344656405751,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,3.66,1.31,"No",16.8422155688623,283.660225268027,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.66,4.23,"No",-17.1577844311377,294.389566585392,"mexicanam","edu.somecol","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,2.3,2.54,"No",-1.15778443113773,1.34046478898491,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,0.56,3.77,"No",-29.1577844311377,850.176392932698,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.43,2.02,"No",-9.15778443113773,83.8650156871886,"mexicanam","edu.9to11","No","Yes","Born in Mexico",1.39353630899596
+"No",0,8.1,1.08,"No",22.8422155688623,521.766812094374,"white","edu.9to11","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.3,1.69,"No",-8.15778443113773,66.5494468249131,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,1.4,2.94,"No",-14.1577844311377,200.442859998566,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",1,1.42,0.7,"No",9.84221556886227,96.8692073039549,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",3.39353630899596
+"No",0,1.63,4.72,"No",0.842215568862272,0.709327064434001,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,4.7,1.96,"No",1.84221556886227,3.39375820215855,"otherrace","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",1,2.93,1.98,"No",-27.1577844311377,737.545255208147,"otherrace","edu.hischl","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,0.77,1.48,"No",-4.15778443113773,17.2871713758113,"mexicanam","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,2,1.29,"No",12.8422155688623,164.922500717129,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-1.60646369100404
+"No",0,0.64,0.46,"No",-13.1577844311377,173.12729113629,"mexicanam","edu.somecol","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.04,1.74,"No",-21.1577844311377,447.651842034494,"mexicanam","edu.hischl","No","No","Born in Mexico",0.39353630899596
+"No",0,1.33,0.87,"No",-29.1577844311377,850.176392932698,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.81,0.8,"No",12.8422155688623,164.922500717129,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.61,2.98,"No",-5.15778443113773,26.6027402380867,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,2.4,2.63,"No",21.8422155688623,477.082380956649,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,0.82,3.65,"No",-22.1577844311377,490.967410896769,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.7,0.97,"No",-19.1577844311377,367.020704309943,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,1.2,2.88,"No",-0.157784431137728,0.0248959267094563,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.49,3.43,"No",-18.1577844311377,329.705135447668,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.7,1.46,"No",21.8422155688623,477.082380956649,"black","edu.9to11","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",0,11.8,5,"No",-13.1577844311377,173.12729113629,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.19,5,"No",11.8422155688623,140.238069579404,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,1.9,0.78,"No",-21.1577844311377,447.651842034494,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.25,0.68,"No",7.84221556886227,61.5003450285058,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",3.39353630899596
+"No",0,0.46,1.63,"No",-24.1577844311377,583.59854862132,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.04,5,"No",-11.1577844311377,124.496153411739,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,1.8,2.41,"No",16.8422155688623,283.660225268027,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2,1.1,"No",-6.15778443113773,37.9183091003622,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.73,1.01,"No",-20.1577844311377,406.336273172219,"mexicanam","edu.somecol","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,0.57,3.39,"No",-26.1577844311377,684.229686345871,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.79,2.49236006546645,"Yes",18.8422155688623,355.029087543476,"otherhispan","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2.6,1.47,"No",29.8422155688623,890.557830058446,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.8,0.81,"No",-22.1577844311377,490.967410896769,"mexicanam","edu.9to11","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,0.61,1.92,"No",-27.1577844311377,737.545255208147,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,2.15,5,"No",-14.1577844311377,200.442859998566,"mexicanam","edu.college","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.65,2.29,"No",30.8422155688623,951.24226119617,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2.25,2.49236006546645,"Yes",16.8422155688623,283.660225268027,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.71,3.09,"No",-28.1577844311377,792.860824070422,"black","edu.somecol","Yes","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,2.4,2.15,"No",22.8422155688623,521.766812094374,"mexicanam","edu.hischl","Yes","No","Born in Mexico",-0.60646369100404
+"No",0,0.88,5,"No",11.8422155688623,140.238069579404,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2.07,0.74,"No",15.8422155688623,250.975794130302,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.7,2.49236006546645,"Yes",3.84221556886227,14.7626204776076,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"Yes",1,1.89,3.02,"No",-3.15778443113773,9.97160251353582,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,2.2,2.55,"No",30.8422155688623,951.24226119617,"white","edu.college","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,2.09,5,"No",22.8422155688623,521.766812094374,"white","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",0,1.02,0.95,"No",-6.15778443113773,37.9183091003622,"mexicanam","edu.9to11","No","No","Born in Mexico",1.39353630899596
+"Yes",0,1.87,2.9,"No",-10.1577844311377,103.180584549464,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,1.5,0.88,"No",9.84221556886227,96.8692073039549,"white","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",0,1.41,1.93,"No",18.8422155688623,355.029087543476,"black","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.63,2.39,"No",-17.1577844311377,294.389566585392,"black","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.61,1.78,"No",-23.1577844311377,536.282979759045,"mexicanam","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.49,2.86,"No",17.8422155688623,318.344656405751,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,2.69,5,"No",19.8422155688623,393.7135186812,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.4,5,"No",0.842215568862272,0.709327064434001,"black","edu.college","No","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",1,8.7,0.18,"No",-11.1577844311377,124.496153411739,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",1,1.35,1.65,"No",-27.1577844311377,737.545255208147,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,2.9,2.56,"No",24.8422155688623,617.135674369823,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,2.31,3.72,"No",-6.15778443113773,37.9183091003622,"otherhispan","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,0.88,5,"No",-25.1577844311377,632.914117483596,"white","edu.college","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,4.35,0.44,"No",11.8422155688623,140.238069579404,"mexicanam","edu.lt9","No","Yes","Born in Mexico",3.39353630899596
+"Yes",0,1.15,0.6,"No",-17.1577844311377,294.389566585392,"mexicanam","edu.lt9","No","Yes","Born in Mexico",1.39353630899596
+"No",0,0.56,2.83,"No",-22.1577844311377,490.967410896769,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,2.27,0.68,"No",-22.1577844311377,490.967410896769,"mexicanam","edu.somecol","No","Yes","Born in Mexico",1.39353630899596
+"Yes",0,0.75,5,"No",-18.1577844311377,329.705135447668,"black","edu.college","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.24,5,"No",28.8422155688623,831.873398920721,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.97,4.24,"No",-16.1577844311377,261.073997723117,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.89,1.07,"No",-13.1577844311377,173.12729113629,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.8,1.47,"No",0.842215568862272,0.709327064434001,"otherhispan","edu.9to11","No","No","Born in other Spanish-speaking country",-2.60646369100404
+"No",1,0.54,0.23,"No",-23.1577844311377,536.282979759045,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.22,1.39,"No",-25.1577844311377,632.914117483596,"otherrace","edu.college","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,2.55,0.95,"No",17.8422155688623,318.344656405751,"white","edu.college","No","No","Born in other Non-Spanish-speaking country",-1.60646369100404
+"Yes",0,1.6,4.08,"No",-6.15778443113773,37.9183091003622,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.03,0.94,"No",-27.1577844311377,737.545255208147,"mexicanam","edu.hischl","No","Yes","Born in Mexico",0.39353630899596
+"No",0,2.2,4.9,"No",-2.15778443113773,4.65603365126037,"black","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,3,4.75,"No",1.84221556886227,3.39375820215855,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.56,0.66,"No",11.8422155688623,140.238069579404,"mexicanam","edu.lt9","No","Yes","Born in Mexico",3.39353630899596
+"No",0,1.02,1.43,"No",15.8422155688623,250.975794130302,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.33,2.49236006546645,"Yes",-8.15778443113773,66.5494468249131,"black","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",1,5.7,0.93,"No",2.84221556886227,8.07818933988309,"black","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.17,3.36,"No",28.8422155688623,831.873398920721,"white","edu.lt9","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,4.83,5,"No",23.8422155688623,568.451243232098,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,2.1,1.02,"No",-19.1577844311377,367.020704309943,"mexicanam","edu.hischl","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.7,4.02,"No",-16.1577844311377,261.073997723117,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,4.8,1.14,"No",-7.15778443113773,51.2338779626376,"mexicanam","edu.hischl","No","Yes","Born in Mexico",0.39353630899596
+"No",0,1.53,2.49236006546645,"Yes",-19.1577844311377,367.020704309943,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-1.60646369100404
+"No",1,2.93,2.88,"No",18.8422155688623,355.029087543476,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,3.01,2.36,"No",-26.1577844311377,684.229686345871,"mexicanam","edu.lt9","No","Yes","Born in Mexico",2.39353630899596
+"No",0,0.7,1.96,"No",26.8422155688623,720.504536645272,"otherhispan","edu.hischl","No","No","Born in other Spanish-speaking country",-2.60646369100404
+"No",0,1.2,4.36,"No",-11.1577844311377,124.496153411739,"otherrace","edu.somecol","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",0,1.12,0.88,"No",26.8422155688623,720.504536645272,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.5,1.47,"No",-13.1577844311377,173.12729113629,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.73,5,"No",-2.15778443113773,4.65603365126037,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,3.05,1.06,"No",23.8422155688623,568.451243232098,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,9.01,0.28,"No",7.84221556886227,61.5003450285058,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",0.39353630899596
+"No",0,1.9,1.86,"No",-16.1577844311377,261.073997723117,"mexicanam","edu.hischl","No","Yes","Born in Mexico",-0.60646369100404
+"No",1,2.88,1.18,"No",16.8422155688623,283.660225268027,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"No",1,2.87,0.94,"No",-7.15778443113773,51.2338779626376,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,0.88,3.38,"No",23.8422155688623,568.451243232098,"black","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.69,0.47,"No",-19.1577844311377,367.020704309943,"mexicanam","edu.lt9","No","No","Born in Mexico",0.39353630899596
+"No",0,1.65,3.39,"No",4.84221556886227,23.4470516153322,"black","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1,1.86,"No",30.8422155688623,951.24226119617,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,2.3,2.49236006546645,"Yes",-22.1577844311377,490.967410896769,"otherrace","edu.9to11","No","No","Born in other Non-Spanish-speaking country",3.39353630899596
+"No",0,2.94,1.09,"No",-7.15778443113773,51.2338779626376,"otherrace","edu.9to11","No","No","Born in other Non-Spanish-speaking country",3.39353630899596
+"Yes",0,1.18,5,"No",-3.15778443113773,9.97160251353582,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.81,1.89,"No",-15.1577844311377,229.758428860841,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.2,2.49236006546645,"Yes",-7.15778443113773,51.2338779626376,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.83,0.53,"No",1.84221556886227,3.39375820215855,"otherrace","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",2.39353630899596
+"No",1,1.69,2.49236006546645,"Yes",-7.15778443113773,51.2338779626376,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.9,3.29,"No",30.8422155688623,951.24226119617,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,4.3,1.07,"No",14.8422155688623,220.291362992578,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.46,5,"No",20.8422155688623,434.397949818925,"white","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.18,2.69,"No",12.8422155688623,164.922500717129,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.72,4.39,"No",3.84221556886227,14.7626204776076,"otherhispan","edu.hischl","Yes","Yes","Born in other Spanish-speaking country",0.39353630899596
+"No",0,0.96,2.56,"No",4.84221556886227,23.4470516153322,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-1.60646369100404
+"Yes",1,1.5,1.83,"No",-19.1577844311377,367.020704309943,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.73,1.27,"No",-17.1577844311377,294.389566585392,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",-2.60646369100404
+"No",0,3.6,3.26,"No",15.8422155688623,250.975794130302,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",-0.60646369100404
+"No",0,1.8,1.75,"No",21.8422155688623,477.082380956649,"black","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,0.79,0.97,"No",-29.1577844311377,850.176392932698,"mexicanam","edu.somecol","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.02,1.46,"No",-25.1577844311377,632.914117483596,"mexicanam","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.43,3.13,"No",-4.15778443113773,17.2871713758113,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,7.2,2.49236006546645,"Yes",23.8422155688623,568.451243232098,"black","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.31,2.45,"No",-3.15778443113773,9.97160251353582,"black","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.8,4.37,"No",-23.1577844311377,536.282979759045,"black","edu.college","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.25,5,"No",7.84221556886227,61.5003450285058,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,3.8,5,"No",13.8422155688623,191.606931854853,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,3.1,2.94,"No",-1.15778443113773,1.34046478898491,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.84,2.82,"No",-20.1577844311377,406.336273172219,"mexicanam","edu.college","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",1,4.41,2.49236006546645,"Yes",-1.15778443113773,1.34046478898491,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,1.37,1.44,"No",3.84221556886227,14.7626204776076,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",0.39353630899596
+"No",0,1.25,1.08,"No",-1.15778443113773,1.34046478898491,"otherrace","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",1,1.63,1.7,"No",2.84221556886227,8.07818933988309,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,5.5,0.73,"No",28.8422155688623,831.873398920721,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-1.60646369100404
+"Yes",0,0.65,1.76,"No",-25.1577844311377,632.914117483596,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,5.02,2.56,"No",-17.1577844311377,294.389566585392,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.48,0.75,"No",-7.15778443113773,51.2338779626376,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,3.3,0.83,"No",12.8422155688623,164.922500717129,"mexicanam","edu.college","No","Yes","Born in Mexico",1.39353630899596
+"Yes",1,1.4,4.08,"No",-23.1577844311377,536.282979759045,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.47,4.9,"No",24.8422155688623,617.135674369823,"white","edu.college","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,3.62,3.13,"No",-13.1577844311377,173.12729113629,"mexicanam","edu.hischl","No","Yes","Born in Mexico",-0.60646369100404
+"No",0,0.92,2.49236006546645,"Yes",-12.1577844311377,147.811722274015,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.74,3.58,"No",-25.1577844311377,632.914117483596,"black","edu.college","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.26,5,"No",17.8422155688623,318.344656405751,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.4,1.68,"No",-22.1577844311377,490.967410896769,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.8,2.49236006546645,"Yes",-13.1577844311377,173.12729113629,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",-0.60646369100404
+"Yes",1,1.6,5,"No",-23.1577844311377,536.282979759045,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,0.73,5,"No",-14.1577844311377,200.442859998566,"otherrace","edu.somecol","No","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",1,3.5,0.48,"No",-13.1577844311377,173.12729113629,"otherrace","edu.lt9","No","Yes","Born in other Non-Spanish-speaking country",3.39353630899596
+"Yes",0,1.16,5,"No",-18.1577844311377,329.705135447668,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.2,5,"No",-20.1577844311377,406.336273172219,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,0.82,1.92,"No",-24.1577844311377,583.59854862132,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",1,2.5,5,"No",5.84221556886227,34.1314827530567,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.08,2.02,"No",-9.15778443113773,83.8650156871886,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",1.39353630899596
+"No",1,0.94,0.58,"No",2.84221556886227,8.07818933988309,"white","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,3.18,3.75,"No",25.8422155688623,667.820105507548,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,3.51,0.14,"No",30.8422155688623,951.24226119617,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.46,4.25,"No",-13.1577844311377,173.12729113629,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.4,2.89,"No",22.8422155688623,521.766812094374,"black","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.01,1.89,"No",-17.1577844311377,294.389566585392,"mexicanam","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,4.51,0.69,"No",25.8422155688623,667.820105507548,"white","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.43,2.16,"No",28.8422155688623,831.873398920721,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.92,0.96,"No",-26.1577844311377,684.229686345871,"white","edu.college","No","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",1,2.71,2.17,"No",-1.15778443113773,1.34046478898491,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,1.63,0.79,"No",6.84221556886227,46.8159138907813,"otherhispan","edu.lt9","Yes","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"No",0,1.6,5,"No",-4.15778443113773,17.2871713758113,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.8,0.87,"No",27.8422155688623,775.188967782997,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.94,4.12,"No",-15.1577844311377,229.758428860841,"white","edu.college","Yes","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",0,1.83,2.14,"No",16.8422155688623,283.660225268027,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.51,1.19,"No",5.84221556886227,34.1314827530567,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.19,2.64,"No",8.84221556886227,78.1847761662304,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",0.39353630899596
+"No",1,2.43,2.22,"No",3.84221556886227,14.7626204776076,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,3.69,4.29,"No",26.8422155688623,720.504536645272,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,1.75,0.73,"No",2.84221556886227,8.07818933988309,"white","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",0,1.78,2.31,"No",0.842215568862272,0.709327064434001,"mexicanam","edu.lt9","No","No","Born in Mexico",-2.60646369100404
+"Yes",0,1.93,5,"No",-2.15778443113773,4.65603365126037,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.11,5,"No",10.8422155688623,117.553638441679,"black","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.9,1.26,"No",-3.15778443113773,9.97160251353582,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"Other",0,0.66,4.66,"No",-18.1577844311377,329.705135447668,"mexicanam","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,26.8,0.21,"No",-7.15778443113773,51.2338779626376,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",3.39353630899596
+"No",1,2.3,3.07,"No",5.84221556886227,34.1314827530567,"white","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.58,2.49236006546645,"Yes",23.8422155688623,568.451243232098,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"Yes",0,1,0.49,"No",-22.1577844311377,490.967410896769,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",-2.60646369100404
+"No",0,1.45,3.37,"No",3.84221556886227,14.7626204776076,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.33,5,"No",-0.157784431137728,0.0248959267094563,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.97,1.08,"No",-25.1577844311377,632.914117483596,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.98,2.56,"No",4.84221556886227,23.4470516153322,"black","edu.9to11","Yes","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.85,5,"No",-7.15778443113773,51.2338779626376,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.35,5,"No",1.84221556886227,3.39375820215855,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,3.7,0.69,"No",19.8422155688623,393.7135186812,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",-2.60646369100404
+"Yes",0,2.53,4.84,"No",1.84221556886227,3.39375820215855,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",1.39353630899596
+"Yes",0,2.3,2.68,"No",6.84221556886227,46.8159138907813,"mexicanam","edu.9to11","No","Yes","Born in Mexico",-0.60646369100404
+"Yes",0,1.7,4.8,"No",0.842215568862272,0.709327064434001,"black","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.97,3.69,"No",-28.1577844311377,792.860824070422,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.1,1.43,"No",-3.15778443113773,9.97160251353582,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.8,1.25,"No",-24.1577844311377,583.59854862132,"otherhispan","edu.somecol","No","No","Born in other Spanish-speaking country",-0.60646369100404
+"No",1,2.17,1.92,"No",1.84221556886227,3.39375820215855,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,4.29,1.27,"No",17.8422155688623,318.344656405751,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.11,5,"No",-6.15778443113773,37.9183091003622,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,1.8,5,"No",11.8422155688623,140.238069579404,"black","edu.somecol","No","Yes","Born in other Non-Spanish-speaking country",1.39353630899596
+"No",0,1.08,5,"No",-22.1577844311377,490.967410896769,"mexicanam","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,2.1,0.65,"No",-27.1577844311377,737.545255208147,"otherhispan","edu.hischl","No","No","Born in other Spanish-speaking country",2.39353630899596
+"Yes",0,1.74,5,"No",25.8422155688623,667.820105507548,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.8,0.9,"No",3.84221556886227,14.7626204776076,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.1,1.17,"No",28.8422155688623,831.873398920721,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.4,2.49236006546645,"Yes",30.8422155688623,951.24226119617,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"No",0,0.4,0.49,"No",6.84221556886227,46.8159138907813,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.75,2.36,"No",-15.1577844311377,229.758428860841,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,1.6,1.16,"No",-9.15778443113773,83.8650156871886,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,0.65,5,"No",9.84221556886227,96.8692073039549,"otherhispan","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.27,1.11,"No",-16.1577844311377,261.073997723117,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",-0.60646369100404
+"Yes",1,2.6,4.12,"No",-13.1577844311377,173.12729113629,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,7.1,5,"No",30.8422155688623,951.24226119617,"white","edu.lt9","Yes","No","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,2.91,5,"No",24.8422155688623,617.135674369823,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.05,4.72,"No",-1.15778443113773,1.34046478898491,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,3.2,2.04,"No",11.8422155688623,140.238069579404,"black","edu.9to11","Yes","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,2.32,0.17,"No",22.8422155688623,521.766812094374,"black","edu.9to11","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,2,3.2,"No",-12.1577844311377,147.811722274015,"otherhispan","edu.somecol","No","Yes","Born in other Spanish-speaking country",-0.60646369100404
+"No",1,4.72,2.49236006546645,"Yes",3.84221556886227,14.7626204776076,"mexicanam","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.24,1.14,"No",-5.15778443113773,26.6027402380867,"mexicanam","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.91,2.42,"No",-4.15778443113773,17.2871713758113,"otherhispan","edu.9to11","No","Yes","Born in other Spanish-speaking country",1.39353630899596
+"Yes",0,2.7,0.65,"No",-14.1577844311377,200.442859998566,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",2.39353630899596
+"No",0,0.69,3.24,"No",-5.15778443113773,26.6027402380867,"mexicanam","edu.somecol","Yes","Yes","Born in Mexico",0.39353630899596
+"No",1,4.67,0.06,"No",-10.1577844311377,103.180584549464,"otherrace","edu.lt9","No","Yes","Born in other Non-Spanish-speaking country",2.39353630899596
+"No",0,2.2,0.46,"No",11.8422155688623,140.238069579404,"mexicanam","edu.lt9","No","Yes","Born in Mexico",1.39353630899596
+"No",0,2,3.2,"No",-10.1577844311377,103.180584549464,"mexicanam","edu.hischl","No","Yes","Born in Mexico",0.39353630899596
+"No",1,2.35,0.71,"No",-3.15778443113773,9.97160251353582,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2,4.08,"No",-2.15778443113773,4.65603365126037,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.2,5,"No",0.842215568862272,0.709327064434001,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.99,2.49236006546645,"Yes",-3.15778443113773,9.97160251353582,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",3.39353630899596
+"No",1,1.8,2.99,"No",16.8422155688623,283.660225268027,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,3.14,2.86,"No",28.8422155688623,831.873398920721,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.5,4.38,"No",9.84221556886227,96.8692073039549,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,6.83,3.13,"No",10.8422155688623,117.553638441679,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-0.60646369100404
+"No",0,2.57,5,"No",30.8422155688623,951.24226119617,"white","edu.college","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.6,0.97,"No",-11.1577844311377,124.496153411739,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,4.8,0.39,"No",-23.1577844311377,536.282979759045,"mexicanam","edu.lt9","No","Yes","Born in Mexico",3.39353630899596
+"No",0,4.43,0.87,"No",23.8422155688623,568.451243232098,"white","edu.lt9","Yes","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"Yes",0,0.87,5,"No",7.84221556886227,61.5003450285058,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,0.95,1.63,"No",-25.1577844311377,632.914117483596,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.1,5,"No",18.8422155688623,355.029087543476,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1,4.66,"No",-20.1577844311377,406.336273172219,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.95,1.18,"No",-27.1577844311377,737.545255208147,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,3.74,0.28,"No",30.8422155688623,951.24226119617,"otherrace","edu.somecol","No","Yes","Born in other Non-Spanish-speaking country",2.39353630899596
+"No",1,6.47,4.9,"No",-12.1577844311377,147.811722274015,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.7,2.04,"No",-22.1577844311377,490.967410896769,"otherhispan","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,0.43,2.49236006546645,"Yes",-10.1577844311377,103.180584549464,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,0.53,5,"No",-10.1577844311377,103.180584549464,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,0.92,4.86,"No",-5.15778443113773,26.6027402380867,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,4.2,1.39,"No",-1.15778443113773,1.34046478898491,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.4,0.97,"No",-11.1577844311377,124.496153411739,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.04,2.99,"No",-16.1577844311377,261.073997723117,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"Yes",1,3.03,1.23,"No",4.84221556886227,23.4470516153322,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"Yes",0,1.13,3.52,"No",-9.15778443113773,83.8650156871886,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",1.39353630899596
+"Yes",0,0.39,2.49236006546645,"Yes",-8.15778443113773,66.5494468249131,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",-0.60646369100404
+"No",1,11.6,5,"No",2.84221556886227,8.07818933988309,"mexicanam","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,3.35,0.75,"No",8.84221556886227,78.1847761662304,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",1.39353630899596
+"No",0,1.6,0.35,"No",-5.15778443113773,26.6027402380867,"otherhispan","edu.hischl","No","No","Born in other Spanish-speaking country",-2.60646369100404
+"Yes",0,0.59,5,"No",-9.15778443113773,83.8650156871886,"mexicanam","edu.somecol","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.8,2.52,"No",-18.1577844311377,329.705135447668,"mexicanam","edu.hischl","No","No","Born in Mexico",0.39353630899596
+"No",0,3.1,5,"No",25.8422155688623,667.820105507548,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"No",0,1.5,0.96,"No",12.8422155688623,164.922500717129,"mexicanam","edu.lt9","No","Yes","Born in Mexico",3.39353630899596
+"No",1,3.23,2.69,"No",4.84221556886227,23.4470516153322,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",-2.60646369100404
+"No",0,1.37,1.96,"No",-23.1577844311377,536.282979759045,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",1,4.92,1.15,"No",28.8422155688623,831.873398920721,"white","edu.lt9","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.6,2.34,"No",5.84221556886227,34.1314827530567,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,2.63,1.16,"No",-5.15778443113773,26.6027402380867,"white","edu.lt9","No","Yes","Born in other Non-Spanish-speaking country",-0.60646369100404
+"No",0,0.4,0.91,"No",-28.1577844311377,792.860824070422,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.42,1.49,"No",-4.15778443113773,17.2871713758113,"otherrace","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.79,0.5,"No",-16.1577844311377,261.073997723117,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",3.39353630899596
+"No",0,2.9,1.53,"No",20.8422155688623,434.397949818925,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,7.78,0.71,"No",-0.157784431137728,0.0248959267094563,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.8,1.45,"No",-23.1577844311377,536.282979759045,"mexicanam","edu.lt9","No","No","Born in Mexico",2.39353630899596
+"Yes",1,1.96,2.88,"No",-10.1577844311377,103.180584549464,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.82,2.49236006546645,"Yes",-7.15778443113773,51.2338779626376,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.6,2.78,"No",-10.1577844311377,103.180584549464,"black","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,0.94,1.29,"No",3.84221556886227,14.7626204776076,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,3.35,1.34,"No",-2.15778443113773,4.65603365126037,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",2.39353630899596
+"Yes",1,0.83,2.6,"No",-19.1577844311377,367.020704309943,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.66,1.7,"No",-28.1577844311377,792.860824070422,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,4.1,0.98,"No",8.84221556886227,78.1847761662304,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.41,3.21,"No",-18.1577844311377,329.705135447668,"mexicanam","edu.9to11","No","No","Born in Mexico",-1.60646369100404
+"Yes",1,0.98,0.51,"No",-0.157784431137728,0.0248959267094563,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,7.48,1.31,"No",-14.1577844311377,200.442859998566,"mexicanam","edu.lt9","No","No","Born in Mexico",-1.60646369100404
+"No",0,0.65,4.01,"No",-11.1577844311377,124.496153411739,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,3.57,2.95,"No",-2.15778443113773,4.65603365126037,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.43,2.12,"No",-25.1577844311377,632.914117483596,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.3,3.39,"No",-12.1577844311377,147.811722274015,"black","edu.college","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",1,1.45,2.31,"No",-25.1577844311377,632.914117483596,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.65,3.11,"No",1.84221556886227,3.39375820215855,"otherhispan","edu.somecol","No","Yes","Born in other Spanish-speaking country",2.39353630899596
+"Yes",0,1.6,0.7,"No",-9.15778443113773,83.8650156871886,"mexicanam","edu.somecol","No","Yes","Born in Mexico",2.39353630899596
+"Yes",0,1.13,2.48,"No",-15.1577844311377,229.758428860841,"otherhispan","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.32,0.68,"No",-6.15778443113773,37.9183091003622,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"No",0,2.63,2.5,"No",14.8422155688623,220.291362992578,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-1.60646369100404
+"No",0,2.1,5,"No",-13.1577844311377,173.12729113629,"black","edu.college","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.2,5,"No",18.8422155688623,355.029087543476,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,0.81,2.34,"No",-22.1577844311377,490.967410896769,"otherhispan","edu.somecol","No","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"Yes",0,1.82,5,"No",12.8422155688623,164.922500717129,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.62,2.49236006546645,"Yes",15.8422155688623,250.975794130302,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.7,2.49236006546645,"Yes",16.8422155688623,283.660225268027,"white","edu.lt9","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.1,1.9,"No",-10.1577844311377,103.180584549464,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,3.22,4.29,"No",23.8422155688623,568.451243232098,"black","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.1,2.74,"No",7.84221556886227,61.5003450285058,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,3.2,1.47,"No",-1.15778443113773,1.34046478898491,"otherrace","edu.9to11","No","Yes","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",0,1.5,1.97,"No",-10.1577844311377,103.180584549464,"mexicanam","edu.hischl","No","Yes","Born in Mexico",-1.60646369100404
+"No",1,0.7,0.71,"No",3.84221556886227,14.7626204776076,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.1,2.04,"No",-10.1577844311377,103.180584549464,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",2.39353630899596
+"No",0,2.1,1.16,"No",-3.15778443113773,9.97160251353582,"mexicanam","edu.hischl","No","No","Born in Mexico",-0.60646369100404
+"No",1,2.56,0.77,"No",-10.1577844311377,103.180584549464,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.92,0.78,"No",-24.1577844311377,583.59854862132,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.73,2.19,"No",-22.1577844311377,490.967410896769,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,5.46,0.93,"No",26.8422155688623,720.504536645272,"white","edu.lt9","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,5.29,3.85,"No",28.8422155688623,831.873398920721,"white","edu.college","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,3.06,2.49236006546645,"Yes",-0.157784431137728,0.0248959267094563,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,0.18,1.67,"No",-27.1577844311377,737.545255208147,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",3.39353630899596
+"No",1,2,1.05,"No",10.8422155688623,117.553638441679,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.31,4.58,"No",-8.15778443113773,66.5494468249131,"mexicanam","edu.somecol","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,3.43,1.79,"No",3.84221556886227,14.7626204776076,"mexicanam","edu.9to11","No","Yes","Born in Mexico",-1.60646369100404
+"No",0,1.02,2.49236006546645,"Yes",-9.15778443113773,83.8650156871886,"otherhispan","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.7,5,"No",3.84221556886227,14.7626204776076,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,4.2,0,"No",3.84221556886227,14.7626204776076,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,3.33,0.94,"No",26.8422155688623,720.504536645272,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,1.1,2.84,"No",-17.1577844311377,294.389566585392,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.86,5,"No",11.8422155688623,140.238069579404,"mexicanam","edu.college","Yes","Yes","Born in Mexico",-1.60646369100404
+"Yes",0,1.2,5,"No",4.84221556886227,23.4470516153322,"mexicanam","edu.somecol","No","No","Born in Mexico",-0.60646369100404
+"No",0,7,4.02,"No",-19.1577844311377,367.020704309943,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",0,1.7,2.07,"No",-16.1577844311377,261.073997723117,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",1.39353630899596
+"No",1,1.16,0.4,"No",-19.1577844311377,367.020704309943,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,5.01,0.97,"No",15.8422155688623,250.975794130302,"black","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,2.41,3.69,"No",6.84221556886227,46.8159138907813,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,3.85,2.69,"No",7.84221556886227,61.5003450285058,"mexicanam","edu.9to11","No","Yes","Born in Mexico",1.39353630899596
+"No",0,4.01,0.7,"No",14.8422155688623,220.291362992578,"mexicanam","edu.lt9","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.41,0.19,"No",-29.1577844311377,850.176392932698,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.28,5,"No",-9.15778443113773,83.8650156871886,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,0.7,2.49236006546645,"Yes",-21.1577844311377,447.651842034494,"otherhispan","edu.hischl","No","No","Born in other Spanish-speaking country",-2.60646369100404
+"No",0,1.1,5,"No",11.8422155688623,140.238069579404,"black","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.4,3.87,"No",0.842215568862272,0.709327064434001,"black","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,1.5,1.32,"No",-20.1577844311377,406.336273172219,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,1.56,5,"No",-4.15778443113773,17.2871713758113,"black","edu.college","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",0,0.89,1.76,"No",-11.1577844311377,124.496153411739,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,1.78,1.06,"No",-14.1577844311377,200.442859998566,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",2.39353630899596
+"No",1,4.53,3.13,"No",0.842215568862272,0.709327064434001,"otherhispan","edu.hischl","No","No","Born in other Spanish-speaking country",-0.60646369100404
+"No",1,0.98,1.49,"No",15.8422155688623,250.975794130302,"otherrace","edu.hischl","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.91,3.63,"No",-7.15778443113773,51.2338779626376,"mexicanam","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,2.4,2.19,"No",11.8422155688623,140.238069579404,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.12,5,"No",-6.15778443113773,37.9183091003622,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.7,3.79,"No",-29.1577844311377,850.176392932698,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.7,5,"No",10.8422155688623,117.553638441679,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.82,0.04,"No",-28.1577844311377,792.860824070422,"mexicanam","edu.9to11","No","No","Born in Mexico",-1.60646369100404
+"Yes",0,1.5,2.49,"No",-9.15778443113773,83.8650156871886,"mexicanam","edu.college","Yes","Yes","Born in Mexico",1.39353630899596
+"No",0,0.8,2.49236006546645,"Yes",-6.15778443113773,37.9183091003622,"black","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.4,0.5,"No",-25.1577844311377,632.914117483596,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",3.39353630899596
+"No",0,1,2.94,"No",-18.1577844311377,329.705135447668,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.98,2.49236006546645,"Yes",30.8422155688623,951.24226119617,"white","edu.somecol","No","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",1,1.5,0,"No",-21.1577844311377,447.651842034494,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.27,1.14,"No",27.8422155688623,775.188967782997,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.39,3.29,"No",-0.157784431137728,0.0248959267094563,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,8.93,1.21,"No",26.8422155688623,720.504536645272,"white","edu.lt9","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2.4,0.02,"No",-18.1577844311377,329.705135447668,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,3.7,1.3,"No",22.8422155688623,521.766812094374,"black","edu.9to11","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.78,5,"No",6.84221556886227,46.8159138907813,"mexicanam","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.71,5,"No",-10.1577844311377,103.180584549464,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.3,3.07,"No",2.84221556886227,8.07818933988309,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,0.85,0.71,"No",-11.1577844311377,124.496153411739,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,2.7,0.4,"No",-25.1577844311377,632.914117483596,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.27,2.64,"No",5.84221556886227,34.1314827530567,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.6,1.9,"No",18.8422155688623,355.029087543476,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"No",0,3.8,2.49236006546645,"Yes",30.8422155688623,951.24226119617,"white","edu.college","Yes","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",1,2.84,2.49236006546645,"Yes",2.84221556886227,8.07818933988309,"mexicanam","edu.9to11","No","No","Born in Mexico",-0.60646369100404
+"No",1,3.63,1.42,"No",1.84221556886227,3.39375820215855,"otherrace","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,2.2,0.84,"No",13.8422155688623,191.606931854853,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",3.39353630899596
+"No",1,2.68,0.18,"No",-15.1577844311377,229.758428860841,"black","edu.lt9","No","No","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,1.55,5,"No",5.84221556886227,34.1314827530567,"black","edu.somecol","No","No","Born in other Non-Spanish-speaking country",1.39353630899596
+"Yes",0,1.19,1.71,"No",12.8422155688623,164.922500717129,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.88,2.98,"No",16.8422155688623,283.660225268027,"mexicanam","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.6,1.66,"No",24.8422155688623,617.135674369823,"mexicanam","edu.lt9","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,2.95,0.7,"No",-16.1577844311377,261.073997723117,"otherhispan","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,0.76,5,"No",-6.15778443113773,37.9183091003622,"white","edu.college","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",0,1.9,4.38,"No",22.8422155688623,521.766812094374,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.71,0,"No",-25.1577844311377,632.914117483596,"black","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.2,2.15,"No",12.8422155688623,164.922500717129,"mexicanam","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,3.2,1.24,"No",3.84221556886227,14.7626204776076,"mexicanam","edu.lt9","No","Yes","Born in Mexico",3.39353630899596
+"No",1,7.7,1.69,"No",-0.157784431137728,0.0248959267094563,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,3.2,2.18,"No",12.8422155688623,164.922500717129,"black","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.9,5,"No",-1.15778443113773,1.34046478898491,"white","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-0.60646369100404
+"No",1,4.9,1.46,"No",20.8422155688623,434.397949818925,"black","edu.lt9","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.7,2.49,"No",1.84221556886227,3.39375820215855,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,0.5,2.79,"No",-15.1577844311377,229.758428860841,"black","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.4,2.49236006546645,"Yes",-15.1577844311377,229.758428860841,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.73,3.85,"No",-15.1577844311377,229.758428860841,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.14,0.86,"No",-23.1577844311377,536.282979759045,"white","edu.lt9","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.17,4.52,"No",-26.1577844311377,684.229686345871,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,3.7,0.78,"No",1.84221556886227,3.39375820215855,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-2.60646369100404
+"No",0,0.7,2.14,"No",-29.1577844311377,850.176392932698,"mexicanam","edu.9to11","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,3.12,5,"No",3.84221556886227,14.7626204776076,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.5,1.75,"No",21.8422155688623,477.082380956649,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.4,5,"No",9.84221556886227,96.8692073039549,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.85,0.92,"No",-12.1577844311377,147.811722274015,"mexicanam","edu.hischl","No","Yes","Born in Mexico",0.39353630899596
+"No",1,1.69,0.97,"No",20.8422155688623,434.397949818925,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,2.02,2.49236006546645,"Yes",2.84221556886227,8.07818933988309,"otherhispan","edu.somecol","No","Yes","Born in other Spanish-speaking country",0.39353630899596
+"Yes",0,1.3,5,"No",-18.1577844311377,329.705135447668,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,1.01,5,"No",-17.1577844311377,294.389566585392,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,2,0.88,"No",-2.15778443113773,4.65603365126037,"white","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,2.9,1.75,"No",2.84221556886227,8.07818933988309,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.27,2.49236006546645,"Yes",7.84221556886227,61.5003450285058,"otherhispan","edu.somecol","No","No","Born in other Spanish-speaking country",-2.60646369100404
+"No",0,1.5,2.35,"No",-20.1577844311377,406.336273172219,"black","edu.9to11","No","No","Born in other Non-Spanish-speaking country",2.39353630899596
+"No",0,1.12,2.49236006546645,"Yes",0.842215568862272,0.709327064434001,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.5,3.79,"No",-5.15778443113773,26.6027402380867,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,2,1.67,"No",0.842215568862272,0.709327064434001,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.1,5,"No",-16.1577844311377,261.073997723117,"otherrace","edu.college","No","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"No",1,3.4,1.96,"No",-18.1577844311377,329.705135447668,"otherrace","edu.somecol","No","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",0,0.6,3.02,"No",-23.1577844311377,536.282979759045,"black","edu.somecol","No","No","Born in other Non-Spanish-speaking country",1.39353630899596
+"No",0,1.86,2.92,"No",14.8422155688623,220.291362992578,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,1.56,0.73,"No",-23.1577844311377,536.282979759045,"white","edu.9to11","No","No","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",1,2.59,0.86,"No",-9.15778443113773,83.8650156871886,"white","edu.lt9","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.87,2.36,"No",-13.1577844311377,173.12729113629,"black","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.7,1.18,"No",-11.1577844311377,124.496153411739,"mexicanam","edu.somecol","No","Yes","Born in Mexico",-2.60646369100404
+"No",1,2.8,2.45,"No",-22.1577844311377,490.967410896769,"white","edu.9to11","No","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",1,2.51,0.87,"No",18.8422155688623,355.029087543476,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.97,3.32,"No",-4.15778443113773,17.2871713758113,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.59,3.98,"No",-4.15778443113773,17.2871713758113,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",-0.60646369100404
+"Yes",1,2.71,2.49236006546645,"Yes",-4.15778443113773,17.2871713758113,"black","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,1.63,3.57,"No",-4.15778443113773,17.2871713758113,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.8,1.49,"No",30.8422155688623,951.24226119617,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.97,2.62,"No",11.8422155688623,140.238069579404,"mexicanam","edu.somecol","No","Yes","Born in Mexico",1.39353630899596
+"No",1,1.78,1.76,"No",-20.1577844311377,406.336273172219,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,3.04,2.49236006546645,"Yes",-1.15778443113773,1.34046478898491,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",-0.60646369100404
+"No",0,0.46,1.15,"No",-3.15778443113773,9.97160251353582,"white","edu.9to11","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.7,1.16,"No",-25.1577844311377,632.914117483596,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-0.60646369100404
+"Yes",0,0.53,4.89,"No",-13.1577844311377,173.12729113629,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.92,2.49236006546645,"Yes",3.84221556886227,14.7626204776076,"otherhispan","edu.9to11","No","No","Born in other Spanish-speaking country",0.39353630899596
+"No",0,1.24,2.49236006546645,"Yes",-28.1577844311377,792.860824070422,"otherhispan","edu.hischl","No","No","Born in other Spanish-speaking country",2.39353630899596
+"Yes",0,1.65,3.77,"No",-2.15778443113773,4.65603365126037,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,1.33,5,"No",-11.1577844311377,124.496153411739,"otherrace","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,3.7,2.19,"No",25.8422155688623,667.820105507548,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.79,5,"No",-9.15778443113773,83.8650156871886,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,0.53,2.42,"No",-26.1577844311377,684.229686345871,"otherhispan","edu.somecol","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,2.2,0.61,"No",30.8422155688623,951.24226119617,"otherrace","edu.somecol","Yes","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"Yes",0,2.8,1.08,"No",-0.157784431137728,0.0248959267094563,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",1.39353630899596
+"Yes",0,0.63,5,"No",-28.1577844311377,792.860824070422,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,0.88,0.5,"No",2.84221556886227,8.07818933988309,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.31,3.98,"No",11.8422155688623,140.238069579404,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.64,1.64,"No",-0.157784431137728,0.0248959267094563,"otherhispan","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,6.22,5,"No",5.84221556886227,34.1314827530567,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.9,0.53,"No",25.8422155688623,667.820105507548,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.85,5,"No",-22.1577844311377,490.967410896769,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",2.39353630899596
+"No",0,1.1,5,"No",-15.1577844311377,229.758428860841,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.31,3.79,"No",-16.1577844311377,261.073997723117,"otherhispan","edu.somecol","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,3.2,4.02,"No",30.8422155688623,951.24226119617,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,3.01,0.52,"No",-16.1577844311377,261.073997723117,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.2,1.18,"No",5.84221556886227,34.1314827530567,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.99,1.44,"No",4.84221556886227,23.4470516153322,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,25.7,2.82,"No",-25.1577844311377,632.914117483596,"otherhispan","edu.9to11","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,0.9,1.65,"No",-14.1577844311377,200.442859998566,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.9,1.18,"No",6.84221556886227,46.8159138907813,"white","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",1,4.23,5,"No",9.84221556886227,96.8692073039549,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.02,1.03,"No",-11.1577844311377,124.496153411739,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",3.39353630899596
+"No",1,2,3.62,"No",-6.15778443113773,37.9183091003622,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,1.4,1.77,"No",28.8422155688623,831.873398920721,"black","edu.college","Yes","No","Born in 50 U.S. states or DC",3.39353630899596
+"No",0,0.88,2.86,"No",11.8422155688623,140.238069579404,"black","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.8,2.42,"No",-18.1577844311377,329.705135447668,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",1,4.23,2.59,"No",22.8422155688623,521.766812094374,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.4,5,"No",14.8422155688623,220.291362992578,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,3.69,2.36,"No",24.8422155688623,617.135674369823,"black","edu.somecol","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",0,0.45,1.96,"No",-26.1577844311377,684.229686345871,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.27,1.03,"No",-21.1577844311377,447.651842034494,"mexicanam","edu.9to11","No","Yes","Born in Mexico",3.39353630899596
+"No",0,2.2,2.49236006546645,"Yes",27.8422155688623,775.188967782997,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.7,1.42,"No",-26.1577844311377,684.229686345871,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,2.68,2.49236006546645,"Yes",28.8422155688623,831.873398920721,"otherhispan","edu.college","No","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"No",0,2.3,2.35,"No",16.8422155688623,283.660225268027,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",1,1.4,2.91,"No",-18.1577844311377,329.705135447668,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.7,5,"No",-8.15778443113773,66.5494468249131,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,2.37,5,"No",10.8422155688623,117.553638441679,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.06,5,"No",-2.15778443113773,4.65603365126037,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,2.7,2.49236006546645,"Yes",-15.1577844311377,229.758428860841,"otherrace","edu.somecol","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",0,7.16,1.09,"No",-10.1577844311377,103.180584549464,"white","edu.9to11","No","Yes","Born in other Non-Spanish-speaking country",3.39353630899596
+"No",0,2.05,1.15,"No",13.8422155688623,191.606931854853,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.91,4.35,"No",-23.1577844311377,536.282979759045,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",2.39353630899596
+"No",0,0.45,2.49,"No",-12.1577844311377,147.811722274015,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",1.39353630899596
+"No",1,4.3,1.24,"No",13.8422155688623,191.606931854853,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.2,2.34,"No",-10.1577844311377,103.180584549464,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.42,1.43,"No",29.8422155688623,890.557830058446,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.19,2.42,"No",-10.1577844311377,103.180584549464,"otherrace","edu.somecol","No","No","Born in other Non-Spanish-speaking country",1.39353630899596
+"No",1,0.92,2.49236006546645,"Yes",-22.1577844311377,490.967410896769,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,2.5,5,"No",30.8422155688623,951.24226119617,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,3.98,2.49236006546645,"Yes",22.8422155688623,521.766812094374,"otherhispan","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,0.99,0.94,"No",-3.15778443113773,9.97160251353582,"mexicanam","edu.somecol","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,1.48,2.82,"No",-17.1577844311377,294.389566585392,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.15,5,"No",-2.15778443113773,4.65603365126037,"mexicanam","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,33.1,4.83,"No",-10.1577844311377,103.180584549464,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,1.06,0.97,"No",-7.15778443113773,51.2338779626376,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"Yes",0,1.75,2.88,"No",20.8422155688623,434.397949818925,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",-2.60646369100404
+"No",0,2.49,2.5,"No",3.84221556886227,14.7626204776076,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.76,1.44,"No",0.842215568862272,0.709327064434001,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",-2.60646369100404
+"Yes",1,1.28,5,"No",-21.1577844311377,447.651842034494,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.5,0.88,"No",10.8422155688623,117.553638441679,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.95,2.49236006546645,"Yes",7.84221556886227,61.5003450285058,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",1.39353630899596
+"Yes",0,2.07,2.49236006546645,"Yes",3.84221556886227,14.7626204776076,"mexicanam","edu.lt9","No","Yes","Born in Mexico",3.39353630899596
+"Yes",0,2.42,1.79,"No",27.8422155688623,775.188967782997,"white","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"Yes",0,1.23,5,"No",-5.15778443113773,26.6027402380867,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",0,2.1,5,"No",12.8422155688623,164.922500717129,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,2.95,5,"No",30.8422155688623,951.24226119617,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.83,2.49236006546645,"Yes",23.8422155688623,568.451243232098,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,5.3,2.91,"No",1.84221556886227,3.39375820215855,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.76,1.42,"No",1.84221556886227,3.39375820215855,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",-0.60646369100404
+"No",0,1.1,4.37,"No",-9.15778443113773,83.8650156871886,"white","edu.college","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,3.13,1.18,"No",11.8422155688623,140.238069579404,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,2.1,1.47,"No",6.84221556886227,46.8159138907813,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.53,0.19,"No",-5.15778443113773,26.6027402380867,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,5.69,1.64,"No",11.8422155688623,140.238069579404,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.05,5,"No",-22.1577844311377,490.967410896769,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.51,3.39,"No",30.8422155688623,951.24226119617,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.84,4.13,"No",-15.1577844311377,229.758428860841,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.1,5,"No",-0.157784431137728,0.0248959267094563,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.8,5,"No",10.8422155688623,117.553638441679,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.64,3.79,"No",-15.1577844311377,229.758428860841,"otherhispan","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,4.19,4.25,"No",2.84221556886227,8.07818933988309,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,1.36,1.45,"No",-2.15778443113773,4.65603365126037,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",1,5.7,3.29,"No",17.8422155688623,318.344656405751,"otherhispan","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.89,2.49236006546645,"Yes",-12.1577844311377,147.811722274015,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",0,1.47,3.49,"No",-4.15778443113773,17.2871713758113,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.3,3.39,"No",-2.15778443113773,4.65603365126037,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.23,5,"No",7.84221556886227,61.5003450285058,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,3.67,1.73,"No",30.8422155688623,951.24226119617,"mexicanam","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.4,2.49,"No",-15.1577844311377,229.758428860841,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.38,2.6,"No",30.8422155688623,951.24226119617,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.9,1.75,"No",-14.1577844311377,200.442859998566,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-0.60646369100404
+"No",0,2.2,2.19,"No",28.8422155688623,831.873398920721,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,0.86,1.06,"No",-4.15778443113773,17.2871713758113,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,0.74,2.42,"No",-29.1577844311377,850.176392932698,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",1,2.28,0.34,"No",-18.1577844311377,329.705135447668,"otherhispan","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.84,2.49236006546645,"Yes",12.8422155688623,164.922500717129,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.23,0.96,"No",-20.1577844311377,406.336273172219,"otherrace","edu.college","No","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",0,1.73,1.32,"No",10.8422155688623,117.553638441679,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.6,3.07,"No",22.8422155688623,521.766812094374,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2.78,0.75,"No",-28.1577844311377,792.860824070422,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.07,5,"No",-19.1577844311377,367.020704309943,"otherhispan","edu.college","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.8,1.04,"No",-12.1577844311377,147.811722274015,"mexicanam","edu.hischl","No","Yes","Born in Mexico",1.39353630899596
+"Yes",0,1.47,1.88,"No",-18.1577844311377,329.705135447668,"otherhispan","edu.somecol","No","Yes","Born in other Spanish-speaking country",-0.60646369100404
+"No",0,0.85,1.49,"No",-10.1577844311377,103.180584549464,"otherrace","edu.somecol","No","Yes","Born in other Spanish-speaking country",1.39353630899596
+"No",1,3.6,0.95,"No",30.8422155688623,951.24226119617,"white","edu.9to11","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.6,2.42,"No",-9.15778443113773,83.8650156871886,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",1,3.3,0.78,"No",-25.1577844311377,632.914117483596,"white","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.78,1.42,"No",1.84221556886227,3.39375820215855,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,2.1,2.49236006546645,"Yes",16.8422155688623,283.660225268027,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.29,2.05,"No",14.8422155688623,220.291362992578,"otherrace","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Other",0,1.9,2.49236006546645,"Yes",-7.15778443113773,51.2338779626376,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",0.39353630899596
+"No",0,0.69,2.9,"No",-16.1577844311377,261.073997723117,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",1,1.69,1.19,"No",-16.1577844311377,261.073997723117,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",1,1.55,3.23,"No",-12.1577844311377,147.811722274015,"black","edu.9to11","No","Yes","Born in other Non-Spanish-speaking country",1.39353630899596
+"No",1,2.4,3.21,"No",16.8422155688623,283.660225268027,"black","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,3.03,4.29,"No",21.8422155688623,477.082380956649,"white","edu.college","No","No","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",0,0.87,2.49236006546645,"Yes",2.84221556886227,8.07818933988309,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-1.60646369100404
+"No",1,2.4,2.12,"No",12.8422155688623,164.922500717129,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,3.2,3.13,"No",30.8422155688623,951.24226119617,"white","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.2,0.23,"No",-29.1577844311377,850.176392932698,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,2.27,2.49236006546645,"Yes",2.84221556886227,8.07818933988309,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",-2.60646369100404
+"Yes",0,1.06,5,"No",-2.15778443113773,4.65603365126037,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,6.2,1.33,"No",30.8422155688623,951.24226119617,"mexicanam","edu.lt9","No","Yes","Born in Mexico",1.39353630899596
+"No",0,1.35,2.85,"No",-11.1577844311377,124.496153411739,"black","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.6,4.84,"No",-2.15778443113773,4.65603365126037,"white","edu.somecol","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"Yes",0,1.22,5,"No",10.8422155688623,117.553638441679,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.14,1.21,"No",-14.1577844311377,200.442859998566,"otherhispan","edu.9to11","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.9,2.99,"No",8.84221556886227,78.1847761662304,"otherhispan","edu.9to11","No","Yes","Born in other Spanish-speaking country",2.39353630899596
+"No",0,2.3,2.12,"No",30.8422155688623,951.24226119617,"white","edu.9to11","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,3,1.1,"No",29.8422155688623,890.557830058446,"black","edu.lt9","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,6.2,0.48,"No",-2.15778443113773,4.65603365126037,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"Yes",0,1.4,2.18,"No",-2.15778443113773,4.65603365126037,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,2.97,5,"No",30.8422155688623,951.24226119617,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,5.33,2.49236006546645,"Yes",29.8422155688623,890.557830058446,"mexicanam","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,2.67,5,"No",30.8422155688623,951.24226119617,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.47,3.37,"No",30.8422155688623,951.24226119617,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.12,2.49236006546645,"Yes",19.8422155688623,393.7135186812,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.83,2.88,"No",-8.15778443113773,66.5494468249131,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.19,1.97,"No",-10.1577844311377,103.180584549464,"mexicanam","edu.9to11","No","Yes","Born in Mexico",3.39353630899596
+"No",0,2.65,0.4,"No",21.8422155688623,477.082380956649,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",-0.60646369100404
+"Yes",0,0.99,2.49236006546645,"Yes",-4.15778443113773,17.2871713758113,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,0.8,4.01,"No",-11.1577844311377,124.496153411739,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.1,2.86,"No",19.8422155688623,393.7135186812,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.6,1.31,"No",-28.1577844311377,792.860824070422,"mexicanam","edu.hischl","No","Yes","Born in Mexico",-1.60646369100404
+"No",1,1.3,2.49236006546645,"Yes",-11.1577844311377,124.496153411739,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.44,1.14,"No",2.84221556886227,8.07818933988309,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.93,3.33,"No",-5.15778443113773,26.6027402380867,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",-2.60646369100404
+"No",0,1.41,5,"No",-8.15778443113773,66.5494468249131,"black","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-0.60646369100404
+"No",1,1.8,3.92,"No",-11.1577844311377,124.496153411739,"white","edu.9to11","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2,2.92,"No",12.8422155688623,164.922500717129,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,3.2,1.96,"No",27.8422155688623,775.188967782997,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.08,5,"No",-22.1577844311377,490.967410896769,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,2.5,1.24,"No",-9.15778443113773,83.8650156871886,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",1.39353630899596
+"No",0,1.1,5,"No",-17.1577844311377,294.389566585392,"black","edu.somecol","No","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",0,1.45,5,"No",-14.1577844311377,200.442859998566,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-0.60646369100404
+"No",1,3.36,1.29,"No",12.8422155688623,164.922500717129,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.19,1.2,"No",-19.1577844311377,367.020704309943,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,5,1.36,"No",-9.15778443113773,83.8650156871886,"mexicanam","edu.somecol","No","Yes","Born in Mexico",0.39353630899596
+"No",0,1.4,1.61,"No",30.8422155688623,951.24226119617,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.53,2.03,"No",-10.1577844311377,103.180584549464,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.61,3.08,"No",5.84221556886227,34.1314827530567,"otherrace","edu.hischl","No","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",0,1.5,0.71,"No",-13.1577844311377,173.12729113629,"mexicanam","edu.lt9","No","No","Born in Mexico",3.39353630899596
+"No",1,4.3,1.98,"No",1.84221556886227,3.39375820215855,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,1.4,1.27,"No",-21.1577844311377,447.651842034494,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",2.39353630899596
+"No",1,1.81,0.24,"No",8.84221556886227,78.1847761662304,"otherrace","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1,0.45,"No",-15.1577844311377,229.758428860841,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.44,2.36,"No",-18.1577844311377,329.705135447668,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.6,5,"No",12.8422155688623,164.922500717129,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,6.8,2.49236006546645,"Yes",8.84221556886227,78.1847761662304,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.3,5,"No",9.84221556886227,96.8692073039549,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,7.1,5,"No",29.8422155688623,890.557830058446,"white","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,2.49,4.62,"No",3.84221556886227,14.7626204776076,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,0.62,4.75,"No",11.8422155688623,140.238069579404,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,7.48,4.72,"No",-29.1577844311377,850.176392932698,"otherrace","edu.9to11","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.4,2.49236006546645,"Yes",-29.1577844311377,850.176392932698,"mexicanam","edu.9to11","No","Yes","Born in Mexico",3.39353630899596
+"No",0,0.9,2.15,"No",1.84221556886227,3.39375820215855,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1,1.45,"No",-27.1577844311377,737.545255208147,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",2.39353630899596
+"Yes",0,0.58,2.52,"No",-20.1577844311377,406.336273172219,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,7.7,0.44,"No",-8.15778443113773,66.5494468249131,"mexicanam","edu.hischl","No","No","Born in Mexico",-1.60646369100404
+"No",0,1.9,1.47,"No",-7.15778443113773,51.2338779626376,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,0.99,3.37,"No",-21.1577844311377,447.651842034494,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,3,0.08,"No",30.8422155688623,951.24226119617,"black","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.15,5,"No",1.84221556886227,3.39375820215855,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,2.44,0.71,"No",-10.1577844311377,103.180584549464,"white","edu.lt9","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,0.88,4.83,"No",-11.1577844311377,124.496153411739,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.69,2.49236006546645,"Yes",-24.1577844311377,583.59854862132,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.02,2.86,"No",-9.15778443113773,83.8650156871886,"mexicanam","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,2.17,0.77,"No",-6.15778443113773,37.9183091003622,"white","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"Yes",0,0.75,4.55,"No",-16.1577844311377,261.073997723117,"black","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.2,1.16,"No",30.8422155688623,951.24226119617,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.6,1.24,"No",12.8422155688623,164.922500717129,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.22,5,"No",-12.1577844311377,147.811722274015,"otherhispan","edu.hischl","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,0.95,4.08,"No",-25.1577844311377,632.914117483596,"otherhispan","edu.somecol","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.17,1.99,"No",-3.15778443113773,9.97160251353582,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.18,5,"No",-8.15778443113773,66.5494468249131,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,1.39,5,"No",1.84221556886227,3.39375820215855,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.41,4.81,"No",-3.15778443113773,9.97160251353582,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.93,1.03,"No",-28.1577844311377,792.860824070422,"mexicanam","edu.9to11","No","No","Born in Mexico",3.39353630899596
+"No",1,3.16,1.39,"No",-5.15778443113773,26.6027402380867,"white","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,0.95,5,"No",18.8422155688623,355.029087543476,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.93,2.49236006546645,"Yes",-12.1577844311377,147.811722274015,"otherrace","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,2.54,3.08,"No",22.8422155688623,521.766812094374,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.26,5,"No",3.84221556886227,14.7626204776076,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.68,3.87,"No",-1.15778443113773,1.34046478898491,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.15,5,"No",5.84221556886227,34.1314827530567,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,3.53,3.63,"No",-1.15778443113773,1.34046478898491,"white","edu.hischl","Yes","No","Born in other Spanish-speaking country",0.39353630899596
+"No",0,2,1.17,"No",28.8422155688623,831.873398920721,"white","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.71,2.49236006546645,"Yes",3.84221556886227,14.7626204776076,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,5.4,4.41,"No",14.8422155688623,220.291362992578,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,0.67,0.83,"No",-26.1577844311377,684.229686345871,"mexicanam","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.47,1.92,"No",-6.15778443113773,37.9183091003622,"otherhispan","edu.hischl","No","No","Born in other Spanish-speaking country",-2.60646369100404
+"Yes",1,2.8,1.03,"No",4.84221556886227,23.4470516153322,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",3.39353630899596
+"No",0,0.92,5,"No",-28.1577844311377,792.860824070422,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,1.32,2.73,"No",-13.1577844311377,173.12729113629,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"Yes",0,0.59,2.82,"No",-4.15778443113773,17.2871713758113,"mexicanam","edu.college","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,0.7,0.83,"No",-5.15778443113773,26.6027402380867,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"No",1,4.55,1.87,"No",4.84221556886227,23.4470516153322,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",2.39353630899596
+"Yes",0,2,3.28,"No",7.84221556886227,61.5003450285058,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.1,3.78,"No",-8.15778443113773,66.5494468249131,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.11,2.49236006546645,"Yes",30.8422155688623,951.24226119617,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2,2.56,"No",30.8422155688623,951.24226119617,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,7,1.31,"No",30.8422155688623,951.24226119617,"white","edu.lt9","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.79,3.51,"No",-19.1577844311377,367.020704309943,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2.94,5,"No",-2.15778443113773,4.65603365126037,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,3.1,2.14,"No",30.8422155688623,951.24226119617,"white","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,5.01,0.94,"No",22.8422155688623,521.766812094374,"black","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.12,1.28,"No",-17.1577844311377,294.389566585392,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-0.60646369100404
+"No",0,0.95,3.13,"No",-28.1577844311377,792.860824070422,"mexicanam","edu.somecol","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,4.8,1.42,"No",23.8422155688623,568.451243232098,"mexicanam","edu.lt9","No","No","Born in Mexico",-0.60646369100404
+"No",1,3.1,1.59,"No",18.8422155688623,355.029087543476,"black","edu.9to11","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.75,3.98,"No",30.8422155688623,951.24226119617,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",-0.60646369100404
+"No",0,0.97,3.62,"No",-12.1577844311377,147.811722274015,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,2.12,5,"No",-9.15778443113773,83.8650156871886,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",1.39353630899596
+"No",0,0.74,1.3,"No",-27.1577844311377,737.545255208147,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,0.68,2.01,"No",11.8422155688623,140.238069579404,"mexicanam","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"Yes",0,0.89,3.61,"No",-17.1577844311377,294.389566585392,"mexicanam","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",1,2.06,4.83,"No",-13.1577844311377,173.12729113629,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.66,3.65,"No",24.8422155688623,617.135674369823,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.1,2.07,"No",-20.1577844311377,406.336273172219,"otherhispan","edu.lt9","No","No","Born in other Spanish-speaking country",1.39353630899596
+"Yes",0,4.36,2.1,"No",14.8422155688623,220.291362992578,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,0.59,0.29,"No",-29.1577844311377,850.176392932698,"otherrace","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.5,3.39,"No",-12.1577844311377,147.811722274015,"black","edu.college","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,0.66,2.56,"No",-13.1577844311377,173.12729113629,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.57,5,"No",-21.1577844311377,447.651842034494,"mexicanam","edu.somecol","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,3.16,2.49236006546645,"Yes",-0.157784431137728,0.0248959267094563,"mexicanam","edu.hischl","No","No","Born in Mexico",-2.60646369100404
+"No",0,2.04,1.83,"No",-11.1577844311377,124.496153411739,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.78,3.91,"No",-29.1577844311377,850.176392932698,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"Other",0,0.98,2.49236006546645,"Yes",-15.1577844311377,229.758428860841,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",1,3.34,5,"No",-0.157784431137728,0.0248959267094563,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.06,5,"No",8.84221556886227,78.1847761662304,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.21,5,"No",-0.157784431137728,0.0248959267094563,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.36,5,"No",-10.1577844311377,103.180584549464,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2,0.96,"No",-12.1577844311377,147.811722274015,"mexicanam","edu.lt9","No","Yes","Born in Mexico",3.39353630899596
+"No",1,1.4,4.31,"No",9.84221556886227,96.8692073039549,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.7,3.2,"No",-11.1577844311377,124.496153411739,"mexicanam","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,2.13,5,"No",21.8422155688623,477.082380956649,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"Yes",0,1.6,5,"No",-16.1577844311377,261.073997723117,"otherrace","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2,2.35,"No",-3.15778443113773,9.97160251353582,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,2.15,4.62,"No",-3.15778443113773,9.97160251353582,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Other",0,3.76,2.49236006546645,"Yes",10.8422155688623,117.553638441679,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",1,1.6,2.28,"No",-13.1577844311377,173.12729113629,"mexicanam","edu.hischl","No","Yes","Born in Mexico",2.39353630899596
+"Yes",0,0.44,2.49236006546645,"Yes",-15.1577844311377,229.758428860841,"mexicanam","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.3,5,"No",12.8422155688623,164.922500717129,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.87,2.57,"No",-20.1577844311377,406.336273172219,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,1.66,5,"No",30.8422155688623,951.24226119617,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.89,4.25,"No",11.8422155688623,140.238069579404,"black","edu.somecol","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",0,0.86,3.71,"No",1.84221556886227,3.39375820215855,"white","edu.college","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.9,5,"No",10.8422155688623,117.553638441679,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,3.5,2.56,"No",30.8422155688623,951.24226119617,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,4.3,4.75,"No",24.8422155688623,617.135674369823,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.6,2.35,"No",1.84221556886227,3.39375820215855,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.84,1.83,"No",14.8422155688623,220.291362992578,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",0,2.2,4.01,"No",-3.15778443113773,9.97160251353582,"white","edu.college","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,2.3,0.99,"No",-27.1577844311377,737.545255208147,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,3.57,0.34,"No",0.842215568862272,0.709327064434001,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,1.9,3.49,"No",-3.15778443113773,9.97160251353582,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,4,1.15,"No",0.842215568862272,0.709327064434001,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,0.98,0.6,"No",-20.1577844311377,406.336273172219,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,0.92,5,"No",5.84221556886227,34.1314827530567,"otherhispan","edu.college","Yes","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,0.99,2.64,"No",23.8422155688623,568.451243232098,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,4.55,1.31,"No",-12.1577844311377,147.811722274015,"mexicanam","edu.lt9","No","No","Born in Mexico",-1.60646369100404
+"No",1,5.14,2.49236006546645,"Yes",2.84221556886227,8.07818933988309,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-0.60646369100404
+"Yes",0,1.9,0.79,"No",-26.1577844311377,684.229686345871,"otherhispan","edu.9to11","No","No","Born in other Spanish-speaking country",-0.60646369100404
+"Yes",0,1.21,2.5,"No",-23.1577844311377,536.282979759045,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,5.53,5,"No",4.84221556886227,23.4470516153322,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.6,1.99,"No",-28.1577844311377,792.860824070422,"black","edu.college","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.68,4.81,"No",-2.15778443113773,4.65603365126037,"white","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,5.41,2.36,"No",-18.1577844311377,329.705135447668,"mexicanam","edu.lt9","No","Yes","Born in Mexico",2.39353630899596
+"No",0,0.88,1.45,"No",-4.15778443113773,17.2871713758113,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,2.85,0.98,"No",2.84221556886227,8.07818933988309,"black","edu.college","No","No","Born in other Non-Spanish-speaking country",-2.60646369100404
+"No",1,1.2,0.66,"No",-14.1577844311377,200.442859998566,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,10.4,5,"No",30.8422155688623,951.24226119617,"white","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"No",0,1.6,2.42,"No",-5.15778443113773,26.6027402380867,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.4,2.49236006546645,"Yes",-14.1577844311377,200.442859998566,"mexicanam","edu.lt9","No","No","Born in Mexico",1.39353630899596
+"No",1,1.9,1.96,"No",9.84221556886227,96.8692073039549,"black","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.71,4.29,"No",-10.1577844311377,103.180584549464,"white","edu.college","Yes","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.22,2.49236006546645,"Yes",-8.15778443113773,66.5494468249131,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.25,5,"No",2.84221556886227,8.07818933988309,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,3.6,5,"No",-17.1577844311377,294.389566585392,"otherrace","edu.lt9","No","No","Born in other Non-Spanish-speaking country",2.39353630899596
+"Yes",1,0.63,0.71,"No",-19.1577844311377,367.020704309943,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.38,1.58,"No",10.8422155688623,117.553638441679,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,2.3,0.8,"No",-20.1577844311377,406.336273172219,"otherrace","edu.9to11","No","Yes","Born in other Non-Spanish-speaking country",3.39353630899596
+"No",1,1.98,0.17,"No",10.8422155688623,117.553638441679,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.34,5,"No",-29.1577844311377,850.176392932698,"otherhispan","edu.somecol","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,4.4,2.19,"No",26.8422155688623,720.504536645272,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.98,2.12,"No",-5.15778443113773,26.6027402380867,"black","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.63,5,"No",-23.1577844311377,536.282979759045,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.35,1.44,"No",-27.1577844311377,737.545255208147,"black","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.4,1.45,"No",-1.15778443113773,1.34046478898491,"mexicanam","edu.9to11","No","Yes","Born in Mexico",0.39353630899596
+"No",0,4.5,5,"No",-1.15778443113773,1.34046478898491,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.08,2.27,"No",-2.15778443113773,4.65603365126037,"mexicanam","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.98,0.92,"No",-8.15778443113773,66.5494468249131,"mexicanam","edu.somecol","No","No","Born in Mexico",3.39353630899596
+"No",0,1.61,0.71,"No",-16.1577844311377,261.073997723117,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,0.8,2.49236006546645,"Yes",-9.15778443113773,83.8650156871886,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",1,1.7,1.96,"No",-22.1577844311377,490.967410896769,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",1,2.1,2.49236006546645,"Yes",-18.1577844311377,329.705135447668,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.8,5,"No",5.84221556886227,34.1314827530567,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.46,0.47,"No",-23.1577844311377,536.282979759045,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.79,0.55,"No",-29.1577844311377,850.176392932698,"white","edu.somecol","No","No","Born in other Non-Spanish-speaking country",3.39353630899596
+"No",0,1.9,3.83,"No",14.8422155688623,220.291362992578,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,0.98,1.92,"No",30.8422155688623,951.24226119617,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.26,2.77,"No",30.8422155688623,951.24226119617,"black","edu.hischl","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.95,2.49,"No",4.84221556886227,23.4470516153322,"mexicanam","edu.9to11","No","Yes","Born in Mexico",1.39353630899596
+"No",0,1.31,2.49236006546645,"Yes",-13.1577844311377,173.12729113629,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",3.39353630899596
+"Yes",0,1.51,2.5,"No",-23.1577844311377,536.282979759045,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",1,1.4,3.29,"No",-13.1577844311377,173.12729113629,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.19,5,"No",-9.15778443113773,83.8650156871886,"otherrace","edu.college","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,1.7,2.91,"No",-4.15778443113773,17.2871713758113,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,3.9,3.92,"No",29.8422155688623,890.557830058446,"white","edu.9to11","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.51,1.25,"No",-16.1577844311377,261.073997723117,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,2.24,0.85,"No",14.8422155688623,220.291362992578,"otherhispan","edu.college","No","No","Born in other Spanish-speaking country",0.39353630899596
+"No",0,1.3,0.88,"No",20.8422155688623,434.397949818925,"mexicanam","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,3.5,2.45,"No",9.84221556886227,96.8692073039549,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.4,2.28,"No",2.84221556886227,8.07818933988309,"otherhispan","edu.college","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",0,1.45,5,"No",3.84221556886227,14.7626204776076,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.8,4.7,"No",-11.1577844311377,124.496153411739,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,3.24,0.7,"No",-24.1577844311377,583.59854862132,"mexicanam","edu.9to11","No","No","Born in Mexico",3.39353630899596
+"No",0,0.74,3.68,"No",-5.15778443113773,26.6027402380867,"mexicanam","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,2.23,1.14,"No",30.8422155688623,951.24226119617,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.1,4.97,"No",-12.1577844311377,147.811722274015,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",1,2,0.82,"No",2.84221556886227,8.07818933988309,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.05,1.67,"No",7.84221556886227,61.5003450285058,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",3.39353630899596
+"No",1,1.71,0.88,"No",-10.1577844311377,103.180584549464,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,1.59,1.2,"No",0.842215568862272,0.709327064434001,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2.09,2.49236006546645,"Yes",-8.15778443113773,66.5494468249131,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,0.98,5,"No",4.84221556886227,23.4470516153322,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.52,0.81,"No",-13.1577844311377,173.12729113629,"mexicanam","edu.9to11","No","Yes","Born in Mexico",1.39353630899596
+"No",0,0.99,4.66,"No",-13.1577844311377,173.12729113629,"mexicanam","edu.college","No","Yes","Born in Mexico",-0.60646369100404
+"No",1,3.1,3.92,"No",1.84221556886227,3.39375820215855,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,2.23,2.7,"No",10.8422155688623,117.553638441679,"mexicanam","edu.lt9","No","Yes","Born in Mexico",-0.60646369100404
+"No",0,1.49,5,"No",-8.15778443113773,66.5494468249131,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,1.1,0.51,"No",-29.1577844311377,850.176392932698,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.65,2.79,"No",-27.1577844311377,737.545255208147,"mexicanam","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.74,1.28,"No",-22.1577844311377,490.967410896769,"mexicanam","edu.9to11","No","Yes","Born in Mexico",-0.60646369100404
+"No",0,1.1,2.15,"No",-9.15778443113773,83.8650156871886,"mexicanam","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,0.89,5,"No",-17.1577844311377,294.389566585392,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.68,0.82,"No",28.8422155688623,831.873398920721,"otherhispan","edu.9to11","No","No","Born in other Spanish-speaking country",0.39353630899596
+"No",0,5.22,0.34,"No",13.8422155688623,191.606931854853,"black","edu.lt9","No","No","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.3,5,"No",-9.15778443113773,83.8650156871886,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,3.68,0.62,"No",-16.1577844311377,261.073997723117,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",1,0.92,0.7,"No",-16.1577844311377,261.073997723117,"white","edu.hischl","Yes","No","Born in 50 U.S. states or DC",3.39353630899596
+"Other",0,0.84,2.49236006546645,"Yes",15.8422155688623,250.975794130302,"white","edu.college","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,3.2,0.5,"No",-14.1577844311377,200.442859998566,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,2,0.39,"No",-9.15778443113773,83.8650156871886,"mexicanam","edu.lt9","No","Yes","Born in Mexico",0.39353630899596
+"No",0,2.23,0.58,"No",19.8422155688623,393.7135186812,"black","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,1.5,4.36,"No",9.84221556886227,96.8692073039549,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,6.81,4.43,"No",10.8422155688623,117.553638441679,"black","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.2,2.49236006546645,"Yes",30.8422155688623,951.24226119617,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.1,5,"No",12.8422155688623,164.922500717129,"black","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.4,0.73,"No",-24.1577844311377,583.59854862132,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,1.7,1.98,"No",6.84221556886227,46.8159138907813,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,0.53,3.54,"No",-18.1577844311377,329.705135447668,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.2,5,"No",0.842215568862272,0.709327064434001,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,0.77,0.71,"No",-11.1577844311377,124.496153411739,"black","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Other",0,2.3,2.49236006546645,"Yes",17.8422155688623,318.344656405751,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",1,1.33,4.53,"No",1.84221556886227,3.39375820215855,"mexicanam","edu.hischl","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,0.37,0.39,"No",-24.1577844311377,583.59854862132,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.12,2.73,"No",-26.1577844311377,684.229686345871,"otherrace","edu.somecol","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.6,2.91,"No",-18.1577844311377,329.705135447668,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.78,2.62,"No",-7.15778443113773,51.2338779626376,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.09,1.42,"No",-15.1577844311377,229.758428860841,"mexicanam","edu.somecol","No","Yes","Born in Mexico",-1.60646369100404
+"Yes",0,1.66,5,"No",23.8422155688623,568.451243232098,"otherrace","edu.college","No","Yes","Born in other Non-Spanish-speaking country",-1.60646369100404
+"Yes",0,4.65,5,"No",2.84221556886227,8.07818933988309,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,5,2.49236006546645,"Yes",11.8422155688623,140.238069579404,"white","edu.college","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.13,5,"No",-9.15778443113773,83.8650156871886,"black","edu.college","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1,5,"No",-9.15778443113773,83.8650156871886,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,2.52,0.99,"No",-9.15778443113773,83.8650156871886,"white","edu.college","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",0,4.6,3.94,"No",-14.1577844311377,200.442859998566,"black","edu.hischl","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",0,1.3,1.45,"No",-12.1577844311377,147.811722274015,"mexicanam","edu.lt9","No","No","Born in Mexico",2.39353630899596
+"No",1,1.4,1.26,"No",-18.1577844311377,329.705135447668,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.5,0.58,"No",21.8422155688623,477.082380956649,"mexicanam","edu.lt9","No","Yes","Born in Mexico",0.39353630899596
+"No",1,6.08,2.49236006546645,"Yes",0.842215568862272,0.709327064434001,"white","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.5,2.84,"No",30.8422155688623,951.24226119617,"otherhispan","edu.9to11","No","Yes","Born in other Spanish-speaking country",-0.60646369100404
+"No",0,2.34,1.27,"No",-5.15778443113773,26.6027402380867,"otherrace","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",2.39353630899596
+"No",0,1.09,1.42,"No",20.8422155688623,434.397949818925,"mexicanam","edu.9to11","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.2,5,"No",-5.15778443113773,26.6027402380867,"white","edu.somecol","No","Yes","Born in other Non-Spanish-speaking country",-0.60646369100404
+"Yes",0,0.92,2.82,"No",2.84221556886227,8.07818933988309,"otherhispan","edu.somecol","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",0,3.5,1.69,"No",-18.1577844311377,329.705135447668,"otherhispan","edu.9to11","No","Yes","Born in other Spanish-speaking country",-0.60646369100404
+"Yes",0,1.1,5,"No",13.8422155688623,191.606931854853,"black","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,2.5,2.92,"No",-5.15778443113773,26.6027402380867,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.67,0.96,"No",5.84221556886227,34.1314827530567,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.86,2.49236006546645,"Yes",13.8422155688623,191.606931854853,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",-1.60646369100404
+"No",0,2,1.43,"No",7.84221556886227,61.5003450285058,"otherrace","edu.9to11","No","Yes","Born in other Non-Spanish-speaking country",0.39353630899596
+"No",0,1.07,2.31,"No",11.8422155688623,140.238069579404,"white","edu.college","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.72,0.89,"No",-28.1577844311377,792.860824070422,"mexicanam","edu.9to11","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",1,1.28,4.07,"No",0.842215568862272,0.709327064434001,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2.8,2.64,"No",-13.1577844311377,173.12729113629,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",1,5.9,0,"No",12.8422155688623,164.922500717129,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.32,5,"No",-23.1577844311377,536.282979759045,"white","edu.somecol","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.1,1.57,"No",-2.15778443113773,4.65603365126037,"black","edu.9to11","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,2.21,5,"No",3.84221556886227,14.7626204776076,"white","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.45,2.91,"No",-24.1577844311377,583.59854862132,"white","edu.9to11","No","No","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",1,3.2,0.91,"No",3.84221556886227,14.7626204776076,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",1,1.33,0.96,"No",-10.1577844311377,103.180584549464,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,5.2,0.9,"No",-6.15778443113773,37.9183091003622,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",3.39353630899596
+"No",1,0.89,2.84,"No",-26.1577844311377,684.229686345871,"otherhispan","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",1,1.7,0.24,"No",-16.1577844311377,261.073997723117,"white","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",2.39353630899596
+"No",0,1.8,1.23,"No",-4.15778443113773,17.2871713758113,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",2.39353630899596
+"Yes",0,1.14,4.01,"No",2.84221556886227,8.07818933988309,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"Yes",0,3.79,0.97,"No",10.8422155688623,117.553638441679,"otherrace","edu.hischl","No","Yes","Born in other Non-Spanish-speaking country",1.39353630899596
+"No",0,1.72,2.49236006546645,"Yes",5.84221556886227,34.1314827530567,"otherhispan","edu.lt9","No","Yes","Born in other Spanish-speaking country",1.39353630899596
+"No",1,0.96,2.84,"No",-20.1577844311377,406.336273172219,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.45,0.83,"No",-6.15778443113773,37.9183091003622,"mexicanam","edu.lt9","No","Yes","Born in Mexico",1.39353630899596
+"No",0,1.4,1.96,"No",30.8422155688623,951.24226119617,"white","edu.lt9","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.93,2.49236006546645,"Yes",18.8422155688623,355.029087543476,"mexicanam","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.59,2.49236006546645,"Yes",-0.157784431137728,0.0248959267094563,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,3,1.47,"No",-8.15778443113773,66.5494468249131,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",-2.60646369100404
+"No",0,3.4,3.07,"No",29.8422155688623,890.557830058446,"black","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,1.65,5,"No",8.84221556886227,78.1847761662304,"mexicanam","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.42,5,"No",1.84221556886227,3.39375820215855,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.94,3.91,"No",5.84221556886227,34.1314827530567,"black","edu.college","No","Yes","Born in other Non-Spanish-speaking country",1.39353630899596
+"No",0,1.78,5,"No",12.8422155688623,164.922500717129,"black","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.77,5,"No",-26.1577844311377,684.229686345871,"mexicanam","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.92,2.49236006546645,"Yes",-6.15778443113773,37.9183091003622,"mexicanam","edu.hischl","No","Yes","Born in Mexico",3.39353630899596
+"Yes",0,2.54,3.77,"No",-12.1577844311377,147.811722274015,"white","edu.somecol","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.03,4.33,"No",-10.1577844311377,103.180584549464,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"Yes",0,0.84,4.55,"No",-16.1577844311377,261.073997723117,"white","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,3.38,1.5,"No",30.8422155688623,951.24226119617,"white","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2.6,2.63,"No",17.8422155688623,318.344656405751,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.59,0.85,"No",-22.1577844311377,490.967410896769,"mexicanam","edu.9to11","No","Yes","Born in Mexico",0.39353630899596
+"No",1,2.47,0.5,"No",-7.15778443113773,51.2338779626376,"black","edu.lt9","No","No","Born in 50 U.S. states or DC",3.39353630899596
+"No",1,2,1.46,"No",18.8422155688623,355.029087543476,"white","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,0.77,1.97,"No",-2.15778443113773,4.65603365126037,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.22,1.79,"No",15.8422155688623,250.975794130302,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,4.3,4.08,"No",-12.1577844311377,147.811722274015,"otherhispan","edu.hischl","No","No","Born in other Spanish-speaking country",-0.60646369100404
+"No",0,1.6,1.46,"No",-11.1577844311377,124.496153411739,"mexicanam","edu.9to11","No","No","Born in Mexico",-0.60646369100404
+"No",0,9.1,1.06,"No",22.8422155688623,521.766812094374,"black","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,2.1,2.04,"No",-11.1577844311377,124.496153411739,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.7,1.93,"No",-0.157784431137728,0.0248959267094563,"otherhispan","edu.9to11","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.69,5,"No",-22.1577844311377,490.967410896769,"mexicanam","edu.somecol","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,1.73,1.3,"No",1.84221556886227,3.39375820215855,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.26,0.6,"No",7.84221556886227,61.5003450285058,"otherhispan","edu.somecol","No","Yes","Born in other Spanish-speaking country",1.39353630899596
+"No",0,2.35,1.42,"No",3.84221556886227,14.7626204776076,"mexicanam","edu.lt9","No","Yes","Born in Mexico",0.39353630899596
+"No",0,1.4,3.49,"No",-0.157784431137728,0.0248959267094563,"black","edu.somecol","No","Yes","Born in other Non-Spanish-speaking country",-0.60646369100404
+"No",0,5.12,3.37,"No",2.84221556886227,8.07818933988309,"white","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,0.95,1.11,"No",-20.1577844311377,406.336273172219,"mexicanam","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,4.6,0.82,"No",7.84221556886227,61.5003450285058,"black","edu.9to11","Yes","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"No",0,1.23,5,"No",-17.1577844311377,294.389566585392,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,2.8,0.91,"No",14.8422155688623,220.291362992578,"otherhispan","edu.hischl","No","Yes","Born in other Spanish-speaking country",1.39353630899596
+"No",1,5.5,1.39,"No",-6.15778443113773,37.9183091003622,"black","edu.hischl","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.17,5,"No",11.8422155688623,140.238069579404,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"Yes",0,0.95,5,"No",-11.1577844311377,124.496153411739,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",-2.60646369100404
+"No",1,1.78,0.53,"No",0.842215568862272,0.709327064434001,"white","edu.lt9","No","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,1.03,1.07,"No",13.8422155688623,191.606931854853,"white","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,0.75,1.27,"No",-17.1577844311377,294.389566585392,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",2.39353630899596
+"No",0,1.3,1.61,"No",-26.1577844311377,684.229686345871,"black","edu.somecol","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.4,1.83,"No",7.84221556886227,61.5003450285058,"mexicanam","edu.9to11","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,0.89,1.31,"No",-12.1577844311377,147.811722274015,"white","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,6.7,1.21,"No",-3.15778443113773,9.97160251353582,"white","edu.lt9","Yes","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"Yes",1,1.17,5,"No",15.8422155688623,250.975794130302,"white","edu.somecol","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,3.6,5,"No",15.8422155688623,250.975794130302,"black","edu.somecol","Yes","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,2,4.12,"No",-3.15778443113773,9.97160251353582,"black","edu.9to11","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,2.35,5,"No",-20.1577844311377,406.336273172219,"mexicanam","edu.college","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,1.9,1.7,"No",-27.1577844311377,737.545255208147,"white","edu.hischl","No","No","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.3,1.21,"No",-15.1577844311377,229.758428860841,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",1,1.01,1.65,"No",-26.1577844311377,684.229686345871,"white","edu.hischl","Yes","Yes","Born in 50 U.S. states or DC",0.39353630899596
+"No",0,1.8,5,"No",20.8422155688623,434.397949818925,"black","edu.college","Yes","No","Born in 50 U.S. states or DC",-2.60646369100404
+"No",0,2.95,1.25,"No",-22.1577844311377,490.967410896769,"mexicanam","edu.hischl","No","No","Born in Mexico",-2.60646369100404
+"No",0,1.72,2.62,"No",5.84221556886227,34.1314827530567,"otherhispan","edu.somecol","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
+"No",1,3.4,2.04,"No",1.84221556886227,3.39375820215855,"mexicanam","edu.lt9","No","Yes","Born in 50 U.S. states or DC",-0.60646369100404
+"Yes",0,1.14,2.14,"No",7.84221556886227,61.5003450285058,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",1,3.75,3.93,"No",10.8422155688623,117.553638441679,"white","edu.hischl","No","Yes","Born in 50 U.S. states or DC",-1.60646369100404
+"No",0,1.04,3.83,"No",-1.15778443113773,1.34046478898491,"white","edu.college","No","Yes","Born in 50 U.S. states or DC",1.39353630899596
