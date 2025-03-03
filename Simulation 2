@@ -3,7 +3,7 @@
 ###############
 # proposed by Bahamyirou et al
 # contains function with argument N  =  sample size and seed
-# that generates 1000 datasets of Design B,  Simulation 2.
+# that generates 1000 datasets of Simulation 2.
 
 # Load required libraries
 
