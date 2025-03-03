@@ -1,0 +1,121 @@
+####Sensitivity analysis####
+
+setwd("F:/Users/chapo752/Dropbox/PhD work- Chamika Porage/R codes/Prognostic score methods/revision")
+datat <- read.csv("dfmale_with_pseu_variable.csv", header=TRUE) 
+X.matrix <- model.matrix(smoking ~ water.treat.devices +married + birth.country + edu + race + income + income.mis + cage + cage2 + army + cfamily.size, data = datat)
+dat.X <- as.data.frame(X.matrix)
+dat.X <- dat.X[,-1]
+names(dat.X) <- c("water_treatment_devices_used_or_not",LETTERS[1:19])
+dat_com <- cbind(datat$lead, datat$smoking, dat.X)
+names(dat_com) <- c("lead", "smoking", "water.treatment.devices.used.or.not", LETTERS[1:19])
+
+# Subsetting data
+data0 <- subset(dat_com, smoking == 0)
+data1 <- subset(dat_com, smoking == 1)
+
+# logistic regression model 
+
+pg1 <- glm(water.treatment.devices.used.or.not~ ., data= subset(data1, select = -c(smoking, lead)), family = binomial())
+p1<- predict(pg1,newdata = subset(dat_com, select = -c(smoking, lead)),type = "response" )  
+
+pg0 <- glm(water.treatment.devices.used.or.not~ ., data= subset(data0, select = -c(smoking, lead)), family = binomial())
+p0<- predict(pg0,newdata = subset(dat_com, select = -c(smoking, lead)),type = "response") 
+
+#ATE
+mean(p1)-mean(p0)
+
+#Random forest regression
+
+library(ranger)
+
+### Random Forest regression(ranger)
+# Train random forest on untreated group (smoking == 0)
+model_rf_0 <- ranger(water.treatment.devices.used.or.not ~ ., 
+                     data = subset(data0, select = -c(smoking, lead)), 
+                     num.trees = 500, 
+                     mtry = 3)
+p0ra <- predict(model_rf_0, data = subset(dat_com, select = -c(smoking, lead)))$predictions
+# Train random forest on treated group (smoking == 1)
+model_rf_1 <- ranger(water.treatment.devices.used.or.not ~ ., 
+                     data = subset(data1, select = -c(smoking, lead)), 
+                     num.trees = 500, 
+                     mtry = 3)
+p1ra <- predict(model_rf_1, data = subset(dat_com, select = -c(smoking, lead)))$predictions
+mean(p1ra)-mean(p0ra)
+
+
+# Function to compute ATE for bootstrapping
+ate_boot <- function(data, indices) {
+  dat_com <- data[indices, ]  # Resample the data
+  
+  # Subset treatment groups
+  data0 <- subset(dat_com, smoking == 0)
+  data1 <- subset(dat_com, smoking == 1)
+  
+  # Logistic regression models
+  pg1 <- glm(water.treatment.devices.used.or.not ~ ., 
+             data = subset(data1, select = -c(smoking, lead)), 
+             family = binomial())
+  p1 <- predict(pg1, newdata = subset(dat_com, select = -c(smoking, lead)), type = "response")  
+  
+  pg0 <- glm(water.treatment.devices.used.or.not ~ ., 
+             data = subset(data0, select = -c(smoking, lead)), 
+             family = binomial())
+  p0 <- predict(pg0, newdata = subset(dat_com, select = -c(smoking, lead)), type = "response")  
+  
+  # Compute ATE
+  return(mean(p1) - mean(p0))
+}
+
+# Perform bootstrapping with 1000 resamples
+set.seed(123)  # For reproducibility
+boot_results <- boot(data = dat_com, statistic = ate_boot, R = 1000)
+
+# Extract bootstrap standard error and standard deviation
+bootstrap_se <- sd(boot_results$t)
+
+# Print results
+cat("Bootstrap Standard Error:", bootstrap_se, "\n")
+
+# Print bootstrapped confidence interval (95%)
+boot.ci(boot_results, type = "perc")
+
+# Function to compute ATE using Random Forest for bootstrapping
+ate_rf_boot <- function(data, indices) {
+  dat_com <- data[indices, ]  # Resample the data
+  
+  # Subset treatment groups
+  data0 <- subset(dat_com, smoking == 0)
+  data1 <- subset(dat_com, smoking == 1)
+  
+  # Train random forest on untreated group (smoking == 0)
+  model_rf_0 <- ranger(water.treatment.devices.used.or.not ~ ., 
+                       data = subset(data0, select = -c(smoking, lead)), 
+                       num.trees = 500, 
+                       mtry = 3)
+  p0ra <- predict(model_rf_0, data = subset(dat_com, select = -c(smoking, lead)))$predictions
+  
+  # Train random forest on treated group (smoking == 1)
+  model_rf_1 <- ranger(water.treatment.devices.used.or.not ~ ., 
+                       data = subset(data1, select = -c(smoking, lead)), 
+                       num.trees = 500, 
+                       mtry = 3)
+  p1ra <- predict(model_rf_1, data = subset(dat_com, select = -c(smoking, lead)))$predictions
+  
+  # Compute ATE
+  return(mean(p1ra) - mean(p0ra))
+}
+
+# Perform bootstrapping with 1000 resamples
+set.seed(123)  
+boot_results_rf <- boot(data = dat_com, statistic = ate_rf_boot, R = 1000)
+
+# Extract bootstrap standard error and standard deviation
+bootstrap_se_rf <- sd(boot_results_rf$t)
+
+# Print results
+cat("Bootstrap Standard Error (RF):", bootstrap_se_rf, "\n")
+
+# Print bootstrapped confidence interval (95%)
+boot.ci(boot_results_rf, type = "perc")
+
